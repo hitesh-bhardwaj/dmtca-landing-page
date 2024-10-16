@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Only necessary with horizontal scrolling */
+html[data-scroll-orientation="horizontal"] {
+  body {
+      width: fit-content;
+  }
+  [data-scroll-container] {
+      display: flex;
+  }
+}
+
+/* Font Family */
+@font-face {
+  font-family: 'Body';
+  src: url('/fonts/neuemontreal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Head';
+  src: url('/fonts/avenir.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Head';
+  src: url('/fonts/avenir-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Font Family End*/
+body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Body", Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+  font-kerning: none;
+}
+
+.font-body{
+  font-family: "Body";
+}
+.font-head{
+  font-family: "Head";
 }
