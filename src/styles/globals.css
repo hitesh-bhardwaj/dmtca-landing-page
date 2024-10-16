@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url("./slideshow.css");
-
+@import url('./servicesPannel.css');
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -50,11 +50,167 @@ body{
   font-family: "Body", Arial, Helvetica, sans-serif;
   text-rendering: geometricPrecision;
   font-kerning: none;
+  color: #1C1B1A;
 }
 
-.font-body{
+.text-body{
   font-family: "Body";
 }
-.font-head{
+.text-head{
   font-family: "Head";
+}
+.container-lg{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.title-2{
+  font-family: "Head";
+  font-size: 3.8vw;
+  line-height: 1.2;
+  
+ 
+  
+}
+
+/* button css */
+.btn{
+  display: inline-flex;
+  align-items: center;
+
+  
+  padding: 0 1.8vw;
+  height: 4.2vw;
+  position: relative;
+  width: fit-content;
+  min-width: 14vw;
+  border-radius: 1000px;
+  background: rgba(255, 255, 255, 0.743);
+  color: black;
+  font-size: 1.2vw;
+  font-weight: 500;
+  text-rendering: geometricPrecision;
+}
+.btn .btn-circle{
+  clip-path: inset(0.8vw 0.9vw 0.8vw calc(100% - 3.7vw) round 4vw);
+  position: absolute;
+  inset: -1px;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.85vw;
+  z-index: 2;
+  background-color: black;
+  color: white;
+  transition: all .45s cubic-bezier(.785,.135,.15,.86);
+}
+.btn .btn-circle.demo{
+  padding: 0 1.75vw;
+}
+.btn .btn-circle-text{
+  padding: 0 1px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.btn .btn-icon{
+  width: 0.8vw;
+  height: 0.8vw;
+  overflow: hidden;
+}
+.btn .btn-icon .btn-path{
+  transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+  transform-origin: center center;
+}
+.btn .btn-icon .btn-path:first-child{
+  transform: translateX(-120%) scale(0);
+}
+.btn:hover .btn-icon .btn-path:first-child{
+  transform: translateX(0) scale(1);
+}
+.btn:hover .btn-icon .btn-path:last-child{
+  transform: translateX(120%) scale(0);
+}
+.btn:hover .btn-circle{
+  clip-path: inset(0 round 4vw);
+  background-color: black;
+  color: white;
+}
+
+
+/* black button */
+
+.black-btn{
+  display: inline-flex;
+  align-items: center;
+
+  
+  padding: 0 1.8vw;
+  height: 4.2vw;
+  position: relative;
+  width: fit-content;
+  
+  min-width: 17vw;
+  border-radius: 1000px;
+  background:black;
+  color: white;
+  font-size: 1.1vw;
+  font-weight: 500;
+  text-rendering: geometricPrecision;
+}
+.black-btn .btn-circle{
+  clip-path: inset(0.8vw 0.9vw 0.8vw calc(100% - 3.7vw) round 4vw);
+  position: absolute;
+  inset: -1px;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.85vw;
+  z-index: 2;
+  background-color: white;
+  color: #1C1B1A ;
+  transition: all .45s cubic-bezier(.785,.135,.15,.86);
+}
+.black-btn .btn-circle.demo{
+  padding: 0 1.75vw;
+}
+.black-btn .btn-circle-text{
+  padding: 0 1px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.black-btn .btn-icon{
+  width: 0.8vw;
+  height: 0.8vw;
+  overflow: hidden;
+}
+.black-btn .btn-icon .btn-path{
+  transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+  transform-origin: center center;
+}
+.black-btn .btn-icon .btn-path:first-child{
+  transform: translateX(-120%) scale(0);
+}
+.black-btn:hover .btn-icon .btn-path:first-child{
+  transform: translateX(0) scale(1);
+}
+
+.black-btn:hover .btn-icon .btn-path:last-child{
+  transform: translateX(120%) scale(0);
+}
+.black-btn:hover .btn-circle{
+  clip-path: inset(0 round 4vw);
+  background-color: white;
+  color: #1C1B1A;
+}
+.black-btn:hover{
+  border: 1px  solid #1C1B1A;
+
+}
+
+
+.glassmorphism{
+  backdrop-filter: blur(10px);
 }

@@ -153,7 +153,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -171,7 +171,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -189,7 +189,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -277,7 +277,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -295,7 +295,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -313,7 +313,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -396,7 +396,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
@@ -414,7 +414,7 @@ const SlideShow = () => {
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center">
-                                        <span className="bg-white block h-[50%] w-[50%] shadow z-[1] rounded-full" />
+                                        <span className="bg-white block h-[50%] w-[50%] bottom-[24%] left-[24%] shadow z-[1] rounded-full" />
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
