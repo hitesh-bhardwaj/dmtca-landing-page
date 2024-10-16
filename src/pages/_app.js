@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
           const locomotiveScroll = new LocomotiveScroll({
             lenisOptions: {
-              duration: 2,
+              duration: 3.5
             }
           });
       }
