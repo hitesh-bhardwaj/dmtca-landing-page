@@ -68,10 +68,7 @@ body{
 .title-2{
   font-family: "Head";
   font-size: 3.8vw;
-  line-height: 1.2;
-  
- 
-  
+  line-height: 1.2; 
 }
 p{
   font-size: 1.2vw;
@@ -83,8 +80,6 @@ p{
 .btn{
   display: inline-flex;
   align-items: center;
-
-  
   padding: 0 1.8vw;
   height: 4.2vw;
   position: relative;
