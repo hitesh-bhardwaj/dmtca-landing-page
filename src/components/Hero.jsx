@@ -22,7 +22,7 @@ const Hero = () => {
           <Image
             quality={100}
             data-scroll
-            data-scroll-speed="-0.5"
+            data-scroll-speed="-0.7"
             src="/Images/hero-image.png"
             alt="Hero Image"
             fill

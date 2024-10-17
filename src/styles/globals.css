@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @import url("./slideshow.css");
-@import url('./servicesPannel.css');
+/* @import url('./servicesPannel.css'); */
+@import url('./services.css');
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
