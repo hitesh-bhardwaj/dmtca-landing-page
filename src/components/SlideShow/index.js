@@ -253,7 +253,7 @@ const SlideShow = () => {
                                 className="absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-50 block bg-gradient-to-b from-transparent to-black z-[1]"
                             />
                             <Image
-                                src="/images/slider1/img1.png"
+                                src="/Images/slider1/img1.png"
                                 alt="Slider Image"
                                 fill
                                 quality={100}
@@ -372,7 +372,7 @@ const SlideShow = () => {
                                 className="absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-50 block bg-gradient-to-b from-transparent to-black z-[1]"
                             />
                             <Image
-                                src="/images/slider1/img2.png"
+                                src="/Images/slider1/img2.png"
                                 alt="Slider Image"
                                 fill
                                 quality={100}
@@ -491,7 +491,7 @@ const SlideShow = () => {
                                 className="absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-50 block bg-gradient-to-b from-transparent to-black z-[1]"
                             />
                             <Image
-                                src="/images/slider1/img3.png"
+                                src="/Images/slider1/img3.png"
                                 alt="Slider Image"
                                 fill
                                 quality={100}

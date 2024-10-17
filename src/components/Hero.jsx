@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="w-screen h-[130vw] relative overflow-hidden container-lg pt-[3%]">
           <Link href={"#"}>
             <Image quality={100}
-              src="/images/logo.png"
+              src="/Images/logo.png"
               alt="logo-img"
               width={170}
               height={170}
