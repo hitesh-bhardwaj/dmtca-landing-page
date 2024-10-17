@@ -1,17 +1,21 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 const Experience = () => {
   const ref1 = useRef(null);  
   const ref2 = useRef(null);  
   const ref3 = useRef(null);  
 
+
   // GSAP animation for opening the image
   const handleMouseEnter = (ref, width,height) => {
     gsap.to(ref.current, {
       width: width,
       height:height,
+      transformOrigin:"center",
       duration: 0.4,
       ease: [0.23, 1, 0.32, 1],
     });

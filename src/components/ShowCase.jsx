@@ -41,7 +41,7 @@ const ShowCase = () => {
 
           <video
                         id="showcase-video"
-                        poster="/assets/assets/video-poster.webp"
+                        poster="/assets/video-poster.webp"
                         autoPlay
                         muted
                         loop
