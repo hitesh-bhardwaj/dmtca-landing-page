@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="w-screen h-[130vw] relative overflow-hidden container-lg pt-[3%]">
           <Link href={"#"}>
             <Image quality={100}
-              src="/Images/logo.png"
+              src="/assets/logo.png"
               alt="logo-img"
               width={170}
               height={170}
@@ -22,7 +22,7 @@ const Hero = () => {
             quality={100}
             data-scroll
             data-scroll-speed="-0.7"
-            src="/Images/hero-image.png"
+            src="/assets/hero-image.png"
             alt="Hero Image"
             fill
             className="object-cover w-full h-full object-top relative z-[-1]"

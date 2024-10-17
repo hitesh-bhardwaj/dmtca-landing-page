@@ -54,12 +54,12 @@ export default function Project() {
       >
         <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'>
             
-            <Image src="/Images/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500'/>
+            <Image src="/assets/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500'/>
         </SwiperSlide>
-        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/Images/interior-img-2.png" alt='interior-img-2' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
-        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/Images/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
-        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/Images/interior-img-2.png" alt='interior-img-2' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
-        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/Images/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
+        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/assets/interior-img-2.png" alt='interior-img-2' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
+        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/assets/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
+        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/assets/interior-img-2.png" alt='interior-img-2' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
+        <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'><Image src="/assets/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500'/></SwiperSlide>
        
       </Swiper>
         </div>

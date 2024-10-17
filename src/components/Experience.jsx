@@ -43,7 +43,7 @@ const Experience = () => {
               <div>
                 <div ref={ref1} className="relative h-[6vw] w-0 flex items-center justify-center rounded-full overflow-hidden">
                   <div className="relative h-full w-full p-[1vw]">
-                    <Image src="/images/experience1.png" fill alt="experience" />
+                    <Image src="/assets/experience1.png" fill alt="experience" />
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Experience = () => {
                >
                 <div ref={ref2} className="relative h-[6vw] w-0 flex items-center justify-center rounded-tr-full overflow-hidden">
                   <div className="relative h-full w-full p-[1vw]">
-                    <Image src="/images/experience2.png" fill alt="experience" />
+                    <Image src="/assets/experience2.png" fill alt="experience" />
                   </div>
                 </div>
                 <p className="uppercase text-head text-white text-[4.15vw]">Projects</p>
@@ -80,7 +80,7 @@ const Experience = () => {
                 onMouseLeave={() => handleMouseLeave(ref3)}>
                 <div ref={ref3} className="relative h-[6vw] w-0 rounded-[20px] flex items-center justify-center overflow-hidden">
                   <div className="relative h-full w-full p-[1vw]">
-                    <Image src="/images/experience3.png" fill alt="experience" />
+                    <Image src="/assets/experience3.png" fill alt="experience" />
                   </div>
                 </div>
                 <p className="uppercase text-head text-white text-[4.15vw]">Luxury Projects</p>

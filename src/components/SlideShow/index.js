@@ -117,7 +117,7 @@ const SlideShow = () => {
                                 height={24}
                                 loading="lazy"
                                 className="rotate-180 z-10 group-hover:invert duration-300"
-                                src="/Images/icons/arrow.svg"
+                                src="/assets/icons/arrow.svg"
                             />
                             <span className="block absolute scale-0 h-full w-full bg-white group-hover:scale-100 duration-300 rounded-full" />
                         </button>
@@ -131,7 +131,7 @@ const SlideShow = () => {
                                 height={24}
                                 loading="lazy"
                                 className="z-10 group-hover:invert duration-300"
-                                src="/Images/icons/arrow.svg"
+                                src="/assets/icons/arrow.svg"
                             />
                             <span className="block absolute scale-0 h-full w-full bg-white group-hover:scale-100 duration-300 rounded-full" />
                         </button>
@@ -208,7 +208,7 @@ const SlideShow = () => {
                             </h4>
                             <div className="flex items-center gap-2 mb-2">
                                 <img
-                                    src="/Images/icons/location.svg"
+                                    src="/assets/icons/location.svg"
                                     alt="location icon"
                                     width="18"
                                     height="18"
@@ -218,7 +218,7 @@ const SlideShow = () => {
                             <div className="flex gap-[2vw]">
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/area.svg"
+                                        src="/assets/icons/area.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -227,7 +227,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/beds.svg"
+                                        src="/assets/icons/beds.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -236,7 +236,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/tub.svg"
+                                        src="/assets/icons/tub.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -253,7 +253,7 @@ const SlideShow = () => {
                                 className="absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-50 block bg-gradient-to-b from-transparent to-black z-[1]"
                             />
                             <Image
-                                src="/Images/slider1/img1.png"
+                                src="/assets/slider1/img1.png"
                                 alt="Slider Image"
                                 fill
                                 quality={100}
@@ -327,7 +327,7 @@ const SlideShow = () => {
                             </h4>
                             <div className="flex items-center gap-2 mb-2">
                                 <img
-                                    src="/Images/icons/location.svg"
+                                    src="/assets/icons/location.svg"
                                     alt="location icon"
                                     width="18"
                                     height="18"
@@ -337,7 +337,7 @@ const SlideShow = () => {
                             <div className="flex gap-[2vw]">
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/area.svg"
+                                        src="/assets/icons/area.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -346,7 +346,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/beds.svg"
+                                        src="/assets/icons/beds.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -355,7 +355,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/tub.svg"
+                                        src="/assets/icons/tub.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -372,7 +372,7 @@ const SlideShow = () => {
                                 className="absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-50 block bg-gradient-to-b from-transparent to-black z-[1]"
                             />
                             <Image
-                                src="/Images/slider1/img2.png"
+                                src="/assets/slider1/img2.png"
                                 alt="Slider Image"
                                 fill
                                 quality={100}
@@ -446,7 +446,7 @@ const SlideShow = () => {
                             </h4>
                             <div className="flex items-center gap-2 mb-2">
                                 <img
-                                    src="/Images/icons/location.svg"
+                                    src="/assets/icons/location.svg"
                                     alt="location icon"
                                     width="18"
                                     height="18"
@@ -456,7 +456,7 @@ const SlideShow = () => {
                             <div className="flex gap-[2vw]">
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/area.svg"
+                                        src="/assets/icons/area.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -465,7 +465,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/beds.svg"
+                                        src="/assets/icons/beds.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -474,7 +474,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <img
-                                        src="/Images/icons/tub.svg"
+                                        src="/assets/icons/tub.svg"
                                         alt="location icon"
                                         width="18"
                                         height="18"
@@ -491,7 +491,7 @@ const SlideShow = () => {
                                 className="absolute top-0 left-0 right-0 bottom-0 w-full h-full opacity-50 block bg-gradient-to-b from-transparent to-black z-[1]"
                             />
                             <Image
-                                src="/Images/slider1/img3.png"
+                                src="/assets/slider1/img3.png"
                                 alt="Slider Image"
                                 fill
                                 quality={100}

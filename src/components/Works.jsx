@@ -40,7 +40,7 @@ const Works = () => {
               <div className="w-[37vw] h-full flex flex-col gap-[2vw]" data-scroll data-scroll-speed="0.1">
                 <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group">
                   <Image
-                    src="/Images/work-img-5.png"
+                    src="/assets/work-img-5.png"
                     alt="work-img-5"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
@@ -101,7 +101,7 @@ const Works = () => {
               <div className="w-[25vw] h-fit relative mr-[8%] mt-[30%] relative z-[4]" data-scroll data-scroll-speed="-0.1">
                 <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group">
                   <Image
-                    src="/Images/work-img-1.png"
+                    src="/assets/work-img-1.png"
                     alt="work-img-1"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
@@ -154,7 +154,7 @@ const Works = () => {
             <div className="w-fit h-full mt-[15vw] relative" data-scroll data-scroll-speed="-0.1" >
               <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group">
                 <Image
-                  src="/Images/work-img-2.png"
+                  src="/assets/work-img-2.png"
                   alt="work-img-2"
                   className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   fill
@@ -215,7 +215,7 @@ const Works = () => {
             <div className="w-full h-full flex justify-between mt-[7vw]" data-scroll data-scroll-speed="0.1">
               <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group">
                 <Image
-                  src="/Images/work-img-4.png"
+                  src="/assets/work-img-4.png"
                   alt="work-img-4"
                   className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   fill
@@ -266,7 +266,7 @@ const Works = () => {
               <div className="w-[35vw] h-full flex flex-col gap-[5vw]" data-scroll data-scroll-speed="-0.1">
                 <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group">
                   <Image
-                    src="/Images/work-img-3.png"
+                    src="/assets/work-img-3.png"
                     alt="work-img-3"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
@@ -326,7 +326,7 @@ const Works = () => {
           <div className="w-fit h-full absolute top-[10%] left-[50%] translate-x-[-50%] work-bg-icon">
             <div className="w-[50vw] h-[50vw] relative">
               <Image
-                src="/Images/work-bg-logo.svg"
+                src="/assets/work-bg-logo.svg"
                 alt="work-logo"
                 fill
                 className="object-contain"

@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden ">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
-                    src="/Images/icons/facebook.svg"
+                    src="/assets/icons/facebook.svg"
                     fill
                     alt="facebook-icon"
                   />
@@ -20,7 +20,7 @@ const Footer = () => {
               <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
-                    src="/Images/icons/twitter.svg"
+                    src="/assets/icons/twitter.svg"
                     fill
                     alt="twitter-icon"
                   />
@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
-                    src="/Images/icons/instagram.svg"
+                    src="/assets/icons/instagram.svg"
                     fill
                     alt="instagram-icon"
                   />
@@ -38,7 +38,7 @@ const Footer = () => {
               <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
-                    src="/Images/icons/linkedin.svg"
+                    src="/assets/icons/linkedin.svg"
                     fill
                     alt="linkedin-icon"
                   />
@@ -49,7 +49,7 @@ const Footer = () => {
               <div className=" flex items-center justify-center h-[5vw] w-[15vw] absolute left-[50%] translate-x-[-50%]">
                 <div className="relative h-full w-full ">
                   <Image
-                    src="/Images/icons/logo-black.svg"
+                    src="/assets/icons/logo-black.svg"
                     fill
                     alt="logo-img"
                   />
@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="absolute h-[3vw] w-[3vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden right-0">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
-                    src="/Images/icons/CaretRight.svg"
+                    src="/assets/icons/CaretRight.svg"
                     fill
                     alt="CaretRight-icon"
                   />
