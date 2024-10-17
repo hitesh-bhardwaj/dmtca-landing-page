@@ -14,10 +14,12 @@ const Works = () => {
         trigger: ".work-bg-icon",
         start: "top top",
         end: "90% bottom",
-        // markers:true,
         pin: true,
-        scrub: true,
+        scrub: 2,
       },
+      defaults: {
+        ease: "none"
+      }
     });
   });
   return (
