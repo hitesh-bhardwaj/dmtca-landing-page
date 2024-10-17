@@ -14,8 +14,32 @@ import { Scrollbar, FreeMode } from 'swiper/modules';
 import Image from 'next/image';
 import PrimaryButton from './Button/PrimaryButton';
 import BlackButton from './Button/BlackButton';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Project() {
+  useGSAP(()=>{
+    const body = document.body;
+    const changeBodyColor = (color) => {
+      gsap.to(body, {
+        backgroundColor: color,
+        duration: 1, // Duration for smooth transition
+        ease: "power2.out",
+      });
+    };
+  
+  
+  // ScrollTrigger for changing body background color
+  ScrollTrigger.create({
+    trigger: "#project",
+    start: "top 60%", // When the section enters the viewport
+    end: "bottom 20%", // When the section is about to leave
+    onEnter: () => changeBodyColor("#ffffff"), // Replace with your actual secondary color
+    onLeaveBack: () => changeBodyColor("#1C1B1A"), // Revert when scrolling back up
+  });
+  })
   return (
     <>
     <section id='project' className='py-[10%]'>

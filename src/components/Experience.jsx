@@ -28,7 +28,7 @@ const Experience = () => {
   };
 
   return (
-    <section className="experience" data-scroll data-scroll-speed="-0.2">
+    <section className="experience" >
       <div className="container-lg w-screen h-screen flex flex-col items-center justify-center bg-[#161616]">
         <div className="gap-[5vw] flex flex-col ">
           

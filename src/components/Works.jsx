@@ -9,6 +9,27 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Works = () => {
   useGSAP(() => {
+    const body = document.body;
+
+    const changeBodyColor = (color) => {
+      gsap.to(body, {
+        backgroundColor: color,
+        duration: 1, // Duration for smooth transition
+        ease: "power2.out",
+      });
+    };
+
+    // ScrollTrigger for changing body background color
+    ScrollTrigger.create({
+      trigger: "#works",
+      start: "top 60%", // When the section enters the viewport
+      end: "bottom 20%", // When the section is about to leave
+      onEnter: () => changeBodyColor("#1C1B1A"), // Replace with your actual secondary color
+      // onLeave: () => changeBodyColor("#ffffff"), // Revert to white when leaving
+      // onEnterBack: () => changeBodyColor("#"), // Reapply when scrolling back
+      onLeaveBack: () => changeBodyColor("#ffffff"), // Revert when scrolling back up
+    });
+
     gsap.to(".work-bg-icon", {
       scrollTrigger: {
         trigger: ".work-bg-icon",
@@ -26,7 +47,7 @@ const Works = () => {
     <>
       <section
         id="works"
-        className="w-full h-full bg-[#1C1B1A] overflow-hidden"
+        className="w-full h-full overflow-hidden"
       >
         <div className="container-lg h-full  py-[5%] relative ">
           <div className="w-full flex justify-center relative z-[2]">
