@@ -47,8 +47,8 @@ const Features = () => {
   return (
     <section className="py-[10%] bg-[#E0D4C6]" id="features">
       <div className="container-lg">
-        <h2 className="title-2 mb-[2vw]">Key Features</h2>
-        <p className="w-[40%]">
+        <h2 data-title-anim className="title-2 mb-[2vw]">Key Features</h2>
+        <p data-para-anim className="w-[40%]">
           Experience paradise on earth at Lumiere Haven, where opulent homes and serene surroundings create an idyllic lifestyle.
         </p>
         <div className="w-full flex justify-between">
@@ -65,9 +65,9 @@ const Features = () => {
                       <Image src={feature.icon} fill alt={feature.name} />
                     </div>
                   </div>
-                  <h4 className="uppercase text-[1.4vw] mb-[1vw]">{feature.name}</h4>
+                  <h4 data-para-anim className="uppercase text-[1.4vw] mb-[1vw]">{feature.name}</h4>
                 </div>
-                <div className="bg-black/40 w-full h-[1px]"></div>
+                <div className="bg-black/40 w-full h-[1px] lineDraw"></div>
               </div>
             ))}
           </div>
@@ -107,9 +107,9 @@ const Features = () => {
                       <Image src={feature.icon} fill alt={feature.name} />
                     </div>
                   </div>
-                  <h4 className="uppercase text-[1.4vw] mb-[1vw]">{feature.name}</h4>
+                  <h4 data-para-anim className="uppercase text-[1.4vw] mb-[1vw]">{feature.name}</h4>
                 </div>
-                <div className="bg-black/40 w-full h-[1px]"></div>
+                <div className="bg-black/40 w-full h-[1px] lineDraw"></div>
               </div>
             ))}
           </div>

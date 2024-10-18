@@ -126,7 +126,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <div className="container-lg w-screen h-screen flex flex-col items-center justify-center bg-[#161616]">
         <div className="gap-[5vw] flex flex-col projects">
           {/* Preview Image */}
@@ -139,7 +139,7 @@ const Experience = () => {
           {/* First Project */}
           <div className="flex flex-col gap-[2vw] project" id="p1">
             <div className="flex items-center justify-center gap-[2vw] ">
-              <p className="uppercase text-head text-white text-[4.15vw]">
+              <p data-para-anim className="uppercase text-head text-white text-[4.15vw]">
                 25+ Years in Business
               </p>
             </div>
@@ -149,11 +149,11 @@ const Experience = () => {
           {/* Second Project */}
           <div className="flex flex-col gap-[2vw] project" id="p2">
             <div className="flex items-center justify-center gap-[2vw] w-full">
-              <p className="uppercase text-head text-white text-[4.15vw]">
+              <p data-para-anim className="uppercase text-head text-white text-[4.15vw]">
                 50000+ Housing
               </p>
               <div className="flex">
-                <p className="uppercase text-head text-white text-[4.15vw]">
+                <p data-para-anim className="uppercase text-head text-white text-[4.15vw]">
                   Projects
                 </p>
               </div>
@@ -164,11 +164,11 @@ const Experience = () => {
           {/* Third Project */}
           <div className="flex flex-col gap-[2vw] project" id="p3">
             <div className="flex items-center justify-center gap-[2vw]">
-              <p className="uppercase text-head text-white text-[4.15vw]">
+              <p data-para-anim className="uppercase text-head text-white text-[4.15vw]">
                 20+
               </p>
               <div className="flex">
-                <p className="uppercase text-head text-white text-[4.15vw]">
+                <p data-para-anim className="uppercase text-head text-white text-[4.15vw]">
                   Luxury Projects
                 </p>
               </div>

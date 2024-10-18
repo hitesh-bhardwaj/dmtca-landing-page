@@ -10,7 +10,7 @@ const ShowCase = () => {
       scrollTrigger: {
         trigger: "#showcase",
         start: "top 40%",
-        end: "+=1500 bottom",
+        end: "+=2000 bottom",
         scrub: 0.25,
         // markers: true,
       }
@@ -21,7 +21,7 @@ const ShowCase = () => {
       yPercent: 35,
       right: "5%",
       ease: "power1.out",
-      duration: 2
+      duration: 5
     })
     tl.to(".inner-detail", {
       opacity: 1,
@@ -34,7 +34,7 @@ const ShowCase = () => {
         <div className="container-lg h-full relative">
           <div className="flex w-full gap-[10vw]">
 
-            <h2 className="w-[40%] title-2">
+            <h2 data-para-anim className="w-[40%] title-2">
               Lumière Haven- A luxury hillside home
             </h2>
             <div className="w-[25vw] h-[25vw] overflow-hidden rounded-full video-block absolute right-[10%]">
@@ -51,13 +51,13 @@ const ShowCase = () => {
               >
               </video>
               <div className="w-[50vw] bg-white/50 glassmorphism flex justify-around rounded-full py-[2vw] absolute bottom-[7%] left-[50%] translate-x-[-50%] opacity-0 inner-detail z-[6]">
-                <p>
+                <p data-para-anim>
                   Off-Plan in Dubai Marina
                 </p>
-                <p>
+                <p data-para-anim>
                   61,250 sq.ft of Amenities
                 </p>
-                <p>
+                <p data-para-anim>
                   5 Bedroom
                 </p>
               </div>
@@ -65,7 +65,7 @@ const ShowCase = () => {
           </div>
 
           <div className="w-full h-full mt-[42vw] flex justify-end">
-            <p className="w-[50%] ">
+            <p data-para-anim className="w-[50%] ">
               Lumiere Haven embodies the ultimate marriage of refinement and
               comfort, extravagance and ease, boldness and elegance. Each of the
               tower’s residences is an heirloom for the modern age—combining

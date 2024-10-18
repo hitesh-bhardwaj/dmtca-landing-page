@@ -1,16 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(useGSAP,ScrollTrigger)
 
 const Footer = () => {
+  useGSAP(()=>{
+    const tl =  gsap.timeline()
+
+    tl.from(".footer-body", {
+      yPercent:100,
+      
+      scrollTrigger:{
+        trigger:"#experience",
+        start:"top 10%",
+        end:"bottom 30%",
+        scrub:true,
+        // markers:true
+
+      }
+    })
+  })
   return (
-    <section id="footer" className="z-10 relative">
+    <section id="footer" className="z-[5] bottom-0 fixed footer-body">
       <div className="container-lg w-screen h-full rounded-t-[40px] bg-[#E0D4C6] text-[#1C1B1A]">
         <div className=" py-[5%] flex flex-col gap-[6vw]">
           <div className="w-full relative">
             <div className="flex items-center justify-center gap-[1vw] absolute left-0 top-0">
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden ">
+              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup ">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
                     src="/assets/icons/facebook.svg"
@@ -21,7 +41,7 @@ const Footer = () => {
               </div>
               </Link>
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden">
+              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
                     src="/assets/icons/twitter.svg"
@@ -32,7 +52,7 @@ const Footer = () => {
               </div>
               </Link>
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden">
+              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
                     src="/assets/icons/instagram.svg"
@@ -43,7 +63,7 @@ const Footer = () => {
               </div>
               </Link>
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden">
+              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
                     src="/assets/icons/linkedin.svg"
@@ -56,7 +76,7 @@ const Footer = () => {
             </div>
             <div>
               <Link href={"/"}>
-              <div className=" flex items-center justify-center h-[5vw] w-[15vw] absolute left-[50%] translate-x-[-50%]">
+              <div className=" flex items-center justify-center h-[5vw] w-[15vw] absolute left-[50%] translate-x-[-50%] fadeup">
                 <div className="relative h-full w-full ">
                   <Image
                     src="/assets/icons/logo-black.svg"
@@ -69,7 +89,7 @@ const Footer = () => {
             </div>
             <div>
               <Link href={"/"}>
-              <div className="absolute h-[3vw] w-[3vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden right-0">
+              <div className="absolute h-[3vw] w-[3vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden right-0 fadeup">
                 <div className="relative h-full w-full p-[1vw]">
                   <Image
                     src="/assets/icons/CaretRight.svg"
@@ -84,11 +104,11 @@ const Footer = () => {
           <div className="flex items-center justify-center">
             <div>
                 <div>
-                    <p className=" text-[3.4vw] font-medium">(+234) 7046336078</p>
+                    <p data-para-anim className=" text-[3.4vw] font-medium">(+234) 7046336078</p>
                 </div>
                 <div>
                   <Link href={"mailto:nigeria@dmtca.com"}>
-                    <p className="text-[3.4vw] font-medium">
+                    <p data-para-anim className="text-[3.4vw] font-medium">
                     nigeria@dmtca.com
                     </p>
                     </Link>
@@ -99,14 +119,14 @@ const Footer = () => {
 
           <div className="flex items-center justify-between">
             <div className="w-[15%]">
-                <p className="text-[1.1vw]  uppercase ">All rights reserved @2024 dmtca</p>
+                <p data-para-anim className="text-[1.1vw]  uppercase ">All rights reserved @2024 dmtca</p>
             </div>
             <div className="w-[30%]">
-                <p className="text-[1.1vw] leading-[1.2] text-center">315b Akin Ogunlewe Rd, Victoria Island, Lagos & No. 1, Adekunle Owobiyi Close, Ogba, Lagos, Nigeria</p>
+                <p data-para-anim className="text-[1.1vw] leading-[1.2] text-center">315b Akin Ogunlewe Rd, Victoria Island, Lagos & No. 1, Adekunle Owobiyi Close, Ogba, Lagos, Nigeria</p>
             </div>
             <Link href={"#"}>
             <div>
-                <p className="text-[1.1vw]  uppercase">PRIVACY POLICY</p>
+                <p data-para-anim className="text-[1.1vw]  uppercase">PRIVACY POLICY</p>
             </div>
             </Link>
 

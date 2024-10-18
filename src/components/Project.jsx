@@ -45,23 +45,26 @@ export default function Project() {
     <section id='project' className='py-[10%]'>
         <div className='container-lg'>
 
-        <h2 className='title-2'>
+        <h2 data-para-anim className='title-2'>
         Interior by Versace
 
         </h2>
-        <div className='w-full h-[1px] bg-black/30 my-[4vw]'></div>
+        <div className='w-full h-[1px] bg-black/30 my-[4vw] lineDraw'></div>
         </div>
         <div className='w-full flex justify-end mb-[5vw]'>
 
             <div className='w-[75%] flex justify-between px-[2vw]'>
-                <BlackButton btnText={"Enquire Now"} link={"#"}/>
+              <div className='fadeup'>
 
-            <p className='w-[60%]'>
+                <BlackButton btnText={"Enquire Now"} link={"#"}/>
+              </div>
+
+            <p data-para-anim className='w-[60%]'>
             This project integrates fashion, luxury, and lifestyle to offer a global experience of the Versace world. The collection speaks of know-how, creativity, and pure design, echoing the revered identity of Versace.
             </p>
             </div>
         </div>
-        <div className='w-full h-full translate-x-[22%]'>
+        <div className='w-full h-full translate-x-[22%] swipe fadeup cursor-none'>
 
       <Swiper
         scrollbar={{

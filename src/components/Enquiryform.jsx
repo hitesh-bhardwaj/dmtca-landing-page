@@ -1,4 +1,4 @@
-// import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 // import Link from "next/link";
@@ -14,10 +14,20 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+  } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 // import { Checkbox } from "@/components/ui/checkbox";
 // import CountrySelector from "../ui/country-selector";
-// import { COUNTRIES } from "@/lib/countries";
+import { COUNTRIES } from "@/lib/countries";
+import CountrySelector from "./ui/country-selector";
 
 const formSchema = z.object({
     name: z.string().min(1, {message: "Name is required."}),
@@ -35,6 +45,7 @@ export default function EnquiryForm() {
     const [submitting, setSubmitting] = useState(false);
     const [submissionError, setSubmissionError] = useState(null);
     const [submissionSuccess, setSubmissionSuccess] = useState(false);
+    const [selectedRole, setSelectedRole] = useState("");
 
     const form = useForm({
         // resolver: zodResolver(formSchema),
@@ -48,6 +59,9 @@ export default function EnquiryForm() {
         },
     });
 
+    const handleValueChange = (value) => {
+        setSelectedRole(value);
+      };
     // const onSubmit = async (data) => {
     //     setSubmitting(true);
     //     const countryName = COUNTRIES.find(c => c.value === country)?.title || 'Not specified';
@@ -89,12 +103,12 @@ export default function EnquiryForm() {
     // };
 
   return (
-    <div className="w-[30%] bg-[white]/40 p-[1.5vw] pb-[5vw] rounded-[1.5vw] absolute right-[10%] bottom-[10%] glassmorphism">
+    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism fadeup">
         <div className="flex flex-col mb-[3vw]">
-            <h2 className="text-[3.5vw] font-light text-center">
+            <h2 data-para-anim className="text-[3.5vw] font-light text-center">
             Enquire Now
         </h2>
-        <div className="w-full bg-black h-[1px]">
+        <div className="w-full bg-black h-[1px] lineDraw">
 
         </div>
             </div>
@@ -104,7 +118,26 @@ export default function EnquiryForm() {
         
         {/* Form fields */}
         {/* Name field */}
-        <div className="w-[18vw]">
+        <div className="w-full flex gap-[1.2vw] items-center">
+        <Select onValueChange={handleValueChange}>
+                  <SelectTrigger className="w-[7vw] placeholder:text-[2vw]">
+                    <SelectValue placeholder="" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      {/* <SelectLabel>Roles</SelectLabel> */}
+                      <SelectItem>
+                        Mr.
+                      </SelectItem>
+                      {/* <SelectItem>
+                        Mrs.
+                      </SelectItem> */}
+                    </SelectGroup>
+                    
+                  </SelectContent>
+                </Select>
+
+        <div className="w-[21vw]">
         <FormField
           control={form.control}
           name="name"
@@ -112,7 +145,7 @@ export default function EnquiryForm() {
             <FormItem className="required">
               {/* <FormLabel>Full Name</FormLabel> */}
               <FormControl>
-                <Input placeholder="Name" {...field} />
+                <Input placeholder="Name" {...field} placeholderIcon={"/assets/icons/name-icon.png"}/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -120,8 +153,31 @@ export default function EnquiryForm() {
         />
             
         </div>
-
-        <div className="w-[18vw]">
+        </div>
+        <div className="w-full flex gap-[1.2vw] items-center">
+        <FormField
+            control={form.control}
+            name="country"
+            render={({ field }) => (
+                <FormItem className="required">
+                    {/* <FormLabel>Country</FormLabel> */}
+                    <FormControl>
+                        <CountrySelector
+                            id={"country-selector"}
+                            open={isOpen}
+                            onToggle={() => setIsOpen(!isOpen)}
+                            onChange={(value) => {
+                                setCountry(value);
+                                field.onChange(value);
+                            }}
+                            selectedValue={COUNTRIES.find((option) => option.value === country)}
+                        />
+                    </FormControl>
+                    <FormMessage />
+                </FormItem>
+            )}
+        />
+        <div className="w-[21vw]">
 
         <FormField 
             control={form.control}
@@ -130,13 +186,16 @@ export default function EnquiryForm() {
                 <FormItem className="required">
                     {/* <FormLabel>Company Name</FormLabel> */}
                     <FormControl>
-                        <Input placeholder="Number" {...field}/>
+                        <Input placeholder="Mobile Number" {...field} placeholderIcon={"/assets/icons/mobile-icon.png"}/>
                     </FormControl>
                     <FormMessage />
                 </FormItem>
             )}
         />
         </div>
+
+        </div>
+
         {/* Email field */}
         <FormField 
             control={form.control}
@@ -145,13 +204,29 @@ export default function EnquiryForm() {
                 <FormItem className="required">
                     {/* <FormLabel>Business Email</FormLabel> */}
                     <FormControl>
-                        <Input placeholder="Email" {...field} />
+                        <Input placeholder="Email" {...field} placeholderIcon={"/assets/icons/email-icon.png"} />
                     </FormControl>
                     <FormMessage />
                 </FormItem>
             )}
         />
-
+        <Select onValueChange={handleValueChange}>
+                  <SelectTrigger className="w-full state placeholder:text-[2vw] pl-[4vw]" placeholderIcon={"/assets/icons/state-icon.png"}>
+                    <SelectValue placeholder="" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      {/* <SelectLabel>Roles</SelectLabel> */}
+                      <SelectItem>
+                        Interested in
+                      </SelectItem>
+                      {/* <SelectItem>
+                        Mrs.
+                      </SelectItem> */}
+                    </SelectGroup>
+                    
+                  </SelectContent>
+                </Select>
         {/* Company field */}
 
         {/* Country Selector Field */}
@@ -202,7 +277,7 @@ export default function EnquiryForm() {
         /> */}
 
         {/* Submit button */}
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center fadeup">
 
         <Button type="submit" disabled={submitting} className=" black-btn">
         <span data-primary className="flex justify-start w-full">

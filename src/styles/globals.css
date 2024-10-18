@@ -46,7 +46,7 @@ html[data-scroll-orientation="horizontal"] {
 }
 /* Font Family End*/
 body{
-  width: 100%;
+  width: 100vw;
   height: 100%;
   overflow: hidden;
   font-family: "Body", Arial, Helvetica, sans-serif;
@@ -74,6 +74,19 @@ p{
   font-size: 1.2vw;
   line-height: 1.6;
   letter-spacing: 0.05vw;
+}
+
+[data-title-anim],
+[data-para-anim],
+.para-anim,
+.lineWord {
+  font-kerning: none;
+}
+[data-title-anim] .line,
+[data-para-anim] .line,
+.para-anim .line,
+.lineWord .line {
+  overflow: hidden;
 }
 
 /* button css */
@@ -277,6 +290,78 @@ p{
   color: white;
 }
 
+/* service button */
+
+.service-btn{
+  display: inline-flex;
+  align-items: center;
+
+  
+  padding: 0 1.8vw;
+  height: 4.2vw;
+  position: relative;
+  width: fit-content;
+  
+  min-width: 17.2vw;
+  border-radius: 1000px;
+  background:black;
+  color: white;
+  font-size: 1.1vw;
+  font-weight: 500;
+  text-rendering: geometricPrecision;
+}
+.service-btn .btn-circle{
+  clip-path: inset(0.8vw 0.9vw 0.8vw calc(100% - 3.7vw) round 4vw);
+  position: absolute;
+  inset: -1px;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.85vw;
+  z-index: 2;
+  background-color: white;
+  color: #1C1B1A ;
+  transition: all .45s cubic-bezier(.785,.135,.15,.86);
+}
+.service-btn .btn-circle.demo{
+  padding: 0 1.75vw;
+}
+.service-btn .btn-circle-text{
+  padding: 0 0px 0 0;
+  padding-left: -3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.service-btn .btn-icon{
+  width: 0.8vw;
+  height: 0.8vw;
+  overflow: hidden;
+}
+.service-btn .btn-icon .btn-path{
+  transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+  transform-origin: center center;
+}
+.service-btn .btn-icon .btn-path:first-child{
+  transform: translateX(-120%) scale(0);
+}
+.service-btn:hover .btn-icon .btn-path:first-child{
+  transform: translateX(0) scale(1);
+}
+
+.service-btn:hover .btn-icon .btn-path:last-child{
+  transform: translateX(120%) scale(0);
+}
+.service-btn:hover .btn-circle{
+  clip-path: inset(0 round 4vw);
+  background-color: white;
+  color: #1C1B1A;
+}
+.service-btn:hover{
+  border: 2px  solid #1C1B1A;
+
+}
 
 .glassmorphism{
   backdrop-filter: blur(10px);
@@ -324,3 +409,4 @@ p{
 .swiper-scrollbar-drag:hover {
   background-color: #000; /* Darker color on hover */
 }
+

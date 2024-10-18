@@ -9,8 +9,14 @@ import Experience from "@/components/Experience";
 import ShowCase from "@/components/ShowCase";
 import Features from "@/components/Features";
 import Bringing from "@/components/Bringing";
+import { titleAnim , paraAnim , lineAnim , fadeUp} from "@/components/gsapAnimations";
 
 export default function Home() {
+  paraAnim()
+  lineAnim()
+  titleAnim()
+  fadeUp()
+  
   return (
     <>
       <Hero />

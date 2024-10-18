@@ -51,7 +51,7 @@ const Works = () => {
       >
         <div className="container-lg h-full  py-[5%] relative ">
           <div className="w-full flex justify-center relative z-[2]">
-            <h2 className="title-2 text-white w-[60%] text-center ">
+            <h2 data-para-anim className="title-2 text-white w-[60%] text-center ">
               Indulge in Unmatched Elegance in Dubai’s Skyline
             </h2>
           </div>
@@ -66,7 +66,7 @@ const Works = () => {
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300">
+                  <div  className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -109,7 +109,7 @@ const Works = () => {
                     </div>
                   </div>
                 </div>
-                <p className=" text-white">
+                <p data-para-anim className=" text-white">
                   Designed by DMTCA with custom interiors by Versace, Lumiere
                   Haven is carved by the alchemy of light and shadow. The
                   building, a true reflection of its environment, is based on an
@@ -223,8 +223,8 @@ const Works = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[50%] h-full flex ml-[3%] mt-[5vw]">
-                <p className=" text-center text-white">
+              <div className="w-[70%] h-full flex ml-[3%] mt-[5vw]">
+                <p data-para-anim className=" text-white">
                   Lumiere Haven embodies the ultimate marriage of refinement and
                   comfort, extravagance and ease, boldness and elegance. Each of
                   the Villa’s residences is an heirloom for the modern
@@ -335,7 +335,7 @@ const Works = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-white">
+                <p data-para-anim className="text-white">
                   Lumiere Haven’s one-of-a-kind Villa residences are both
                   palatial and personal. Their 360-degree views, exquisite
                   detailing, and majestic scale lend a modern feeling that

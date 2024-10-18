@@ -8,10 +8,10 @@ const About = () => {
       <section className="" id="about">
         <div className="container-lg py-[10%]">
           <div className="w-full flex justify-between">
-            <h2 className="w-[40%] text-[3.8vw] title-2 mt-[-1vw]">
+            <h2 data-para-anim className="w-[40%] text-[3.8vw] title-2 mt-[-1vw]">
               Luxury Living Awaits You In Dubai's Elite Neighborhood
             </h2>
-            <p className="text-[1.3vw] w-[40%] leading-[1.6] tracking-wide">
+            <p data-para-anim className="text-[1.3vw] w-[40%] leading-[1.6] tracking-wide">
               Indulge in the epitome of luxury living with DMTCA, where a world
               of investment opportunities awaits. Whether you're drawn to the
               charm of lavish villas nestled within master communities, the
@@ -21,7 +21,7 @@ const About = () => {
               diverse array of options tailored to your discerning taste.
             </p>
           </div>
-          <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap">
+          <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup">
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image width={50} height={50} src="/assets/about-icon-1.svg" alt="about-icon-1" className="object-contain" />
