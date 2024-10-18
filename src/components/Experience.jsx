@@ -12,8 +12,8 @@ const Experience = () => {
     // Background positions
     const bgPositions = {
       p1: "0 0",
-      p2: "0 25%",
-      p3: "0 50%",
+      p2: "0 50%",
+      p3: "0 100%",
     };
 
     // Mapping project IDs to image sources

@@ -1,135 +1,97 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(useGSAP,ScrollTrigger)
 
 const Footer = () => {
-  useGSAP(()=>{
-    const tl =  gsap.timeline()
-
-    tl.from(".footer-body", {
-      yPercent:100,
-      
-      scrollTrigger:{
-        trigger:"#experience",
-        start:"top 10%",
-        end:"bottom 30%",
-        scrub:true,
-        // markers:true
-
-      }
-    })
-  })
   return (
-    <section id="footer" className="z-[5] bottom-0 fixed footer-body">
+    <section id="footer" className="z-[5] footer-body bg-[#161616]">
       <div className="container-lg w-screen h-full rounded-t-[40px] bg-[#E0D4C6] text-[#1C1B1A]">
-        <div className=" py-[5%] flex flex-col gap-[6vw]">
-          <div className="w-full relative">
-            <div className="flex items-center justify-center gap-[1vw] absolute left-0 top-0">
+        <div className=" pt-[5%] pb-[2%] flex flex-col gap-[6vw]">
+          <div className="w-full relative flex items-center justify-between mb-[2vw]">
+            <div className="flex items-center justify-center gap-[1vw]">
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup ">
-                <div className="relative h-full w-full p-[1vw]">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup ">
                   <Image
+                    width={24}
+                    height={24}
                     src="/assets/icons/facebook.svg"
-                    fill
                     alt="facebook-icon"
                   />
                 </div>
-              </div>
               </Link>
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup">
-                <div className="relative h-full w-full p-[1vw]">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup ">
                   <Image
-                    src="/assets/icons/twitter.svg"
-                    fill
-                    alt="twitter-icon"
-                  />
-                </div>
-              </div>
-              </Link>
-              <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup">
-                <div className="relative h-full w-full p-[1vw]">
-                  <Image
+                    width={24}
+                    height={24}
                     src="/assets/icons/instagram.svg"
-                    fill
                     alt="instagram-icon"
                   />
                 </div>
-              </div>
               </Link>
               <Link href={"#"}>
-              <div className="relative h-[1vw] w-[1vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden fadeup">
-                <div className="relative h-full w-full p-[1vw]">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup ">
                   <Image
+                    width={24}
+                    height={24}
                     src="/assets/icons/linkedin.svg"
-                    fill
                     alt="linkedin-icon"
                   />
                 </div>
-              </div>
               </Link>
-            </div>
-            <div>
-              <Link href={"/"}>
-              <div className=" flex items-center justify-center h-[5vw] w-[15vw] absolute left-[50%] translate-x-[-50%] fadeup">
-                <div className="relative h-full w-full ">
+              <Link href={"#"}>
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup ">
                   <Image
-                    src="/assets/icons/logo-black.svg"
-                    fill
-                    alt="logo-img"
+                    width={24}
+                    height={24}
+                    src="/assets/icons/twitter.svg"
+                    alt="twitter-icon"
                   />
                 </div>
-              </div>
               </Link>
             </div>
-            <div>
+            <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup">
               <Link href={"/"}>
-              <div className="absolute h-[3vw] w-[3vw] flex items-center justify-center bg-[#1C1B1A] rounded-full p-[2vw] overflow-hidden right-0 fadeup">
-                <div className="relative h-full w-full p-[1vw]">
-                  <Image
-                    src="/assets/icons/CaretRight.svg"
-                    fill
-                    alt="CaretRight-icon"
-                  />
-                </div>
-              </div>
+                <Image
+                  width={200}
+                  height={50}
+                  src="/assets/icons/logo-black.svg"
+                  alt="logo-img"
+                />
               </Link>
             </div>
+            <Link href={"/"}>
+              <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup ">
+                <Image
+                  width={24}
+                  height={24}
+                  src="/assets/icons/CaretRight.svg"
+                  alt="CaretRight-icon"
+                />
+              </div>
+            </Link>
           </div>
-          <div className="flex items-center justify-center">
-            <div>
-                <div>
-                    <p data-para-anim className=" text-[3.4vw] font-medium">(+234) 7046336078</p>
-                </div>
-                <div>
-                  <Link href={"mailto:nigeria@dmtca.com"}>
-                    <p data-para-anim className="text-[3.4vw] font-medium">
-                    nigeria@dmtca.com
-                    </p>
-                    </Link>
-                </div>
-            </div>
-
+          <div className="flex items-center flex-col justify-center mb-[2vw]">
+            <Link href="#" className="text-[3.4vw] font-medium text-head leading-none">
+              <span data-para-anim className="">(+234) 7046336078</span>
+            </Link>
+              <Link href="mailto:nigeria@dmtca.com">
+                <p data-para-anim className="text-[3.4vw] text-head font-medium">
+                  nigeria@dmtca.com
+                </p>
+              </Link>
           </div>
-
           <div className="flex items-center justify-between">
             <div className="w-[15%]">
-                <p data-para-anim className="text-[1.1vw]  uppercase ">All rights reserved @2024 dmtca</p>
+              <p className="text-[1.1vw]  uppercase ">All rights reserved @2024 dmtca</p>
             </div>
             <div className="w-[30%]">
-                <p data-para-anim className="text-[1.1vw] leading-[1.2] text-center">315b Akin Ogunlewe Rd, Victoria Island, Lagos & No. 1, Adekunle Owobiyi Close, Ogba, Lagos, Nigeria</p>
+              <p className="text-[1.1vw] leading-[1.2] text-center">315b Akin Ogunlewe Rd, Victoria Island, Lagos & No. 1, Adekunle Owobiyi Close, Ogba, Lagos, Nigeria</p>
             </div>
             <Link href={"#"}>
-            <div>
-                <p data-para-anim className="text-[1.1vw]  uppercase">PRIVACY POLICY</p>
-            </div>
+              <div>
+                <p className="text-[1.1vw]  uppercase">PRIVACY POLICY</p>
+              </div>
             </Link>
-
           </div>
         </div>
       </div>

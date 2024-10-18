@@ -13,8 +13,6 @@ function Cursor() {
             x:clientX,
             y:clientY
          })
-            
-         
         }
         const onmouseenter =(e)=>{
             const slide = e.target

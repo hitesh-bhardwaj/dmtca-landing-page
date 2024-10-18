@@ -1,48 +1,50 @@
 import Image from "next/image";
-import React from "react";
-import PrimaryButton from "./Button/PrimaryButton";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
-  useGSAP(() => {
-    const body = document.body;
-
-    const changeBodyColor = (color) => {
-      gsap.to(body, {
-        backgroundColor: color,
-        duration: 1, // Duration for smooth transition
-        ease: "power2.out",
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      const body = document.body;
+      const changeBodyColor = (color) => {
+        gsap.to(body, {
+          backgroundColor: color,
+          duration: 1, // Duration for smooth transition
+          ease: "power2.out",
+        });
+      };
+      // ScrollTrigger for changing body background color
+      ScrollTrigger.create({
+        trigger: "#works",
+        start: "top 60%",
+        end: "bottom 20%",
+        onEnter: () => changeBodyColor("#161616"),
+        onLeaveBack: () => changeBodyColor("#ffffff"),
       });
-    };
-
-    // ScrollTrigger for changing body background color
-    ScrollTrigger.create({
-      trigger: "#works",
-      start: "top 60%", // When the section enters the viewport
-      end: "bottom 20%", // When the section is about to leave
-      onEnter: () => changeBodyColor("#1C1B1A"), // Replace with your actual secondary color
-      // onLeave: () => changeBodyColor("#ffffff"), // Revert to white when leaving
-      // onEnterBack: () => changeBodyColor("#"), // Reapply when scrolling back
-      onLeaveBack: () => changeBodyColor("#ffffff"), // Revert when scrolling back up
     });
-
-    gsap.to(".work-bg-icon", {
-      scrollTrigger: {
-        trigger: ".work-bg-icon",
-        start: "top top",
-        end: "90% bottom",
-        pin: true,
-        scrub: 2,
-      },
-      defaults: {
-        ease: "none"
-      }
-    });
+    return () => ctx.revert();
   });
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      let imagePin = document.getElementById("work-bg-icon");
+      let triggerSection = document.getElementById("works");
+      ScrollTrigger.create({
+        trigger: imagePin,
+        start: "top 10%",
+        endTrigger: triggerSection,
+        end: "bottom 80%",
+        invalidateOnRefresh: true,
+        pin: imagePin,
+        markers: false,
+      });
+    });
+    return () => ctx.revert();
+  });
+
   return (
     <>
       <section
@@ -57,7 +59,6 @@ const Works = () => {
           </div>
           <div className="w-full h-full flex-col mt-[10vw] relative z-[2]">
             <div className="flex w-full h-full justify-between">
-
               <div className="w-[37vw] h-full flex flex-col gap-[2vw]" data-scroll data-scroll-speed="0.1">
                 <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group">
                   <Image
@@ -66,7 +67,7 @@ const Works = () => {
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div  className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300">
+                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -344,7 +345,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <div className="w-fit h-full absolute top-[10%] left-[50%] translate-x-[-50%] work-bg-icon">
+          <div className="w-fit h-full absolute top-[10%] left-[50%] translate-x-[-50%] work-bg-icon" id="work-bg-icon">
             <div className="w-[50vw] h-[50vw] relative">
               <Image
                 src="/assets/work-bg-logo.svg"

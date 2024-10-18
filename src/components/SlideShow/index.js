@@ -103,7 +103,7 @@ const SlideShow = () => {
 
     return (
         <section className="w-screen h-screen overflow-hidden" id="features-slideshow">
-            <div className="relative w-full h-full" data-scroll data-scroll-speed="-0.7">
+            <div className="relative w-full h-full" data-scroll data-scroll-speed="-0.3">
                 <div className="w-full h-full absolute z-10 top-0 left-0 bottom-0 right-0 grid place-items-end px-16 py-10 pointer-events-none">
                     <nav className="flex gap-4 pointer-events-auto">
                         <button

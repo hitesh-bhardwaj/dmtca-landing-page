@@ -1,36 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(useGSAP, ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger)
 
 const ShowCase = () => {
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#showcase",
-        start: "top 40%",
-        end: "+=2000 bottom",
-        scrub: 0.25,
-        // markers: true,
-      }
-    })
-    tl.to(".video-block", {
-      width: "90vw",
-      height: "35vw",
-      yPercent: 35,
-      right: "5%",
-      ease: "power1.out",
-      duration: 5
-    })
-    tl.to(".inner-detail", {
-      opacity: 1,
-      duration: 2
-    })
-  })
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#showcase",
+          start: "top 40%",
+          end: "+=2000 bottom",
+          scrub: 0.25,
+        }
+      })
+      tl.to(".video-block", {
+        width: "90vw",
+        height: "35vw",
+        yPercent: 35,
+        right: "5%",
+        ease: "power1.out",
+        duration: 5
+      })
+      tl.to(".inner-detail", {
+        opacity: 1,
+        duration: 2
+      })
+    });
+    return () => ctx.revert();
+  });
   return (
     <>
-      <section id="showcase" className="py-[10%]">
+      <section id="showcase" className="py-[10%] bg-white relative z-[5]" data-scroll data-scroll-speed="-0.3">
         <div className="container-lg h-full relative">
           <div className="flex w-full gap-[10vw]">
 

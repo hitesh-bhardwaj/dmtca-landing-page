@@ -5,17 +5,17 @@ import SlideShow from "@/components/SlideShow";
 import Service from "@/components/Service";
 import Project from "@/components/Project";
 import Footer from "@/components/Footer";
-import Experience from "@/components/Experience";
 import ShowCase from "@/components/ShowCase";
-import Features from "@/components/Features";
 import Bringing from "@/components/Bringing";
 import { titleAnim , paraAnim , lineAnim , fadeUp} from "@/components/gsapAnimations";
+import Gallery from "@/components/Gallery";
+import ProjectHover from "@/components/ProjectHover";
 
 export default function Home() {
-  paraAnim()
-  lineAnim()
-  titleAnim()
-  fadeUp()
+  paraAnim();
+  lineAnim();
+  titleAnim();
+  fadeUp();
   
   return (
     <>
@@ -26,9 +26,9 @@ export default function Home() {
       <Works/>
       <Project/>
       <ShowCase/>
-      <Features/>
+      <Gallery />
       <Bringing/>
-      <Experience/>
+      <ProjectHover />
       <Footer/>
     </>
   )

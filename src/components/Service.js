@@ -8,7 +8,6 @@ const ServiceButton = ({link, btnText}) => {
             <span data-primary className="btn-text">
                 {btnText}
             </span>
-                
             <div aria-hidden="true" className="btn-circle">
                 <div className="btn-circle-text ml-[-2px]">
                     {btnText}
@@ -22,10 +21,6 @@ const ServiceButton = ({link, btnText}) => {
     )
 }
 
-
-
-
-/* eslint-disable @next/next/no-img-element */
 export default function Service() {
     return (
         <>

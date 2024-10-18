@@ -55,6 +55,10 @@ body{
   color: #1C1B1A;
 }
 
+[data-para-anim], [data-title-anim] {
+  font-kerning: none;
+}
+
 .text-body{
   font-family: "Body";
 }
@@ -154,17 +158,13 @@ p{
 
 
 /* black button */
-
 .black-btn{
   display: inline-flex;
   align-items: center;
-
-  
   padding: 0 1.8vw;
   height: 4.2vw;
   position: relative;
   width: fit-content;
-  
   min-width: 14vw;
   border-radius: 1000px;
   background:black;
@@ -220,17 +220,14 @@ p{
   background-color: white;
   color: #1C1B1A;
 }
-.black-btn:hover{
+/* .black-btn:hover{
   border: 1px  solid #1C1B1A;
-
-}
+} */
 
 /* work button css */
 .work-btn .btn{
   display: inline-flex;
   align-items: center;
-
-  
   padding: 0 1vw;
   height: 3vw;
   position: relative;
@@ -295,13 +292,10 @@ p{
 .service-btn{
   display: inline-flex;
   align-items: center;
-
-  
   padding: 0 1.8vw;
   height: 4.2vw;
   position: relative;
   width: fit-content;
-  
   min-width: 17.2vw;
   border-radius: 1000px;
   background:black;
@@ -309,11 +303,12 @@ p{
   font-size: 1.1vw;
   font-weight: 500;
   text-rendering: geometricPrecision;
+  border: 1px  solid #1C1B1A;
 }
 .service-btn .btn-circle{
-  clip-path: inset(0.8vw 0.9vw 0.8vw calc(100% - 3.7vw) round 4vw);
+  clip-path: inset(0.75vw 1vw 0.75vw calc(100% - 3.6vw) round 4vw);
   position: absolute;
-  inset: -1px;
+  inset: 0px;
   border-radius: 1000px;
   display: flex;
   align-items: center;
@@ -328,7 +323,7 @@ p{
 }
 .service-btn .btn-circle-text{
   padding: 0 0px 0 0;
-  padding-left: -3px;
+  padding-left: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -358,10 +353,9 @@ p{
   background-color: white;
   color: #1C1B1A;
 }
-.service-btn:hover{
+/* .service-btn:hover{
   border: 2px  solid #1C1B1A;
-
-}
+} */
 
 .glassmorphism{
   backdrop-filter: blur(10px);
