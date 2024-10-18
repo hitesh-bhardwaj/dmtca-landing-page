@@ -13,9 +13,9 @@ import Bringing from "@/components/Bringing";
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <About/>
-      <SlideShow/>
+      <Hero />
+      <About />
+      <SlideShow />
       <Service />
       <Works/>
       <Project/>

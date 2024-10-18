@@ -119,7 +119,7 @@ const Works = () => {
                 </p>
               </div>
 
-              <div className="w-[25vw] h-fit relative mr-[8%] mt-[30%] relative z-[4]" data-scroll data-scroll-speed="-0.1">
+              <div className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4]" data-scroll data-scroll-speed="-0.1">
                 <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group">
                   <Image
                     src="/assets/work-img-1.png"

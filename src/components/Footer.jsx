@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section id="footer" className="z-10 relative" data-scroll data-scroll-speed="-0.1">
+    <section id="footer" className="z-10 relative">
       <div className="container-lg w-screen h-full rounded-t-[40px] bg-[#E0D4C6] text-[#1C1B1A]">
         <div className=" py-[5%] flex flex-col gap-[6vw]">
           <div className="w-full relative">

@@ -430,7 +430,7 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2]">Stone Facade</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2]">Stone Facade</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
