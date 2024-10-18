@@ -104,7 +104,7 @@ const Bringing = () => {
           </div>
         </div>
         <div
-                className='h-[13vw] w-[20vw] rounded-[20px] cover overflow-hidden absolute top-[35%] translate-y-[-35%] right-[10%] video'
+                className='h-[13vw] w-[20vw] rounded-[20px] overflow-hidden absolute top-[35%] translate-y-[-35%] right-[10%] video'
                 ref={videoRef}
               >
                 <video

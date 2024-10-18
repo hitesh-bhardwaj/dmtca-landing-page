@@ -230,7 +230,7 @@ p{
   font-weight: 500;
   text-rendering: geometricPrecision;
 }
-.btn .btn-circle{
+.work-btn .btn .btn-circle{
   clip-path: inset(0.4vw 0.5vw 0.4vw calc(100% - 2.7vw) round 4vw);
   position: absolute;
   inset: -1px;
