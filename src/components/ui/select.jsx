@@ -25,8 +25,8 @@ const SelectTrigger = React.forwardRef(({ className, children,placeholderIcon, .
     )}
     {...props}>
       {placeholderIcon&&(
-        <span className="absolute left-[12%]">
-          <Image src={placeholderIcon} alt="form-icons" width={20} height={20}/>
+        <span className="absolute left-[10.5%]">
+          <Image src={placeholderIcon} alt="form-icons" width={25} height={25}/>
         </span>
       )}
     {children}

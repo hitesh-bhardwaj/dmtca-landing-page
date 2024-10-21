@@ -100,7 +100,7 @@ export default function EnquiryForm() {
                   <FormItem className="required">
                     {/* <FormLabel>Full Name</FormLabel> */}
                     <FormControl>
-                      <Input placeholder="Name" {...field} placeholderIcon={"/assets/icons/name-icon.png"} />
+                      <Input placeholder="Name" {...field} placeholderIcon={"/assets/icons/name-icon.svg"} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -141,7 +141,7 @@ export default function EnquiryForm() {
                   <FormItem className="required">
                     {/* <FormLabel>Company Name</FormLabel> */}
                     <FormControl>
-                      <Input placeholder="Mobile Number" {...field} placeholderIcon={"/assets/icons/mobile-icon.png"} />
+                      <Input placeholder="Mobile Number" {...field} placeholderIcon={"/assets/icons/mobile-icon.svg"} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -159,14 +159,14 @@ export default function EnquiryForm() {
               <FormItem className="required">
                 {/* <FormLabel>Business Email</FormLabel> */}
                 <FormControl>
-                  <Input placeholder="Email" {...field} placeholderIcon={"/assets/icons/email-icon.png"} />
+                  <Input placeholder="Email" {...field} placeholderIcon={"/assets/icons/email-icon.svg"} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
           <Select onValueChange={handleValueChange}>
-            <SelectTrigger className="w-full state placeholder:text-[2vw] pl-[4vw]" placeholderIcon={"/assets/icons/state-icon.png"}>
+            <SelectTrigger className="w-full state placeholder:text-[2vw] pl-[4vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
               <SelectValue placeholder="" />
             </SelectTrigger>
             <SelectContent>
