@@ -1,6 +1,5 @@
 import * as React from "react"
 import {
-  CaretSortIcon,
   CheckIcon,
   ChevronDownIcon,
   ChevronUpIcon,
@@ -20,18 +19,18 @@ const SelectTrigger = React.forwardRef(({ className, children,placeholderIcon, .
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-[3.2vw] rounded-full bg-white w-[5vw] items-center justify-between whitespace-nowrap px-6 py-2  text-[1.2vw] shadow-sm ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "flex h-[3.2vw] rounded-full bg-white w-[5vw] items-center justify-between focus:outline-none whitespace-nowrap px-4 py-2 text-[1.2vw] shadow-sm ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:ring-0 autofill:ring-0",
       className
     )}
     {...props}>
       {placeholderIcon&&(
-        <span className="absolute left-[10.5%]">
+        <span className="absolute left-[2.5vw]">
           <Image src={placeholderIcon} alt="form-icons" width={25} height={25}/>
         </span>
       )}
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDownIcon className="w-[2vw] h-[1.2vw]"/>
+      <ChevronDownIcon className="w-[1.4vw] h-[1.4vw]"/>
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -63,7 +62,7 @@ const SelectContent = React.forwardRef(({ className, children, position = "poppe
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        "relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border border-neutral-200 bg-white text-neutral-950 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50",
+        "relative z-50 max-h-64 min-w-[8rem] overflow-hidden rounded-xl border border-neutral-200 bg-white text-neutral-950 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50",
         position === "popper" &&
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         className
@@ -94,7 +93,7 @@ const SelectItem = React.forwardRef(({ className, children, ...props }, ref) => 
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full  cursor-default select-none items-center py-1.5 pl-2 pr-8 text-[1.25vw] outline-none focus:bg-neutral-100 focus:text-neutral-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-neutral-800 dark:focus:text-neutral-50",
+      "relative flex w-full cursor-default select-none items-center py-1.5 text-[1.2vw] outline-none focus:bg-neutral-100 focus:text-neutral-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-neutral-800 dark:focus:text-neutral-50",
       className
     )}
     {...props}>

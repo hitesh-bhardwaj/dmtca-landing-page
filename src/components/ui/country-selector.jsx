@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { COUNTRIES } from "@/lib/countries";
-import { ChevronDown, SearchIcon } from "lucide-react";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { SearchIcon } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function CountrySelector({
@@ -33,37 +35,33 @@ export default function CountrySelector({
       <div className=" relative">
         <button
           type="button"
-          className="relative h-[3.2vw] w-[7vw] rounded-full border-[#a1a1a1] bg-[#fdfdfd] px-3 py-2 lg:text-[1vw] text-[4vw] focus:outline-none placeholder:text-gray-300 focus:outline-none focus:border-primary disabled:cursor-not-allowed disabled:opacity-50"
+          className="relative h-[3.2vw] w-[7vw] rounded-full bg-[#fdfdfd] px-5 py-2 lg:text-[1vw] text-[4vw] focus:outline-none placeholder:text-gray-300 focus:border-primary disabled:cursor-not-allowed disabled:opacity-50"
           aria-haspopup="listbox"
           aria-expanded="true"
           aria-labelledby="listbox-label"
           onClick={onToggle}
           disabled={disabled}
         >
-          <span className="truncate flex items-center ml-[1vw]">
+          <span className="truncate flex items-center">
             <img
               alt={`${selectedValue.value}`}
               src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedValue.value}.svg`}
-              className={"inline mr-3 relative lg:h-4 md:h-6 h-4 rounded-sm"}
+              className={"inline mr-2 relative lg:h-4 md:h-6 h-4 rounded-sm"}
             />
-            {/* <span className="pl-3 relative after:left-0 after:top-0 after:absolute after:block after:h-full after:w-[2px] after:bg-gray-200 after:rounded-2xl">
-                {selectedValue.title}
-            </span> */}
           </span>
           <span
-            className={`absolute inset-y-0 right-0 flex items-center pr-[1.5vw] pointer-events-none ${
+            className={`absolute inset-y-0 right-0 flex items-center pr-[1vw] pointer-events-none ${
               disabled ? "hidden" : ""
             }`}
           >
-            <ChevronDown />
-          
+            <ChevronDownIcon className="w-[1.4vw] h-[1.4vw]"/>
           </span>
         </button>
 
           {open && (
             <ul
               data-lenis-prevent
-              className="absolute z-10 mt-2 w-full bg-white shadow-lg max-h-80 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+              className="absolute z-10 mt-2 w-[12vw] bg-white shadow-lg max-h-80 rounded-[20px] text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
               tabIndex={-1}
               role="listbox"
               aria-labelledby="listbox-label"
@@ -71,7 +69,7 @@ export default function CountrySelector({
             >
              <div className="sticky top-0 z-10 bg-white">
                 <li className=" text-gray-900 cursor-default select-none relative py-2 px-3 flex items-center gap-x-4">
-                    <SearchIcon className="text-gray-400 h-5"/>
+                    <SearchIcon className="text-gray-400 h-6"/>
                     <input
                         type="search"
                         name="search"

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container-lg w-screen h-full rounded-t-[40px] bg-[#E0D4C6] text-[#1C1B1A] mobile:py-[10%]">
         <div className=" pt-[5%] pb-[2%] flex flex-col gap-[6vw]">
           <div className="w-full relative flex items-center justify-between mb-[2vw] mobile:flex-col mobile:gap-[7vw]">
-          <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup hidden mobile:block mobile:ml-0 mobile:w-[30vw]">
+          <div className="items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup hidden mobile:block mobile:ml-0 mobile:w-[30vw]">
               <Link href={"/"}>
                 <Image
                   width={200}

@@ -81,14 +81,14 @@ if(globalThis.innerWidth>541){
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"0.1"}
               >
-                <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group mobile:w-[90vw] mobile:h-[70vw]">
+                <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw]">
                   <Image
                     src="/assets/work-img-5.png"
                     alt="work-img-5"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
+                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw]">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -144,14 +144,14 @@ if(globalThis.innerWidth>541){
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"-0.1"}
               >
-                <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group mobile:w-[90vw] mobile:h-[80vw]">
+                <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group mobile:w-[90vw] mobile:h-[80vw] mobile:p-[4vw]">
                   <Image
                     src="/assets/work-img-1.png"
                     alt="work-img-1"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
+                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw]">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -201,14 +201,14 @@ if(globalThis.innerWidth>541){
               data-scroll
               data-scroll-speed={isMobile?undefined:"-0.1"}
             >
-              <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group mobile:w-[90vw] mobile:h-[80vw] mobile:ml-0">
+              <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group mobile:w-[90vw] mobile:h-[80vw] mobile:ml-0 mobile:p-[4vw]">
                 <Image
                   src="/assets/work-img-2.png"
                   alt="work-img-2"
                   className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   fill
                 />
-                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
+                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw]">
                   Living room
                   <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                     <div>
@@ -251,13 +251,13 @@ if(globalThis.innerWidth>541){
                   </div>
                 </div>
               </div>
-              <div className="w-[70%] h-full flex ml-[3%] mt-[5vw] mobile:w-full mobile:ml-0">
-                <p data-para-anim className=" text-white">
+              <div className="w-[40%] h-full flex ml-[3%] mt-[5vw] mobile:w-full mobile:ml-0">
+                <p className="fadeup text-white">
                   53 West 53 offers an extraordinary living experience, with
                   residences boasting panoramic views of the city skyline and
                   the Arabian Gulf. Each suite is designed with spacious
                   interiors, ultra-luxury amenities, and modern craftsmanship
-                  that reflects your elite status
+                  that reflects your elite status.
                 </p>
               </div>
             </div>
@@ -266,14 +266,14 @@ if(globalThis.innerWidth>541){
               data-scroll
               data-scroll-speed={isMobile?undefined:"0.1"}
             >
-              <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group mobile:w-[90vw] mobile:h-[70vw]">
+              <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw]">
                 <Image
                   src="/assets/work-img-4.png"
                   alt="work-img-4"
                   className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   fill
                 />
-                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
+                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw]">
                   Living room
                   <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                     <div>
@@ -321,7 +321,7 @@ if(globalThis.innerWidth>541){
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"-0.1"}
               >
-                <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group mobile:w-[90vw] mobile:h-[70vw]">
+                <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw]">
                   <Image
                     src="/assets/work-img-3.png"
                     alt="work-img-3"
@@ -387,8 +387,8 @@ if(globalThis.innerWidth>541){
           >
             <div className="w-[50vw] h-[50vw] relative mobile:w-[90vw] mobile:h-[90vw]">
               <Image
-                src="/assets/work-bg-logo.svg"
-                alt="work-logo"
+                src="/assets/emaar-logo.svg"
+                alt="emaar-logo"
                 fill
                 className="object-contain"
               />

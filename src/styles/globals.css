@@ -352,17 +352,12 @@ p{
   background-color: white;
   color: #1C1B1A;
 }
-/* .service-btn:hover{
-  border: 2px  solid #1C1B1A;
-} */
-
 .glassmorphism{
   backdrop-filter: blur(10px);
 }
 
 /* swiper css */
 .swiper {
-  width: 90vw;
   height: 33vw;
   padding-bottom: 2vw !important;
 }

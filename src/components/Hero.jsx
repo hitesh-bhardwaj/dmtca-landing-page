@@ -11,10 +11,10 @@ const Hero = () => {
         <div className="w-screen h-[130vw] relative overflow-hidden container-lg pt-[3%] mobile:h-[120vh] mobile:pt-[7%]">
           <Link href={"#"} className="block fadeup">
             <Image quality={100}
-              src="/assets/logo.png"
+              src="/assets/53-west-logo.svg"
               alt="logo-img"
-              width={170}
-              height={170}
+              width={160}
+              height={160}
               className="object-contain mobile:w-[30vw]" />
           </Link>
 

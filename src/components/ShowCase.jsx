@@ -91,7 +91,7 @@ const ShowCase = () => {
     >
       <div className="container-lg h-full relative">
         <div className="flex w-full gap-[10vw] mobile:flex-col">
-          <h2 data-para-anim className="w-[40%] title-2 mobile:w-full">
+          <h2 data-para-anim className="w-[50%] title-2 mobile:w-full">
             Find Opulence in Dubai’s Finest Location
           </h2>
           <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] mobile:w-[90vw] mobile:h-[70vw] mobile:static mobile:rounded-[4vw]">

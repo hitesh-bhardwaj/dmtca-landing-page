@@ -45,7 +45,7 @@ export default function Project() {
       <section id='project' className='pt-[10%] pb-[20%] mobile:py-[20%] w-screen overflow-hidden'>
         <div className='container-lg'>
           <h2 data-para-anim className='title-2'>
-            Interior by Versace
+            A World of Refinement
           </h2>
           <div className='w-full h-[1px] bg-black/30 my-[4vw] lineDraw mobile:my-[8vw]'></div>
         <div className='w-full flex justify-end mb-[5vw]'>
@@ -54,7 +54,7 @@ export default function Project() {
               <BlackButton btnText={"Enquire Now"} link={"#"} />
             </div>
             <p data-para-anim className='w-[60%] mobile:w-full'>
-              This project integrates fashion, luxury, and lifestyle to offer a global experience of the Versace world. The collection speaks of know-how, creativity, and pure design, echoing the revered identity of Versace.
+              Immerse yourself in the stylish allure of 53 West 53, where every corner exudes sophistication. This not just a residence, it’s a mark of distinction that embodies the luxurious lifestyle you&apos;ve always craved.
             </p>
           </div>
         </div>

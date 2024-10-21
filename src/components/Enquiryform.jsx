@@ -74,21 +74,30 @@ export default function EnquiryForm() {
           {/* Form fields */}
           {/* Name field */}
           <div className="w-full flex gap-[1.2vw] items-center">
-            <Select onValueChange={handleValueChange}>
+            <Select onValueChange={handleValueChange} >
               <SelectTrigger className="w-[7vw] placeholder:text-[2vw]">
-                <SelectValue placeholder="" />
+                <SelectValue placeholder="Title" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  {/* <SelectLabel>Roles</SelectLabel> */}
-                  <SelectItem>
-                    Mr.
-                  </SelectItem>
-                  {/* <SelectItem>
-                        Mrs.
-                      </SelectItem> */}
+                  <SelectLabel>Title</SelectLabel>
+                  <SelectItem value="Mr.">Mr.</SelectItem>
+                  <SelectItem value="Miss">Miss</SelectItem>
+                  <SelectItem value="Mrs.">Mrs.</SelectItem>
+                  <SelectItem value="Ms.">Ms.</SelectItem>
+                  <SelectItem value="Mx">Mx</SelectItem>
+                  <SelectItem value="Dr.">Dr.</SelectItem>
+                  <SelectItem value="Prof.">Prof.</SelectItem>
+                  <SelectItem value="Sir">Sir</SelectItem>
+                  <SelectItem value="Lord">Lord</SelectItem>
+                  <SelectItem value="Lady">Lady</SelectItem>
+                  <SelectItem value="H R H">H R H</SelectItem>
+                  <SelectItem value="H E">H E</SelectItem>
+                  <SelectItem value="H H">H H</SelectItem>
+                  <SelectItem value="Sheikh">Sheikh</SelectItem>
+                  <SelectItem value="Sheikha">Sheikha</SelectItem>
+                  <SelectItem value="Dipl.">Dipl.</SelectItem>
                 </SelectGroup>
-
               </SelectContent>
             </Select>
 
@@ -166,18 +175,14 @@ export default function EnquiryForm() {
             )}
           />
           <Select onValueChange={handleValueChange}>
-            <SelectTrigger className="w-full state placeholder:text-[2vw] pl-[4vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
+            <SelectTrigger className="w-full state placeholder:text-[2vw] pl-[3vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
               <SelectValue placeholder="" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                {/* <SelectLabel>Roles</SelectLabel> */}
                 <SelectItem>
                   Interested in
                 </SelectItem>
-                {/* <SelectItem>
-                        Mrs.
-                      </SelectItem> */}
               </SelectGroup>
 
             </SelectContent>

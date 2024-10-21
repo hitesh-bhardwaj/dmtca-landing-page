@@ -86,7 +86,7 @@ const Gallery = () => {
 
     // Animate the current last image out
     if (currentLastImg) {
-      gsap.to(currentLastImg, { duration: 1, scale: 1.5, left: '50%' });
+      gsap.to(currentLastImg, { duration: 1, scale: 1.2, left: '100%' });
     }
 
     // Create the new image element
@@ -108,7 +108,7 @@ const Gallery = () => {
   const renderHeadings = () => {
 
     return (
-      <div className="w-full grid grid-cols-2 gap-x-[42%] justify-between mobile:flex mobile:flex-col mobile:order-1 mobile:gap-[5vw] mobile:mt-[12vw]">
+      <div className="w-full mt-[10vw] grid grid-cols-2 gap-x-[42%] justify-between mobile:flex mobile:flex-col mobile:order-1 mobile:gap-[5vw] mobile:mt-[12vw]">
         {features.map((feature, index) => (
           <div
             key={index}

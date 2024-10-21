@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
@@ -7,8 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Bringing = () => {
   const BringingRef = useRef(null);
-  const videoRef = useRef(null); // Ref for the actual video element
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false); // State to track video loading
   
   if(globalThis.innerWidth > 541){
 
@@ -75,49 +74,6 @@ const Bringing = () => {
     });
   }
 
-  // Lazy loading the video using IntersectionObserver
-  useEffect(() => {
-    const videoElement = videoRef.current; // Ensure the actual video element is targeted
-
-    if (videoElement) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Load the video when it comes into view
-              if (videoElement.play) {
-                videoElement.play(); // Ensure the element has a play method
-              }
-              observer.unobserve(videoElement); // Stop observing once the video starts playing
-            }
-          });
-        },
-        { threshold: 0.5 } // Adjust the threshold as per your need
-      );
-
-      observer.observe(videoElement);
-
-      // Cleanup the observer on component unmount
-      return () => observer.disconnect();
-    }
-  }, []);
-
-  // Event listener to detect when the video is loaded
-  useEffect(() => {
-    const videoElement = videoRef.current;
-
-    if (videoElement) {
-      const handleLoadedData = () => {
-        setIsVideoLoaded(true); // Set the state when the video is loaded
-      };
-
-      videoElement.addEventListener("loadeddata", handleLoadedData);
-
-      return () => {
-        videoElement.removeEventListener("loadeddata", handleLoadedData);
-      };
-    }
-  }, []);
 
   return (
     <section id='bringing' className='overflow-hidden' ref={BringingRef}>
@@ -137,23 +93,14 @@ const Bringing = () => {
                 className='h-full w-[20vw] relative rounded-[20px] mobile:absolute mobile:top-[30%] mobile:w-[90vw]'
               >
                 <div className="w-[20vw] h-[10vw] absolute z-[100] top-0 rounded-xl overflow-hidden video mobile:w-[90vw] mobile:h-[70vw]">
-                  {/* Show poster until the video is loaded */}
-                  {!isVideoLoaded && (
-                    <img
-                      src="/assets/video-poster-2.webp"
-                      alt="Video Poster"
-                      className="w-full h-full object-cover"
-                    />
-                  )}
                   <video
-                    ref={videoRef} // Ref points to the video element
                     src='/videos/bringing.mp4'
                     poster="/assets/video-poster-2.webp"
                     muted
                     loop
                     playsInline
                     loading="lazy"
-                    className={`w-full h-full object-cover transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    className={`w-full h-full object-cover transition-opacity duration-500`}
                   />
                 </div>
               </div>
@@ -165,7 +112,7 @@ const Bringing = () => {
             </div>
           </div>
           <div className='w-[70%] mt-[0vw] mobile:mt-[85vw] mobile:w-full'>
-            <p className='text-body text-center mobile:text-start'>
+            <p className='text-body text-center mobile:text-start text-4'>
               At DMTCA, we artfully combine design brilliance, innovative technology, and human insight
               to deliver unparalleled real estate experiences. Our approach goes beyond conventional sales,
               turning properties into coveted lifestyle statements. We understand that discerning investors
