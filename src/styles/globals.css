@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import url("./slideshow.css");
-/* @import url('./servicesPannel.css'); */
 @import url('./services.css');
 
 @layer utilities {
@@ -167,16 +166,17 @@ p{
   width: fit-content;
   min-width: 14vw;
   border-radius: 1000px;
-  background:black;
+  background: #1C1B1A;
   color: white;
   font-size: 1.1vw;
   font-weight: 500;
   text-rendering: geometricPrecision;
+  border: 1px solid #1C1B1A;
 }
 .black-btn .btn-circle{
-  clip-path: inset(0.8vw 0.9vw 0.8vw calc(100% - 3.7vw) round 4vw);
+  clip-path: inset(0.8vw 1vw 0.8vw calc(100% - 3.6vw) round 4vw);
   position: absolute;
-  inset: -1px;
+  inset: 0px;
   border-radius: 1000px;
   display: flex;
   align-items: center;
@@ -220,9 +220,6 @@ p{
   background-color: white;
   color: #1C1B1A;
 }
-/* .black-btn:hover{
-  border: 1px  solid #1C1B1A;
-} */
 
 /* work button css */
 .work-btn .btn{
@@ -298,12 +295,12 @@ p{
   width: fit-content;
   min-width: 17.2vw;
   border-radius: 1000px;
-  background:black;
-  color: white;
+  background: white;
+  color: 1C1B1A;
   font-size: 1.1vw;
   font-weight: 500;
   text-rendering: geometricPrecision;
-  border: 1px  solid #1C1B1A;
+  border: 1px solid #1C1B1A;
 }
 .service-btn .btn-circle{
   clip-path: inset(0.75vw 1vw 0.75vw calc(100% - 3.6vw) round 4vw);
@@ -314,15 +311,15 @@ p{
   align-items: center;
   padding: 0 1.85vw;
   z-index: 2;
-  background-color: white;
-  color: #1C1B1A ;
+  background-color: #1C1B1A;
+  color: white;
   transition: all .45s cubic-bezier(.785,.135,.15,.86);
 }
 .service-btn .btn-circle.demo{
   padding: 0 1.75vw;
 }
 .service-btn .btn-circle-text{
-  padding: 0 0px 0 0;
+  padding: 0;
   padding-left: 0px;
   display: flex;
   justify-content: space-between;
@@ -350,12 +347,12 @@ p{
 }
 .service-btn:hover .btn-circle{
   clip-path: inset(0 round 4vw);
-  background-color: white;
-  color: #1C1B1A;
 }
-/* .service-btn:hover{
-  border: 2px  solid #1C1B1A;
-} */
+.service-btn:hover{
+  border-color: white;
+  transition: all .25s cubic-bezier(.785,.135,.15,.86);
+  transition-delay: 0.25s;
+}
 
 .glassmorphism{
   backdrop-filter: blur(10px);
@@ -363,7 +360,7 @@ p{
 
 /* swiper css */
 .swiper {
-  width: 90vw;
+  /* width: 90vw; */
   height: 33vw;
   padding-bottom: 2vw !important;
 }
@@ -386,21 +383,19 @@ p{
   object-fit: cover;
 }
 .swiper-scrollbar {
-  background-color: rgba(0, 0, 0); /* Background of scrollbar */
-  height: 10px; /* Height of scrollbar */
+  height: 10px; 
   border-radius: 10px;
-   /* Rounded edges */
 }
 
 .swiper-scrollbar-drag {
-  background-color: #000000 !important; /* Color of the draggable handle */
-  border-radius: 30px; /* Rounded edges for the handle */
-  height: 100%; /* Full height of the bar */
-  transition: background-color 0.3s ease;
-  /* width: 10vw !important; */
+  background-color: #3d3c3c !important; 
+  border-radius: 30px; 
+  height: 100%; 
 }
 
-.swiper-scrollbar-drag:hover {
-  background-color: #000; /* Darker color on hover */
-}
 
+
+/* ClipPath Hover Section */
+.circle-clip{
+  clip-path: circle(100.0% at 0 100%);
+}

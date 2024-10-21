@@ -1,17 +1,12 @@
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-// import Link from "next/link";
 import { useState } from 'react';
-// import axios from 'axios';
-import { Button } from "@/components/ui/button";
 
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import {
@@ -28,6 +23,7 @@ import { Input } from "@/components/ui/input";
 // import CountrySelector from "../ui/country-selector";
 import { COUNTRIES } from "@/lib/countries";
 import CountrySelector from "./ui/country-selector";
+import BlackButton from "./Button/BlackButton";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
@@ -48,7 +44,6 @@ export default function EnquiryForm() {
   const [selectedRole, setSelectedRole] = useState("");
 
   const form = useForm({
-    // resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -191,20 +186,12 @@ export default function EnquiryForm() {
 
           {/* Submit button */}
           <div className="w-full flex justify-center fadeup">
-            <Button type="submit" disabled={submitting} className="black-btn">
-              <span data-primary className="flex justify-start w-full">
-                Submit
-              </span>
-              <div aria-hidden="true" className="btn-circle">
-                <div className="btn-circle-text">
-                  Submit
-                  <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon">
-                    <path data-v-f4363f2a fillRule="evenodd" clipRule="evenodd" d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z" className="btn-path fill-current" />
-                    <path data-v-f4363f2a fillRule="evenodd" clipRule="evenodd" d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z" className="btn-path fill-current" />
-                  </svg>
-                </div>
-              </div>
-            </Button>
+            <BlackButton 
+              link={"#"}
+              btnText={"Submit"}
+              type="submit"
+              disbaled
+            />
             {submissionError && <p className="text-red-500">{submissionError}</p>}
             {submissionSuccess && <p className="text-green-500">Email sent successfully!</p>}
           </div>

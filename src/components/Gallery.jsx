@@ -86,14 +86,14 @@ const Gallery = () => {
 
     // Animate the current last image out
     if (currentLastImg) {
-      gsap.to(currentLastImg, { duration: 1, scale: 1.5, top: '50%' });
+      gsap.to(currentLastImg, { duration: 1, scale: 1.5, left: '50%' });
     }
 
     // Create the new image element
     const newImg = document.createElement('img');
     newImg.src = imgSrc;
     newImg.style.position = 'absolute';
-    newImg.style.top = '-100%';
+    newImg.style.left = '-100%';
     newImg.style.width = '100%';
     newImg.style.height = '100%';
     newImg.style.objectFit = 'cover';
@@ -102,7 +102,7 @@ const Gallery = () => {
     previewContainer.appendChild(newImg);
 
     // Animate the new image in
-    gsap.to(newImg, { duration: 1, top: '0%' });
+    gsap.to(newImg, { duration: 1, left: '0%' });
   };
 
   const renderHeadings = () => {

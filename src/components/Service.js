@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import BlackButton from "./Button/BlackButton";
 import Link from "next/link";
 
 const ServiceButton = ({link, btnText}) => {

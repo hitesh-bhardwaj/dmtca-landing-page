@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import "@/styles/globals.css";
 import Head from 'next/head';
-import Cursor from '@/components/Cursor';
 
 export default function App({ Component, pageProps }) {
 
@@ -23,7 +22,6 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="DMTCA - Real Estate Landing Page"></meta>
       </Head>
       <Component {...pageProps} />
-      <Cursor/>
     </>
   )
 }

@@ -9,8 +9,8 @@ const ShowCase = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#showcase",
-          start: "top 40%",
-          end: "+=2000 bottom",
+          start: "top 60%",
+          end: "bottom bottom",
           scrub: 0.25,
         }
       })
@@ -20,11 +20,12 @@ const ShowCase = () => {
         yPercent: 35,
         right: "5%",
         ease: "power1.out",
+        borderRadius: "50px",
         duration: 5
       })
       tl.to(".inner-detail", {
         opacity: 1,
-        duration: 2
+        duration: 1
       })
     });
     return () => ctx.revert();
@@ -38,7 +39,7 @@ const ShowCase = () => {
             <h2 data-para-anim className="w-[40%] title-2">
               Lumière Haven- A luxury hillside home
             </h2>
-            <div className="w-[25vw] h-[25vw] overflow-hidden rounded-full video-block absolute right-[10%]">
+            <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%]">
               <video
                 id="showcase-video"
                 poster="/assets/assets/video-poster.webp"

@@ -78,7 +78,6 @@ const Works = () => {
                           <span data-primary className="btn-text normal-case ">
                             Learn more
                           </span>
-
                           <div aria-hidden="true" className="btn-circle">
                             <div className="btn-circle-text normal-case">
                               Learn more
@@ -111,12 +110,12 @@ const Works = () => {
                   </div>
                 </div>
                 <p data-para-anim className=" text-white">
-                  Designed by DMTCA with custom interiors by Versace, Lumiere
-                  Haven is carved by the alchemy of light and shadow. The
-                  building, a true reflection of its environment, is based on an
-                  unconventional diagrid structure that eliminates the need for
-                  interior columns and allows for grand, airy living spaces
-                  filled with natural light.
+                    Designed by DMTCA with custom interiors by Versace, Lumiere
+                    Haven is carved by the alchemy of light and shadow. The
+                    building, a true reflection of its environment, is based on an
+                    unconventional diagrid structure that eliminates the need for
+                    interior columns and allows for grand, airy living spaces
+                    filled with natural light.
                 </p>
               </div>
 
@@ -224,13 +223,9 @@ const Works = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[70%] h-full flex ml-[3%] mt-[5vw]">
-                <p data-para-anim className=" text-white">
-                  Lumiere Haven embodies the ultimate marriage of refinement and
-                  comfort, extravagance and ease, boldness and elegance. Each of
-                  the Villa’s residences is an heirloom for the modern
-                  age—combining superb sophistication and craftsmanship and
-                  including many custom elements by Versace.
+              <div className="text-left flex ml-[3%] mt-[5vw]">
+                <p className="w-1/2 text-white fadeup">
+                    Lumiere Haven embodies the ultimate marriage of refinement and comfort, extravagance and ease, boldness and elegance. Each of the Villa&apos;s residences is an heirloom for the modern age — combining superb sophistication and craftsmanship and including many custom elements by Versace.
                 </p>
               </div>
             </div>
@@ -337,10 +332,10 @@ const Works = () => {
                   </div>
                 </div>
                 <p data-para-anim className="text-white">
-                  Lumiere Haven’s one-of-a-kind Villa residences are both
-                  palatial and personal. Their 360-degree views, exquisite
-                  detailing, and majestic scale lend a modern feeling that
-                  balances intimacy and grandeur.
+                    Lumiere Haven&apos;s one-of-a-kind Villa residences are both
+                    palatial and personal. Their 360-degree views, exquisite
+                    detailing, and majestic scale lend a modern feeling that
+                    balances intimacy and grandeur.
                 </p>
               </div>
             </div>
