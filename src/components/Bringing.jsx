@@ -97,6 +97,7 @@ const Bringing = () => {
                     src='/videos/bringing.mp4'
                     poster="/assets/video-poster-2.webp"
                     muted
+                    autoPlay
                     loop
                     playsInline
                     loading="lazy"
