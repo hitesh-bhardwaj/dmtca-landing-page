@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import BlackButton from './Button/BlackButton';
@@ -14,48 +15,51 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Project() {
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      const body = document.body;
-      const changeBodyColor = (color) => {
-        gsap.to(body, {
-          backgroundColor: color,
-          duration: 1,
-          ease: "power2.out",
-        });
-      };
+  if(globalThis.innerWidth>541){
 
-      ScrollTrigger.create({
-        trigger: "#project",
-        start: "top 60%", 
-        end: "bottom 20%", 
-        onEnter: () => changeBodyColor("#ffffff"),
-        onLeaveBack: () => changeBodyColor("#1C1B1A"), 
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        const body = document.body;
+        const changeBodyColor = (color) => {
+          gsap.to(body, {
+            backgroundColor: color,
+            duration: 1,
+            ease: "power2.out",
+          });
+        };
+  
+        ScrollTrigger.create({
+          trigger: "#project",
+          start: "top 60%", 
+          end: "bottom 20%", 
+          onEnter: () => changeBodyColor("#ffffff"),
+          onLeaveBack: () => changeBodyColor("#1C1B1A"), 
+        });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   return (
     <>
-      <section id='project' className='pt-[10%] pb-[20%]'>
+      <section id='project' className='pt-[10%] pb-[20%] mobile:py-[20%] w-screen overflow-hidden'>
         <div className='container-lg'>
           <h2 data-para-anim className='title-2'>
             Interior by Versace
           </h2>
-          <div className='w-full h-[1px] bg-black/30 my-[4vw] lineDraw'></div>
+          <div className='w-full h-[1px] bg-black/30 my-[4vw] lineDraw mobile:my-[8vw]'></div>
         <div className='w-full flex justify-end mb-[5vw]'>
-          <div className='w-[75%] flex justify-between px-[2vw]'>
-            <div className='fadeup'>
+          <div className='w-[75%] flex justify-between px-[2vw] mobile:w-full mobile:flex-col mobile:gap-[7vw]'>
+            <div className='fadeup mobile:order-1'>
               <BlackButton btnText={"Enquire Now"} link={"#"} />
             </div>
-            <p data-para-anim className='w-[60%]'>
+            <p data-para-anim className='w-[60%] mobile:w-full'>
               This project integrates fashion, luxury, and lifestyle to offer a global experience of the Versace world. The collection speaks of know-how, creativity, and pure design, echoing the revered identity of Versace.
             </p>
           </div>
         </div>
         </div>
-        <div className='w-[70%] ml-auto h-full swipe fadeup'>
+        <div className='w-[70%] ml-auto h-full swipe fadeup mobile:w-full mobile:mt-[15vw] mobile:pl-[5%]'>
           <Swiper
             slidesPerView={1.5}
             spaceBetween={20}
@@ -65,7 +69,7 @@ export default function Project() {
             modules={[Scrollbar, FreeMode]}
             className="mySwiper w-full"
           >
-            <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'>
+            <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative mobile:h-[70vw]'>
               <Image src="/assets/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500' />
             </SwiperSlide>
             <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'>

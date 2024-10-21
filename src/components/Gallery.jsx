@@ -108,15 +108,15 @@ const Gallery = () => {
   const renderHeadings = () => {
 
     return (
-      <div className="w-full grid grid-cols-2 gap-x-[42%] justify-between">
+      <div className="w-full grid grid-cols-2 gap-x-[42%] justify-between mobile:flex mobile:flex-col mobile:order-1 mobile:gap-[5vw] mobile:mt-[12vw]">
         {features.map((feature, index) => (
           <div
             key={index}
             className="mb-[3vw] cursor-pointer"
             onMouseEnter={() => handleImageHover(feature)}
           >
-            <div className="fadeup flex gap-[2vw] items-center mb-[0.5vw] px-[1vw]">
-              <div className="h-[2.5vw] w-[2.5vw]">
+            <div className="fadeup flex gap-[2vw] items-center mb-[0.5vw] px-[1vw] mobile:gap-[4vw] mobile:mb-[1.5vw]">
+              <div className="h-[2.5vw] w-[2.5vw] mobile:w-[10vw] mobile:h-[10vw]">
                 <div className="w-full h-full relative">
                   <Image  
                     quality={100}
@@ -127,7 +127,7 @@ const Gallery = () => {
                   />
                 </div>
               </div>
-              <h4 className="font-head uppercase text-[1.25vw]">
+              <h4 className="font-head uppercase text-[1.25vw] mobile:text-[4.5vw]">
                 {feature.name}
               </h4>
             </div>
@@ -141,11 +141,13 @@ const Gallery = () => {
   return (
     <section className="py-[8%] bg-[#E0D4C6] relative z-10" ref={bodyRef} >
       <div className="container-lg">
-        <h2 data-title-anim className="title-2 mb-[2vw]">Key Features</h2>
-        <p data-para-anim className="w-[40%]">Experience paradise on earth at Lumiere Haven, where opulent homes and serene surroundings create an idyllic lifestyle.</p>
-        <div className="w-full mt-[12vw] mb-[8vw] relative">
+        <h2 data-title-anim className="title-2 mb-[2vw]">Core Features
+        </h2>
+        <p data-para-anim className="w-[40%] mobile:w-full">Experience the essence of luxury at 53 West 53, where Exceptional offerings cater to your 
+        sophisticated preferences.</p>
+        <div className="w-full mt-[12vw] mb-[8vw] relative mobile:flex mobile:flex-col">
           {renderHeadings()}
-          <div className="w-[35%] h-[45vw] z-10 overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 fadeup">
+          <div className="w-[35%] h-[45vw] z-10 overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 fadeup mobile:static mobile:translate-x-0 mobile:translate-y-0 mobile:w-[90vw] mobile:h-[120vw]">
             <div className="w-full h-full relative overflow-hidden" ref={previewContainerRef}>
               <Image src="/assets/features/1.png" alt="Image" fill quality={100} className="object-cover w-full h-full"/>
             </div>

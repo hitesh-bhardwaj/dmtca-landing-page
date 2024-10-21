@@ -7,6 +7,10 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	  screens: {
+		  'mobile':{'max':'540px'},
+		  'tablet':{'min':'541px','max':'1024px'}
+		},
   	extend: {
   		colors: {
   			background: 'var(--background)',

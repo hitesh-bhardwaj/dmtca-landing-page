@@ -18,8 +18,8 @@ function Cursor() {
             const slide = e.target
             if(slide.classList.contains('swipe')){
                 gsap.to(cursor,{scale:1,
-                    duration:0.5,
-                    ease:"power4.in"
+                    duration:0.3,
+                    ease:"power2.inout"
                 })
                 text.style.display='block'
             }else{

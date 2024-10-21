@@ -30,3 +30,38 @@
 .stripe:hover img{
     scale: 1;
 }
+@media screen and (max-width:541px) {
+    .stripe {
+        width: 100%;
+        display: flex;
+        border-radius: 24px;
+        overflow: hidden;
+        align-items: flex-start;
+        /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+        padding: 1vw;
+        text-decoration: none;
+        transition: all 0.35s ease-in-out;
+        position: relative;
+    }
+    
+    .stripe img {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transition: all 0.35s ease-in-out;
+        scale: 1.1;
+    }
+    
+    .stripe:hover, .stripe:focus {
+        width: 100%;
+    }
+    .stripe:hover img{
+        scale: 1;
+    }
+    
+}

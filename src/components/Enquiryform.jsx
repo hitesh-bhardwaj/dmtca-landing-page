@@ -58,7 +58,7 @@ export default function EnquiryForm() {
     setSelectedRole(value);
   };
   return (
-    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism fadeup">
+    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism fadeup mobile:hidden">
       <div className="flex flex-col mb-[3vw]">
         <h2 data-para-anim className="text-[3.5vw] font-light text-center">
           Enquire Now

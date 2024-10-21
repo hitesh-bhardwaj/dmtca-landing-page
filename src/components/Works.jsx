@@ -1,11 +1,27 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const checkIsMobile = () => {
+    setIsMobile(window.innerWidth < 768); // You can adjust the threshold if needed
+  };
+
+  useEffect(() => {
+    // Check screen size on mount and window resize
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+if(globalThis.innerWidth>541){
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       const body = document.body;
@@ -27,6 +43,7 @@ const Works = () => {
     });
     return () => ctx.revert();
   });
+}
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -47,27 +64,31 @@ const Works = () => {
 
   return (
     <>
-      <section
-        id="works"
-        className="w-full h-full overflow-hidden"
-      >
+      <section id="works" className="w-full h-full overflow-hidden mobile:bg-[#1C1B1A] mobile:py-[10%]">
         <div className="container-lg h-full  py-[5%] relative ">
           <div className="w-full flex justify-center relative z-[2]">
-            <h2 data-para-anim className="title-2 text-white w-[60%] text-center ">
+            <h2
+              data-para-anim
+              className="title-2 text-white w-[60%] text-center mobile:w-full "
+            >
               Indulge in Unmatched Elegance in Dubai’s Skyline
             </h2>
           </div>
-          <div className="w-full h-full flex-col mt-[10vw] relative z-[2]">
-            <div className="flex w-full h-full justify-between">
-              <div className="w-[37vw] h-full flex flex-col gap-[2vw]" data-scroll data-scroll-speed="0.1">
-                <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group">
+          <div className="w-full h-full flex-col mt-[10vw] relative z-[2] mobile:mt-[20vw]">
+            <div className="flex w-full h-full justify-between mobile:flex-col mobile:gap-[10vw]">
+              <div
+                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw]" 
+                data-scroll
+                data-scroll-speed={isMobile?undefined:"0.1"}
+              >
+                <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group mobile:w-[90vw] mobile:h-[70vw]">
                   <Image
                     src="/assets/work-img-5.png"
                     alt="work-img-5"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300">
+                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -110,24 +131,27 @@ const Works = () => {
                   </div>
                 </div>
                 <p data-para-anim className=" text-white">
-                    Designed by DMTCA with custom interiors by Versace, Lumiere
-                    Haven is carved by the alchemy of light and shadow. The
-                    building, a true reflection of its environment, is based on an
-                    unconventional diagrid structure that eliminates the need for
-                    interior columns and allows for grand, airy living spaces
-                    filled with natural light.
+                  Embrace a lifestyle enriched by high-end recreational
+                  activities, from exclusive rooftop lounges to private fitness
+                  centers. Whether you seek relaxation or vibrant social
+                  engagement, 53 West 53 provides a curated experience that
+                  caters to your every desire in an elite environment.
                 </p>
               </div>
 
-              <div className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4]" data-scroll data-scroll-speed="-0.1">
-                <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group">
+              <div
+                className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4] mobile:mt-auto mobile:mr-auto"
+                data-scroll
+                data-scroll-speed={isMobile?undefined:"-0.1"}
+              >
+                <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group mobile:w-[90vw] mobile:h-[80vw]">
                   <Image
                     src="/assets/work-img-1.png"
                     alt="work-img-1"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300">
+                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -172,15 +196,19 @@ const Works = () => {
                 </div>
               </div>
             </div>
-            <div className="w-fit h-full mt-[15vw] relative" data-scroll data-scroll-speed="-0.1" >
-              <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group">
+            <div
+              className="w-fit h-full mt-[15vw] relative mobile:mt-[90vw]"
+              data-scroll
+              data-scroll-speed={isMobile?undefined:"-0.1"}
+            >
+              <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group mobile:w-[90vw] mobile:h-[80vw] mobile:ml-0">
                 <Image
                   src="/assets/work-img-2.png"
                   alt="work-img-2"
                   className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   fill
                 />
-                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500">
+                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
                   Living room
                   <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                     <div>
@@ -223,21 +251,29 @@ const Works = () => {
                   </div>
                 </div>
               </div>
-              <div className="text-left flex ml-[3%] mt-[5vw]">
-                <p className="w-1/2 text-white fadeup">
-                    Lumiere Haven embodies the ultimate marriage of refinement and comfort, extravagance and ease, boldness and elegance. Each of the Villa&apos;s residences is an heirloom for the modern age — combining superb sophistication and craftsmanship and including many custom elements by Versace.
+              <div className="w-[70%] h-full flex ml-[3%] mt-[5vw] mobile:w-full mobile:ml-0">
+                <p data-para-anim className=" text-white">
+                  53 West 53 offers an extraordinary living experience, with
+                  residences boasting panoramic views of the city skyline and
+                  the Arabian Gulf. Each suite is designed with spacious
+                  interiors, ultra-luxury amenities, and modern craftsmanship
+                  that reflects your elite status
                 </p>
               </div>
             </div>
-            <div className="w-full h-full flex justify-between mt-[7vw]" data-scroll data-scroll-speed="0.1">
-              <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group">
+            <div
+              className="w-full h-full flex justify-between mt-[7vw] mobile:mt-auto mobile:flex-col"
+              data-scroll
+              data-scroll-speed={isMobile?undefined:"0.1"}
+            >
+              <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group mobile:w-[90vw] mobile:h-[70vw]">
                 <Image
                   src="/assets/work-img-4.png"
                   alt="work-img-4"
                   className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   fill
                 />
-                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500">
+                <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
                   Living room
                   <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                     <div>
@@ -280,15 +316,19 @@ const Works = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[35vw] h-full flex flex-col gap-[5vw]" data-scroll data-scroll-speed="-0.1">
-                <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group">
+              <div
+                className="w-[35vw] h-full flex flex-col gap-[5vw] mobile:mt-[10vw] mobile:w-full "
+                data-scroll
+                data-scroll-speed={isMobile?undefined:"-0.1"}
+              >
+                <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group mobile:w-[90vw] mobile:h-[70vw]">
                   <Image
                     src="/assets/work-img-3.png"
                     alt="work-img-3"
                     fill
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
-                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500">
+                  <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw]">
                     Living room
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
@@ -332,16 +372,20 @@ const Works = () => {
                   </div>
                 </div>
                 <p data-para-anim className="text-white">
-                    Lumiere Haven&apos;s one-of-a-kind Villa residences are both
-                    palatial and personal. Their 360-degree views, exquisite
-                    detailing, and majestic scale lend a modern feeling that
-                    balances intimacy and grandeur.
+                  Designed for those who appreciate exclusivity, 53 West 53
+                  offers access to private dining rooms, suites and elegant
+                  event spaces, perfect for hosting sophisticated gatherings.
+                  This luxurious property embodies the pinnacle of refined
+                  living.
                 </p>
               </div>
             </div>
           </div>
-          <div className="w-fit h-full absolute top-[10%] left-[50%] translate-x-[-50%] work-bg-icon" id="work-bg-icon">
-            <div className="w-[50vw] h-[50vw] relative">
+          <div
+            className="w-fit h-full absolute top-[10%] left-[50%] translate-x-[-50%] work-bg-icon"
+            id="work-bg-icon"
+          >
+            <div className="w-[50vw] h-[50vw] relative mobile:w-[90vw] mobile:h-[90vw]">
               <Image
                 src="/assets/work-bg-logo.svg"
                 alt="work-logo"
