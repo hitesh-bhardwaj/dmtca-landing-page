@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -7,8 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Bringing = () => {
   const BringingRef = useRef(null);
-  const videoRef = useRef(null);
-  if(globalThis.innerWidth>541){
+  const videoRef = useRef(null); // Ref for the actual video element
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false); // State to track video loading
+  
+  if(globalThis.innerWidth > 541){
 
     useEffect(() => {
       let ctx = gsap.context(() => {
@@ -73,33 +75,93 @@ const Bringing = () => {
     });
   }
 
+  // Lazy loading the video using IntersectionObserver
+  useEffect(() => {
+    const videoElement = videoRef.current; // Ensure the actual video element is targeted
+
+    if (videoElement) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Load the video when it comes into view
+              if (videoElement.play) {
+                videoElement.play(); // Ensure the element has a play method
+              }
+              observer.unobserve(videoElement); // Stop observing once the video starts playing
+            }
+          });
+        },
+        { threshold: 0.5 } // Adjust the threshold as per your need
+      );
+
+      observer.observe(videoElement);
+
+      // Cleanup the observer on component unmount
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  // Event listener to detect when the video is loaded
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    if (videoElement) {
+      const handleLoadedData = () => {
+        setIsVideoLoaded(true); // Set the state when the video is loaded
+      };
+
+      videoElement.addEventListener("loadeddata", handleLoadedData);
+
+      return () => {
+        videoElement.removeEventListener("loadeddata", handleLoadedData);
+      };
+    }
+  }, []);
+
   return (
     <section id='bringing' className='overflow-hidden' ref={BringingRef}>
-      <div className='container-lg w-full h-full  py-[10%] relative mobile:py-[20%]'>
+      <div className='container-lg w-full h-full py-[10%] relative mobile:py-[20%]'>
         <div className='flex flex-col items-center justify-center w-full h-full gap-[5vw]'>
-          <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center'>
             <div className='text1'>
-              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>BRINGING YOU</p>
+              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>
+                BRINGING YOU
+              </p>
             </div>
             <div className='w-full h-full flex justify-center gap-[3vw] text2'>
-              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>SPACES</p>
+              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>
+                SPACES
+              </p>
               <div
                 className='h-full w-[20vw] relative rounded-[20px] mobile:absolute mobile:top-[30%] mobile:w-[90vw]'
-                ref={videoRef}
               >
                 <div className="w-[20vw] h-[10vw] absolute z-[100] top-0 rounded-xl overflow-hidden video mobile:w-[90vw] mobile:h-[70vw]">
+                  {/* Show poster until the video is loaded */}
+                  {!isVideoLoaded && (
+                    <img
+                      src="/assets/video-poster-2.webp"
+                      alt="Video Poster"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                   <video
+                    ref={videoRef} // Ref points to the video element
                     src='/videos/bringing.mp4'
-                    autoPlay
+                    poster="/assets/video-poster-2.webp"
                     muted
                     loop
-                    className='w-full h-full object-cover'
+                    playsInline
+                    loading="lazy"
+                    className={`w-full h-full object-cover transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
                   />
                 </div>
               </div>
             </div>
             <div className='text3 relative z-[-1]'>
-              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3] '>YOU LOVE</p>
+              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>
+                YOU LOVE
+              </p>
             </div>
           </div>
           <div className='w-[70%] mt-[0vw] mobile:mt-[85vw] mobile:w-full'>
@@ -113,7 +175,6 @@ const Bringing = () => {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );
