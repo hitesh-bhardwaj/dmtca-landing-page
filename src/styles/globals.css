@@ -53,6 +53,7 @@ body{
   text-rendering: geometricPrecision;
   font-kerning: none;
   color: #1C1B1A;
+  scroll-behavior: smooth;
 }
 
 [data-para-anim], [data-title-anim] {
@@ -394,7 +395,6 @@ p{
   border-radius: 30px; 
   height: 100%; 
 }
-
 
 
 /* ClipPath Hover Section */

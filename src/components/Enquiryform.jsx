@@ -58,14 +58,12 @@ export default function EnquiryForm() {
     setSelectedRole(value);
   };
   return (
-    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism fadeup mobile:hidden">
+    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism mobile:hidden fadeup">
       <div className="flex flex-col mb-[3vw]">
-        <h2 data-para-anim className="text-[3.5vw] font-light text-center">
+        <h2 className="text-[3.5vw] font-light text-center">
           Enquire Now
         </h2>
-        <div className="w-full bg-black h-[1px] lineDraw">
-
-        </div>
+        <div className="w-full bg-black h-[1px] lineDraw" />
       </div>
 
       <Form {...form}>
@@ -190,7 +188,7 @@ export default function EnquiryForm() {
           {/* Company field */}
 
           {/* Submit button */}
-          <div className="w-full flex justify-center fadeup">
+          <div className="w-full flex justify-center">
             <BlackButton 
               link={"#"}
               btnText={"Submit"}

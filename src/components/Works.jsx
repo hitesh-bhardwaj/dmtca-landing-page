@@ -77,11 +77,11 @@ if(globalThis.innerWidth>541){
           <div className="w-full h-full flex-col mt-[10vw] relative z-[2] mobile:mt-[20vw]">
             <div className="flex w-full h-full justify-between mobile:flex-col mobile:gap-[10vw]">
               <div
-                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw] fadeup" 
+                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw]" 
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"0.1"}
               >
-                <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw]">
+                <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw] fadeup">
                   <Image
                     src="/assets/work-img-5.png"
                     alt="work-img-5"
@@ -140,11 +140,11 @@ if(globalThis.innerWidth>541){
               </div>
 
               <div
-                className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4] mobile:mt-auto mobile:mr-auto fadeup"
+                className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4] mobile:mt-auto mobile:mr-auto"
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"-0.1"}
               >
-                <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group mobile:w-[90vw] mobile:h-[80vw] mobile:p-[4vw]">
+                <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group mobile:w-[90vw] mobile:h-[80vw] mobile:p-[4vw] fadeup">
                   <Image
                     src="/assets/work-img-1.png"
                     alt="work-img-1"
@@ -197,11 +197,11 @@ if(globalThis.innerWidth>541){
               </div>
             </div>
             <div
-              className="w-fit h-full mt-[15vw] relative mobile:mt-[90vw] fadeup"
+              className="w-fit h-full mt-[15vw] relative mobile:mt-[90vw]"
               data-scroll
               data-scroll-speed={isMobile?undefined:"-0.1"}
             >
-              <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group mobile:w-[90vw] mobile:h-[80vw] mobile:ml-0 mobile:p-[4vw]">
+              <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group mobile:w-[90vw] mobile:h-[80vw] mobile:ml-0 mobile:p-[4vw] fadeup">
                 <Image
                   src="/assets/work-img-2.png"
                   alt="work-img-2"
@@ -262,11 +262,11 @@ if(globalThis.innerWidth>541){
               </div>
             </div>
             <div
-              className="w-full h-full flex justify-between mt-[7vw] mobile:mt-auto mobile:flex-col fadeup"
+              className="w-full h-full flex justify-between mt-[7vw] mobile:mt-auto mobile:flex-col"
               data-scroll
               data-scroll-speed={isMobile?undefined:"0.1"}
             >
-              <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw]">
+              <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw] fadeup">
                 <Image
                   src="/assets/work-img-4.png"
                   alt="work-img-4"
@@ -317,7 +317,7 @@ if(globalThis.innerWidth>541){
                 </div>
               </div>
               <div
-                className="w-[35vw] h-full flex flex-col gap-[5vw] mobile:mt-[10vw] mobile:w-full "
+                className="w-[35vw] h-full flex flex-col gap-[5vw] mobile:mt-[10vw] mobile:w-full"
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"-0.1"}
               >

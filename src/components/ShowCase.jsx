@@ -66,8 +66,8 @@ const ShowCase = () => {
         });
         tl.to(".video-block", {
           width: "90vw",
-          height: "35vw",
-          yPercent: 35,
+          height: "40vw",
+          yPercent: 30,
           right: "5%",
           ease: "power1.out",
           borderRadius: "50px",
@@ -113,7 +113,7 @@ const ShowCase = () => {
           </div>
         </div>
 
-        <div className="w-full h-full mt-[42vw] flex justify-end mobile:mt-[7vw]">
+        <div className="w-full h-full mt-[48vw] flex justify-end mobile:mt-[7vw]">
           <p data-para-anim className="w-[50%] mobile:w-full ">
             At 53 West 53, immerse yourself in a lifestyle defined by
             sophistication and exclusivity. Indulge in breathtaking views,
