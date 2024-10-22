@@ -180,7 +180,7 @@ export default function EnquiryForm() {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem>
+                <SelectItem value="Interested In">
                   Interested in
                 </SelectItem>
               </SelectGroup>

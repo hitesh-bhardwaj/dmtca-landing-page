@@ -17,9 +17,12 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=2" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0" />
         <title>DMTCA - Landing Page</title>
-        <meta name="description" content="DMTCA - Real Estate Landing Page"></meta>
+        <meta name="description" content="DMTCA - Real Estate Landing Page" />
+        <link rel='preload' href="/fonts/neuemontreal.woff" as="font" type="font/woff" crossOrigin="anonymous"></link>
+        <link rel='preload' href="/fonts/avenir.woff" as="font" type="font/woff" crossOrigin="anonymous"></link>
+        <link rel='preload' href="/fonts/avenir-medium.woff" as="font" type="font/woff" crossOrigin="anonymous"></link>
       </Head>
       <Component {...pageProps} />
     </>

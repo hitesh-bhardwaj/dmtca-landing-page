@@ -251,8 +251,8 @@ if(globalThis.innerWidth>541){
                   </div>
                 </div>
               </div>
-              <div className="w-[40%] h-full flex ml-[3%] mt-[5vw] mobile:w-full mobile:ml-0">
-                <p className="fadeup text-white">
+              <div className="w-[47vw] h-full flex ml-[3%] mt-[5vw] mobile:w-full mobile:ml-0">
+                <p data-para-anim className="fadeup w-[75%] text-white text-left fadeup">
                   53 West 53 offers an extraordinary living experience, with
                   residences boasting panoramic views of the city skyline and
                   the Arabian Gulf. Each suite is designed with spacious

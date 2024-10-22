@@ -23,8 +23,7 @@ const About = () => {
               haven invites you to experience a lifestyle adorned with
               world-class amenities and curated spaces. Indulge in breathtaking
               skyline views, sophisticated recreational activities and private
-              access to cultural landmarks. Here, every moment becomes a
-              statement of your taste, setting the stage for a life of
+              access to cultural landmarks. Here, every moment becomes a statement of your taste, setting the stage for a life of
               unparalleled sophistication.
             </p>
           </div>
