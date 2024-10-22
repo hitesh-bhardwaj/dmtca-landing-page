@@ -10,12 +10,13 @@ const Hero = () => {
       <section id="hero" className="">
         <div className="w-screen h-[130vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
           <Link href={"#"} className="block fadeup">
-            <Image quality={100}
+            <Image 
+              quality={100}
               src="/assets/53-west-logo.svg"
               alt="logo-img"
               width={160}
               height={160}
-              className="object-contain tablet:w-[30vw]" />
+              className="object-contain tablet:w-[30vw] h-auto w-auto" />
           </Link>
 
           <Image
@@ -37,7 +38,7 @@ const Hero = () => {
               <span data-para-anim>Live In</span>
               <div className="flex items-start gap-[1.5vw] tablet:flex-col tablet:items-start tablet:gap-[4vw]">
                 <span data-para-anim>Grandeur</span>
-                <a data-scroll data-scroll-to data-scroll-duration="2s" href="#about" className="w-fit mt-[0.5vw] tablet:mt-0 h-fit p-[2vw] rounded-full flex justify-center items-center border-[2px] border-white cursor-pointer fadeup tablet:p-[4vw]">
+                <a aria-label="Select Title" data-scroll data-scroll-to data-scroll-duration="2s" href="#about" className="w-fit mt-[0.5vw] tablet:mt-0 h-fit p-[2vw] rounded-full flex justify-center items-center border-[2px] border-white cursor-pointer fadeup tablet:p-[4vw]">
                   <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon rotate-90 w-[3vw] h-[3vw] tablet:w-[7vw] tablet:h-[7vw]">
                     <path data-v-f4363f2a fillRule="evenodd" clipRule="evenodd" d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z" className="btn-path" fill="white" />
                     <path data-v-f4363f2a fillRule="evenodd" clipRule="evenodd" d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z" className="btn-path" fill="white" />

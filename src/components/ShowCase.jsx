@@ -101,9 +101,7 @@ const ShowCase = () => {
               muted
               loop
               playsInline
-              loading="lazy"
               className="w-full h-full aspect-video object-cover"
-              src="/assets/dmtca-video.mp4"
             ></video>
             <div className="w-[50vw] bg-white/50 glassmorphism flex justify-around rounded-full py-[2vw] absolute bottom-[7%] left-[50%] translate-x-[-50%] opacity-0 inner-detail z-[6]">
               <p data-para-anim>Off-Plan in Dubai Marina</p>

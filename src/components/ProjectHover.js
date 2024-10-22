@@ -4,9 +4,6 @@ const ProjectHoverAnimation = () => {
     return (
         <>
             <section className="py-[10%] bg-[#161616] tablet:py-[20%]">
-                <div className="absolute  w-[20vw] h-[13vw] aspect-3/2 overflow-hidden pointer-events-none origin-center scale-0 z-[2]">
-                    <div className="bg-[url('/assets/move-img.png')] bg-no-repeat bg-cover bg-left-top pointer-events-none w-full h-full"></div>
-                </div>
                 <div className="container-lg flex items-center justify-center">
                     <div className="w-[90%] flex flex-col">
 

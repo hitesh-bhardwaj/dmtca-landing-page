@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -8,6 +8,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Bringing = () => {
   const BringingRef = useRef(null);
+
+  const videoRef = useRef(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const video = videoRef.current;
+                    if (video && !videoLoaded) {
+                        // Set video source dynamically when it enters the viewport
+                        video.src = "/videos/bringing.mp4";
+                        video.load(); // Ensure the video is loaded
+                        video.play(); // Play the video when it's visible
+                        setVideoLoaded(true); // Set video as loaded
+                    }
+                    observer.unobserve(entry.target); // Stop observing once the video has loaded
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    const videoElement = videoRef.current;
+    if (videoElement) {
+        observer.observe(videoElement);
+    }
+
+    return () => {
+        if (videoElement) observer.unobserve(videoElement);
+    };
+}, [videoLoaded]);
   
   if(globalThis.innerWidth > 541){
 
@@ -74,7 +107,6 @@ const Bringing = () => {
     });
   }
 
-
   return (
     <section id='bringing' className='overflow-hidden' ref={BringingRef}>
       <div className='container-lg w-full h-full py-[10%] relative tablet:py-[20%]'>
@@ -94,13 +126,11 @@ const Bringing = () => {
               >
                 <div className="w-[20vw] h-[10vw] absolute z-[100] top-0 rounded-xl overflow-hidden video tablet:w-[90vw] tablet:h-[70vw]">
                   <video
-                    src='/videos/bringing.mp4'
+                    ref={videoRef}
                     poster="/assets/video-poster-2.webp"
                     muted
-                    autoPlay
                     loop
                     playsInline
-                    loading="lazy"
                     className={`w-full h-full object-cover transition-opacity duration-500`}
                   />
                 </div>

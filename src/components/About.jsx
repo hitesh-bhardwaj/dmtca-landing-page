@@ -31,9 +31,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:w-[90vw] tablet:h-[90vw] tablet:px-[8vw]">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out tablet:w-[30vw] tablet:h-[30vw] tablet:p-[4vw]">
                 <Image
-                  width={50}
-                  height={50}
-                  src="/assets/about-icon-1.svg"
+                  width={60}
+                  height={60}
+                  src="/assets/about/about-icon-1.svg"
                   alt="about-icon-1"
                   className="object-contain"
                 />
@@ -43,7 +43,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-40 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -60,7 +60,7 @@ const About = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="/assets/about-icon-1.svg"
+                  src="/assets/about/about-icon-2.svg"
                   alt="about-icon-1"
                   className="object-contain"
                 />
@@ -70,7 +70,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -85,9 +85,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden ">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
-                 width={80}
-                 height={80}
-                  src="/assets/icons/connectivity-icon.svg"
+                 width={60}
+                 height={60}
+                 src="/assets/about/about-icon-3.svg"
                   alt="connectivity-icon"
                   className="object-contain"
                 />
@@ -97,7 +97,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -112,9 +112,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden pr-0">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
-                  width={80}
-                  height={80}
-                  src="/assets/icons/activities-icon.svg"
+                  width={60}
+                  height={60}
+                  src="/assets/about/about-icon-4.svg"
                   alt="activities-icon"
                   className="object-contain"
                 />
@@ -124,7 +124,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -139,9 +139,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
-                  width={80}
-                  height={80}
-                  src="/assets/icons/healthcare-icon.svg"
+                  width={60}
+                  height={60}
+                  src="/assets/about/about-icon-5.svg"
                   alt="healthcare-icon"
                   className="object-contain"
                 />
@@ -151,7 +151,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -166,9 +166,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
-                  width={80}
-                  height={80}
-                  src="/assets/icons/harmony-icon.svg"
+                  width={60}
+                  height={60}
+                  src="/assets/about/about-icon-6.svg"
                   alt="about-icon-1"
                   className="object-contain"
                 />
@@ -178,7 +178,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -193,9 +193,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
-                  width={80}
-                  height={80}
-                  src="/assets/icons/international-icon.svg"
+                  width={60}
+                  height={60}
+                  src="/assets/about/about-icon-7.svg"
                   alt="international-icon"
                   className="object-contain"
                 />
@@ -205,7 +205,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -220,9 +220,9 @@ const About = () => {
             <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
-                 width={80}
-                 height={80}
-                  src="/assets/icons/safety-icon.svg"
+                 width={60}
+                 height={60}
+                  src="/assets/about/about-icon-8.svg"
                   alt="safety-icon"
                   className="object-contain"
                 />
@@ -232,7 +232,7 @@ const About = () => {
               </p>
               <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
                 <Image
-                  src="/assets/about-image-1.png"
+                  src="/assets/about/about-image-1.png"
                   alt="about-image-1"
                   className="object-contain"
                   fill
@@ -240,7 +240,7 @@ const About = () => {
               </div>
               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in">
-                Safety for All
+                  Safety for All
                 </p>
               </div>
             </div>

@@ -73,7 +73,7 @@ export default function EnquiryForm() {
           {/* Name field */}
           <div className="w-full flex gap-[1.2vw] items-center">
             <Select onValueChange={handleValueChange} >
-              <SelectTrigger className="w-[7vw] placeholder:text-[2vw]">
+              <SelectTrigger aria-label="Select Title" className="w-[7vw] placeholder:text-[2vw]">
                 <SelectValue placeholder="Title" />
               </SelectTrigger>
               <SelectContent>
@@ -173,8 +173,8 @@ export default function EnquiryForm() {
             )}
           />
           <Select onValueChange={handleValueChange}>
-            <SelectTrigger className="w-full state placeholder:text-[2vw] pl-[3vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
-              <SelectValue placeholder="" />
+            <SelectTrigger aria-label="Select Service" className="w-full state placeholder:text-[2vw] pl-[3vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
+              <SelectValue placeholder="Interested In" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
