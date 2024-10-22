@@ -10,8 +10,9 @@ export default function App({ Component, pageProps }) {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
         const locomotiveScroll = new LocomotiveScroll({
           lenisOptions: {
-            duration: 2,
-            syncTouch: true,
+            duration: 1.2,
+            // syncTouch: true,
+            // touchMultiplier: 2.5,
           }
         });
       }

@@ -16,7 +16,7 @@ const Hero = () => {
               alt="logo-img"
               width={160}
               height={160}
-              className="object-contain tablet:w-[30vw] h-auto w-auto" />
+              className="object-contain mobile:w-[30vw] tablet:w-[20vw]" />
           </Link>
 
           <Image
@@ -29,7 +29,7 @@ const Hero = () => {
             className="object-cover w-full h-full object-top relative z-[-1]"
           />
           <div className="w-[55%] flex flex-col gap-[6vw] mt-[15vw] mb-[8vw] tablet:w-[90%] tablet:mt-[20vh] tablet:mb-[12vw] tablet:gap-[12vw]">
-            <p data-para-anim className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] tablet:text-[4.5vw]">Experience Iconic Luxury Living at Dubai’s Most Prestigious and Exclusive Address</p>
+            <p data-para-anim className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]">Experience Iconic Luxury Living at Dubai’s Most Prestigious and Exclusive Address</p>
 
             <div className="w-full h-[1px] bg-white lineDraw"></div>
           </div>
@@ -47,13 +47,13 @@ const Hero = () => {
               </div>
             </h1>
           </div>
-          <div className="flex flex-col my-[10vw] gap-[6vw] tablet:gap-[10vw] tablet:mt-[20vw]">
+          <div className="flex flex-col my-[10vw] gap-[6vw] mobile:gap-[10vw] mobile:mt-[20vw] tablet:gap-[5vw] tablet:mt-[10vw]">
             <div className="fadeup">
               <PrimaryButton link={"#"} btnText={"Enquire Today"} className="shadow-2xl drop-shadow-2xl " />
             </div>
-            <p data-para-anim className="text-[1.5vw] text-white opacity-90 tracking-wide w-[40%] tablet:text-[4.5vw] tablet:w-[70%]">We Elevate Your Lifestyle With World-Class Architectural Creations</p>
+            <p data-para-anim className="text-[1.5vw] text-white opacity-90 tracking-wide w-[40%] mobile:text-[4.5vw] tablet:w-[70%] tablet:text-[3.2vw]">We Elevate Your Lifestyle With World-Class Architectural Creations</p>
           </div>
-          <div className="">
+          <div className="mobile:hidden">
 
           <EnquiryForm/>
           </div>

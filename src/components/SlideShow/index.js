@@ -17,7 +17,7 @@ const SlideShow = () => {
 
     // Function to check window size
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 541); // You can adjust the threshold if needed
+      setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
     };
   
     useEffect(() => {

@@ -58,12 +58,14 @@ export default function EnquiryForm() {
     setSelectedRole(value);
   };
   return (
-    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism tablet:hidden fadeup">
-      <div className="flex flex-col mb-[3vw]">
-        <h2 className="text-[3.5vw] font-light text-center">
+    <div className="w-[32%] bg-[white]/40 p-[1.5vw] pb-[3vw] rounded-[1vw] absolute right-[7%] bottom-[7%] glassmorphism fadeup mobile:static mobile:w-full mobile:px-[5vw] mobile:border mobile:border-gray-300 mobile:py-[10vw] mobile:rounded-[4vw] mobile:bg-black/10 tablet:w-[50%] tablet:px-[2vw] tablet:py-[3vw]">
+      <div className="flex flex-col mb-[3vw] mobile:mb-[7vw]">
+        <h2 data-para-anim className="text-[3.5vw] font-light text-center mobile:text-[9.5vw] tablet:text-[4.5vw]">
           Enquire Now
         </h2>
-        <div className="w-full bg-black h-[1px] lineDraw" />
+        <div className="w-full bg-black h-[1px] lineDraw mobile:my-[4vw] tablet:my-[2vw]">
+
+        </div>
       </div>
 
       <Form {...form}>
@@ -71,9 +73,9 @@ export default function EnquiryForm() {
 
           {/* Form fields */}
           {/* Name field */}
-          <div className="w-full flex gap-[1.2vw] items-center">
+          <div className="w-full flex gap-[1.2vw] items-center mobile:flex mobile:items-center">
             <Select onValueChange={handleValueChange} >
-              <SelectTrigger aria-label="Select Title" className="w-[7vw] placeholder:text-[2vw]">
+              <SelectTrigger aria-label="Select Title" className="w-[7vw] placeholder:text-[2vw] mobile:text-[4vw] mobile:w-[25vw] tablet:w-[10vw]">
                 <SelectValue placeholder="Title" />
               </SelectTrigger>
               <SelectContent>
@@ -99,7 +101,7 @@ export default function EnquiryForm() {
               </SelectContent>
             </Select>
 
-            <div className="w-[21vw]">
+            <div className="w-[21vw] mobile:w-[53vw] tablet:w-[35vw]">
               <FormField
                 control={form.control}
                 name="name"
@@ -139,7 +141,7 @@ export default function EnquiryForm() {
                 </FormItem>
               )}
             />
-            <div className="w-[21vw]">
+            <div className="w-[21vw] mobile:w-[60vw] tablet:w-[35vw]">
 
               <FormField
                 control={form.control}
@@ -166,19 +168,19 @@ export default function EnquiryForm() {
               <FormItem className="required">
                 {/* <FormLabel>Business Email</FormLabel> */}
                 <FormControl>
-                  <Input placeholder="Email" {...field} placeholderIcon={"/assets/icons/email-icon.svg"} />
+                  <Input placeholder="Email" {...field} placeholderIcon={"/assets/icons/email-icon.svg"} className={"mobile:pl-[10vw] tablet:pl-[6vw]"} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
           <Select onValueChange={handleValueChange}>
-            <SelectTrigger aria-label="Select Service" className="w-full state placeholder:text-[2vw] pl-[3vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
+            <SelectTrigger aria-label="Select Service" className="w-full state placeholder:text-[2vw] pl-[3vw] mobile:text-[4vw] mobile:pl-[10vw] tablet:pl-[6vw]" placeholderIcon={"/assets/icons/state-icon.svg"}>
               <SelectValue placeholder="Interested In" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="Interested In">
+                <SelectItem value="Interested In" >
                   Interested in
                 </SelectItem>
               </SelectGroup>

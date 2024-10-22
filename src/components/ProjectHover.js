@@ -3,7 +3,7 @@ import Image from 'next/image';
 const ProjectHoverAnimation = () => {
     return (
         <>
-            <section className="py-[10%] bg-[#161616] tablet:py-[20%]">
+            <section className="py-[10%] bg-[#161616] mobile:py-[20%] tablet:py-[10%]">
                 <div className="container-lg flex items-center justify-center">
                     <div className="w-[90%] flex flex-col">
 
@@ -17,7 +17,7 @@ const ProjectHoverAnimation = () => {
                                     <Image src="/assets/hoverImages/image1.png" alt="Images" width={250} height={250} className="object-cover h-full w-full"/>
                                 </div>
                             </div>
-                            <span className="w-full block h-[1px] bg-white tablet:my-[7vw]"></span>
+                            <span className="w-full block h-[1px] bg-white mobile:my-[7vw] tablet:my-[4vw]"></span>
                         </div>
 
                         {/* Second Project */}
@@ -29,11 +29,11 @@ const ProjectHoverAnimation = () => {
                                 <div className="w-[8vw] absolute right-[35%] h-[8vw] -top-1/2 overflow-hidden ml-[1.5vw] scale-0 duration-300 ease-out group-hover:scale-100 circle-clip tablet:hidden">
                                     <Image src="/assets/hoverImages/image2.png" alt="Images" width={250} height={250} className="object-cover h-full w-full"/>
                                 </div>
-                                <p className="uppercase text-head text-white group-hover:translate-x-[4.5vw] duration-300 text-[4.5vw] leading-[1] ease-out tablet:text-[5vw] tablet:group-hover:translate-x-0">
+                                <p className="uppercase text-head text-white group-hover:translate-x-[4.5vw] duration-300 text-[4.5vw] leading-[1] ease-out tablet:text-[5vw] tablet:group-hover:translate-x-0 tablet:pt-[1vw]">
                                     Projects
                                 </p>
                             </div>
-                            <span className="w-full block h-[1px]  bg-white tablet:my-[7vw]"></span>
+                            <span className="w-full block h-[1px]  bg-white mobile:my-[7vw] tablet:my-[4vw]"></span>
                         </div>
 
                         {/* Third Project */}
@@ -49,7 +49,7 @@ const ProjectHoverAnimation = () => {
                                     Luxury Projects
                                 </p>
                             </div>
-                            <span className="w-full block h-[1px]  bg-white"></span>
+                            <span className="w-full block h-[1px]  bg-white mobile:my-[7vw] tablet:my-[4vw]"></span>
                         </div>
                     </div>
                 </div>

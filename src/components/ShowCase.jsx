@@ -8,7 +8,7 @@ const ShowCase = () => {
   const [isMobile, setIsMobile] = useState(false);
  
   const checkIsMobile = () => {
-    setIsMobile(window.innerWidth < 768); // You can adjust the threshold if needed
+    setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
   };
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const ShowCase = () => {
       };
   }, [videoLoaded]);
 
-  if (globalThis.innerWidth > 541) {
+  if (globalThis.innerWidth > 1024) {
     useEffect(() => {
       let ctx = gsap.context(() => {
         const tl = gsap.timeline({
@@ -94,7 +94,7 @@ const ShowCase = () => {
           <h2 data-para-anim className="w-[50%] title-2 tablet:w-full">
             Find Opulence in Dubai’s Finest Location
           </h2>
-          <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] tablet:w-[90vw] tablet:h-[70vw] tablet:static tablet:rounded-[4vw]">
+          <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] tablet:w-[90vw] tablet:h-[50vw] tablet:static tablet:rounded-[4vw]">
             <video
               ref={videoRef}
               poster="/assets/video-poster.webp"

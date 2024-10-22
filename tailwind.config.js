@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
 	  screens: {
+		  'tablet':{'max':'1024px'},
 		  'mobile':{'max':'540px'},
-		  'tablet':{'max':'1024px'}
 		},
   	extend: {
   		colors: {

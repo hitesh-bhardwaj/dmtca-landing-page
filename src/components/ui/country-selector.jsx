@@ -35,7 +35,7 @@ export default function CountrySelector({
       <div className=" relative">
         <button
           type="button"
-          className="relative h-[3.2vw] w-[7vw] rounded-full bg-[#fdfdfd] px-5 py-2 lg:text-[1vw] text-[4vw] focus:outline-none placeholder:text-gray-300 focus:border-primary disabled:cursor-not-allowed disabled:opacity-50"
+          className="relative h-[3.2vw] w-[7vw] rounded-full bg-[#fdfdfd] px-5 py-2 lg:text-[1vw] text-[4vw] mobile:w-[25vw] mobile:h-[10vw] tablet:w-[10vw] tablet:h-[5vw] focus:outline-none placeholder:text-gray-300 focus:border-primary disabled:cursor-not-allowed disabled:opacity-50"
           aria-haspopup="listbox"
           aria-expanded="true"
           aria-labelledby="listbox-label"
@@ -50,18 +50,18 @@ export default function CountrySelector({
             />
           </span>
           <span
-            className={`absolute inset-y-0 right-0 flex items-center pr-[1vw] pointer-events-none ${
+            className={`absolute inset-y-0 right-0 flex items-center pr-[1vw] pointer-events-none mobile:pr-[4vw] tablet:pr-[2vw] ${
               disabled ? "hidden" : ""
             }`}
           >
-            <ChevronDownIcon className="w-[1.4vw] h-[1.4vw]"/>
+            <ChevronDownIcon className="w-[1.4vw] h-[1.4vw] mobile:w-[5vw] mobile:h-[5vw] tablet:w-[2vw] tablet:h-[2vw]"/>
           </span>
         </button>
 
           {open && (
             <ul
               data-lenis-prevent
-              className="absolute z-10 mt-2 w-[12vw] bg-white shadow-lg max-h-80 rounded-[20px] text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+              className="absolute z-10 mt-2 w-[12vw] bg-white shadow-lg max-h-80 rounded-[20px] mobile:w-[55vw] tablet:w-[30vw] text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
               tabIndex={-1}
               role="listbox"
               aria-labelledby="listbox-label"
