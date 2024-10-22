@@ -23,46 +23,46 @@ const ServiceButton = ({link, btnText , className}) => {
 export default function Service() {
     return (
         <>
-            <section className='w-screen mobile:py-[20%]' id='services'>
+            <section className='w-screen tablet:py-[20%]' id='services'>
                 <div className='container-lg flex flex-col py-[10%] gap-[7vw]'>
-                    <div className='flex gap-[1vw] fadeup mobile:flex-wrap'>
+                    <div className='flex gap-[1vw] fadeup tablet:flex-wrap'>
                         <ServiceButton link={"#"} btnText={"Download Brochure"} />
-                        <ServiceButton link={"#"} btnText={"Download Floor Plan"} className={"mobile:hidden"} />
-                        <ServiceButton link={"#"} btnText={"Download Payment Plan"}  className={"mobile:hidden"} />
-                        <ServiceButton link={"#"} btnText={"Download Master Plan"} className={"mobile:hidden"} />
-                        <ServiceButton link={"#"} btnText={"Download Site Plan"} className={"mobile:hidden"}  />
+                        <ServiceButton link={"#"} btnText={"Download Floor Plan"} className={"tablet:hidden"} />
+                        <ServiceButton link={"#"} btnText={"Download Payment Plan"}  className={"tablet:hidden"} />
+                        <ServiceButton link={"#"} btnText={"Download Master Plan"} className={"tablet:hidden"} />
+                        <ServiceButton link={"#"} btnText={"Download Site Plan"} className={"tablet:hidden"}  />
                     </div>
-                    <div className="w-full h-full mobile:overflow-scroll mobile:mt-[10%]">
+                    <div className="w-full h-full tablet:overflow-scroll tablet:mt-[10%]">
 
-                    <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup mobile:flex mobile:w-[400vw] mobile:ml-[5%] mobile:aspect-auto mobile:overflow-visible">
-                        <div className="stripe group mobile:w-full mobile:h-[50vh] mobile:p-[4vw]">
+                    <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup tablet:flex tablet:w-[400vw] tablet:ml-[5%] tablet:aspect-auto tablet:overflow-visible">
+                        <div className="stripe group tablet:w-full tablet:h-[50vh] tablet:p-[4vw]">
                             <Image fill alt="Image" src="/assets/service/relaxation.png" loading="lazy" quality={90} />
-                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all mobile:py-[2vw] mobile:px-[3vw]">
-                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] ">Relaxation Lounge</p>
+                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
+                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap tablet:text-[4vw] ">Relaxation Lounge</p>
                             </div>
                         </div>
-                        <div className="stripe mobile:p-[4vw]">
+                        <div className="stripe tablet:p-[4vw]">
                             <Image fill alt="Image" src="/assets/service/pool.png" loading="lazy" quality={90} />
-                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all mobile:py-[2vw] mobile:px-[3vw]">
-                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] ">65 Foot Lap Pool</p>
+                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
+                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap tablet:text-[4vw] ">65 Foot Lap Pool</p>
                             </div>
                         </div>
-                        <div className="stripe mobile:p-[4vw]">
+                        <div className="stripe tablet:p-[4vw]">
                             <Image fill alt="Image" src="/assets/service/spa.png" loading="lazy" quality={90} />
-                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all mobile:py-[2vw] mobile:px-[3vw]">
-                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] ">Spa And Wellness</p>
+                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
+                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap tablet:text-[4vw] ">Spa And Wellness</p>
                             </div>
                         </div>
-                        <div className="stripe mobile:p-[4vw]">
+                        <div className="stripe tablet:p-[4vw]">
                             <Image fill alt="Image" src="/assets/service/fire-pit.png" loading="lazy" quality={90} />
-                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all mobile:py-[2vw] mobile:px-[3vw]">
-                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] ">Fire Pit Lounge</p>
+                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
+                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap tablet:text-[4vw] ">Fire Pit Lounge</p>
                             </div>
                         </div>
-                        <div className="stripe mobile:p-[4vw]">
+                        <div className="stripe tablet:p-[4vw]">
                             <Image fill alt="Image" src="/assets/service/wine.png" loading="lazy" quality={90} />
-                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all mobile:py-[2vw] mobile:px-[3vw]">
-                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] ">Wine</p>
+                            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
+                                <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap tablet:text-[4vw] ">Wine</p>
                             </div>
                         </div>
                     </div>

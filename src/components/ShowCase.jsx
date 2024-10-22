@@ -85,16 +85,16 @@ const ShowCase = () => {
   return (
     <section
       id="showcase"
-      className="py-[10%] bg-white relative z-[5] mobile:pb-[20%]"
+      className="py-[10%] bg-white relative z-[5] tablet:pb-[20%]"
       data-scroll
       data-scroll-speed={isMobile ? undefined : "-0.3"}
     >
       <div className="container-lg h-full relative">
-        <div className="flex w-full gap-[10vw] mobile:flex-col">
-          <h2 data-para-anim className="w-[50%] title-2 mobile:w-full">
+        <div className="flex w-full gap-[10vw] tablet:flex-col">
+          <h2 data-para-anim className="w-[50%] title-2 tablet:w-full">
             Find Opulence in Dubai’s Finest Location
           </h2>
-          <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] mobile:w-[90vw] mobile:h-[70vw] mobile:static mobile:rounded-[4vw]">
+          <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] tablet:w-[90vw] tablet:h-[70vw] tablet:static tablet:rounded-[4vw]">
             <video
               ref={videoRef}
               poster="/assets/video-poster.webp"
@@ -113,8 +113,8 @@ const ShowCase = () => {
           </div>
         </div>
 
-        <div className="w-full h-full mt-[48vw] flex justify-end mobile:mt-[7vw]">
-          <p data-para-anim className="w-[50%] mobile:w-full ">
+        <div className="w-full h-full mt-[48vw] flex justify-end tablet:mt-[7vw]">
+          <p data-para-anim className="w-[50%] tablet:w-full ">
             At 53 West 53, immerse yourself in a lifestyle defined by
             sophistication and exclusivity. Indulge in breathtaking views,
             unparalleled amenities, and a vibrant community that embodies

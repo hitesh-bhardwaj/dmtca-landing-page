@@ -118,13 +118,13 @@ const SlideShow = () => {
     };
 
     return (
-        <section className="w-screen h-screen overflow-hidden mobile:h-[80vh]" id="features-slideshow">
+        <section className="w-screen h-screen overflow-hidden tablet:h-[80vh]" id="features-slideshow">
             <div className={`relative w-full h-full `} data-scroll
       data-scroll-speed={!isMobile ? '-0.3' : undefined}>
-                <div className="w-full h-full absolute z-10 top-0 left-0 bottom-0 right-0 grid place-items-end px-16 py-10 mobile:px-[5vw] pointer-events-none">
+                <div className="w-full h-full absolute z-10 top-0 left-0 bottom-0 right-0 grid place-items-end px-16 py-10 tablet:px-[5vw] pointer-events-none">
                     <nav className="flex gap-4 pointer-events-auto">
                         <button
-                            className="w-[3vw] group border border-white rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden mobile:w-[10vw] mobile:h-[10vw] mobile:p-[2.5vw]"
+                            className="w-[3vw] group border border-white rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden tablet:w-[10vw] tablet:h-[10vw] tablet:p-[2.5vw]"
                             onClick={() => navigate(PREV)}
                         >
                             <Image
@@ -139,7 +139,7 @@ const SlideShow = () => {
                             <span className="block absolute scale-0 h-full w-full bg-white group-hover:scale-100 duration-300 rounded-full" />
                         </button>
                         <button
-                            className="w-[3vw] border group border-white rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden mobile:w-[10vw] mobile:h-[10vw] mobile:p-[2.5vw]"
+                            className="w-[3vw] border group border-white rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden tablet:w-[10vw] tablet:h-[10vw] tablet:p-[2.5vw]"
                             onClick={() => navigate(NEXT)}
                         >
                             <Image
@@ -154,7 +154,7 @@ const SlideShow = () => {
                         </button>
                     </nav>
                 </div>
-                <div className="slides w-screen h-screen absolute overflow-hidden place-items-center mobile:h-[80vh]">
+                <div className="slides w-screen h-screen absolute overflow-hidden place-items-center tablet:h-[80vh]">
                     <div
                         className="slide"
                         ref={(el) => (slidesRef.current[0] = el)}
@@ -168,9 +168,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:top-0">Flat Roof Terraces</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] mobile:w-[60vw] mobile:p-[2.5vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] mobile:leading-[1.4]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw] tablet:top-0">Flat Roof Terraces</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] tablet:p-[2.5vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[3.5vw] tablet:leading-[1.4]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
                                         </p>
                                     </div>
@@ -178,7 +178,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 right-[30%] top-[45%] cursor-pointer mobile:right-[70%]">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 right-[30%] top-[45%] cursor-pointer tablet:right-[70%]">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -186,9 +186,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:top-0">Minimalist Exterior Design</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] mobile:w-[60vw] mobile:p-[2.5vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] mobile:leading-[1.4]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw] tablet:top-0">Minimalist Exterior Design</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] tablet:w-[60vw] tablet:p-[2.5vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[3.5vw] tablet:leading-[1.4]">
                                             Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
                                         </p>
                                     </div>
@@ -196,7 +196,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[60%] top-[75%] cursor-pointer mobile:left-[20%] mobile:top-[65%]">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[60%] top-[75%] cursor-pointer tablet:left-[20%] tablet:top-[65%]">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -204,9 +204,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:top-[10%]">Stone Facade</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] mobile:w-[60vw] relative mobile:p-[2.5vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] mobile:leading-[1.4]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw] tablet:top-[10%]">Stone Facade</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] relative tablet:p-[2.5vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[3.5vw] tablet:leading-[1.4]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
                                         </p>
                                     </div>
@@ -214,13 +214,13 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="text-white text-center absolute top-10 z-[2] w-[35%] mx-auto mobile:w-[90%]">
-                            <p className="text-[1.25vw] mobile:text-[4.5vw]">Own Your Global Property!</p>
+                        <div className="text-white text-center absolute top-10 z-[2] w-[35%] mx-auto tablet:w-[90%]">
+                            <p className="text-[1.25vw] tablet:text-[4.5vw]">Own Your Global Property!</p>
                             <span className="block h-[1px] w-full bg-gradient-to-r my-2 from-transparent from-0% via-white via-50% to-transparent to-100%" />
-                            <h3 className="text-[3.3vw] font-head leading-[1.2] mobile:text-[6vw]">Live Where Prestige and Luxury Meet with DMTCA</h3>
+                            <h3 className="text-[3.3vw] font-head leading-[1.2] tablet:text-[6vw]">Live Where Prestige and Luxury Meet with DMTCA</h3>
                         </div>
-                        <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 mobile:left-[5%] mobile:bottom-[5%] mobile:p-[4vw]">
-                            <h4 className="text-xl font-head mb-[3vw] mobile:mb-[2vw]">
+                        <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[5%] tablet:bottom-[5%] tablet:p-[4vw]">
+                            <h4 className="text-xl font-head mb-[3vw] tablet:mb-[2vw]">
                                 Lumière Haven
                             </h4>
                             <div className="flex items-center gap-2 mb-2">
@@ -292,9 +292,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:w-[20vw]">Flat Roof Terraces</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] mobile:w-[60vw] mobile:p-[4vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[4vw]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw] tablet:w-[20vw]">Flat Roof Terraces</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] tablet:p-[4vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[4vw]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
                                         </p>
                                     </div>
@@ -302,7 +302,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 right-[30%] top-[45%] cursor-pointer mobile:right-[60%]">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 right-[30%] top-[45%] cursor-pointer tablet:right-[60%]">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -310,9 +310,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw]">Minimalist Exterior Design</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] mobile:w-[60vw] mobile:p-[2vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[4vw]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw]">Minimalist Exterior Design</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] tablet:w-[60vw] tablet:p-[2vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[4vw]">
                                             Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
                                         </p>
                                     </div>
@@ -320,7 +320,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[60%] top-[75%] cursor-pointer mobile:left-[20%] mobile:top-[65%]">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[60%] top-[75%] cursor-pointer tablet:left-[20%] tablet:top-[65%]">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -328,9 +328,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:top-[8%]">Stone Facade</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] mobile:p-[2vw] mobile:w-[60vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[4vw]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw] tablet:top-[8%]">Stone Facade</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:p-[2vw] tablet:w-[60vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[4vw]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
                                         </p>
                                     </div>
@@ -338,7 +338,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 mobile:left-[4%] mobile:bottom-[4%] mobile:p-[3vw]">
+                        <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[4%] tablet:bottom-[4%] tablet:p-[3vw]">
                             <h4 className="text-xl font-head mb-[3vw]">
                                 Lumière Haven
                             </h4>
@@ -403,7 +403,7 @@ const SlideShow = () => {
                         ref={(el) => (slidesRef.current[2] = el)}
                     >
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[5%] top-[28%] cursor-pointer mobile:top-[35%] mobile:left-[15%]">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[5%] top-[28%] cursor-pointer tablet:top-[35%] tablet:left-[15%]">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -411,9 +411,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw]">Flat Roof Terraces</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] mobile:p-[2vw] mobile:w-[60vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[4vw]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw]">Flat Roof Terraces</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:p-[2vw] tablet:w-[60vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[4vw]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
                                         </p>
                                     </div>
@@ -421,7 +421,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 right-[30%] top-[45%] cursor-pointer mobile:top-[60%] mobile:right-[70%]">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 right-[30%] top-[45%] cursor-pointer tablet:top-[60%] tablet:right-[70%]">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -429,9 +429,9 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw]">Minimalist Exterior Design</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] mobile:p-[2vw] mobile:w-[60vw]">
-                                        <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[4vw]">
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[3.2vw]">Minimalist Exterior Design</p>
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] tablet:p-[2vw] tablet:w-[60vw]">
+                                        <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[4vw]">
                                             Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
                                         </p>
                                     </div>
@@ -439,7 +439,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[60%] top-[75%] cursor-pointer mobile:hidden">
+                        <div className="absolute w-fit z-[2] pointer-events-auto flex gap-4 left-[60%] top-[75%] cursor-pointer tablet:hidden">
                             <div className="group h-[7vw] w-[7vw] relative">
                                 <div className="rounded-full group-hover:bg-white/40 group-hover:border-white/0 duration-300 h-[7vw] w-[7vw] border-2 border-white flex items-center justify-center">
                                     <span className="bg-white/20 h-[40%] w-[40%] z-[0] rounded-full flex items-center justify-center relative">
@@ -457,7 +457,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 mobile:left-[4%] mobile:bottom-[4%] mobile:p-[3vw]">
+                        <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[4%] tablet:bottom-[4%] tablet:p-[3vw]">
                             <h4 className="text-xl font-head mb-[3vw]">
                                 Lumière Haven
                             </h4>

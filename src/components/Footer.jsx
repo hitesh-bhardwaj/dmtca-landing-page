@@ -4,15 +4,15 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <section id="footer" className="z-[5] footer-body bg-[#161616]">
-      <div className="container-lg w-screen h-full rounded-t-[40px] overflow-hidden bg-[#E0D4C6] text-[#1C1B1A] mobile:py-[10%]">
+      <div className="container-lg w-screen h-full rounded-t-[40px] overflow-hidden bg-[#E0D4C6] text-[#1C1B1A] tablet:py-[10%]">
         <div className=" pt-[5%] pb-[2%] flex flex-col">
 
-          <div className="w-full relative flex items-center justify-between mobile:flex-col-reverse mb-[7vw] mobile:gap-0">
+          <div className="w-full relative flex items-center justify-between tablet:flex-col-reverse mb-[7vw] tablet:gap-0">
             
             {/* First Div */}
-            <div className="flex items-center justify-center gap-[1vw] mobile:gap-[3vw] mobile:mb-[5vw]">
+            <div className="flex items-center justify-center gap-[1vw] tablet:gap-[3vw] tablet:mb-[5vw]">
               <Link href={"#"}>
-                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup mobile:w-[10vw] mobile:h-[10vw] ">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup tablet:w-[10vw] tablet:h-[10vw] ">
                   <Image
                     width={24}
                     height={24}
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
               </Link>
               <Link href={"#"}>
-                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup mobile:w-[10vw] mobile:h-[10vw] ">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup tablet:w-[10vw] tablet:h-[10vw] ">
                   <Image
                     width={24}
                     height={24}
@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
               </Link>
               <Link href={"#"}>
-                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup mobile:w-[10vw] mobile:h-[10vw] mobile:p-[1vw] ">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup tablet:w-[10vw] tablet:h-[10vw] tablet:p-[1vw] ">
                   <Image
                     width={24}
                     height={24}
@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
               </Link>
               <Link href={"#"}>
-                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup mobile:w-[10vw] mobile:h-[10vw] ">
+                <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup tablet:w-[10vw] tablet:h-[10vw] ">
                   <Image
                     width={24}
                     height={24}
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
 
             {/* Second Div */}
-            <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup mobile:ml-0 mobile:w-[30vw] mobile:mb-[10vw]">
+            <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup tablet:ml-0 tablet:w-[30vw] tablet:mb-[10vw]">
               <Link href={"/"}>
                 <Image
                   width={200}
@@ -67,7 +67,7 @@ const Footer = () => {
 
             {/* Third Div */}
             <a data-scroll data-scroll-to data-scroll-to-duration="3s" href="#hero">
-              <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup mobile:absolute mobile:top-[5%] mobile:right-[5%] mobile:w-[9vw] mobile:h-[9.2vw]">
+              <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup tablet:absolute tablet:top-[5%] tablet:right-[5%] tablet:w-[9vw] tablet:h-[9.2vw]">
                 <Image
                   width={24}
                   height={24}
@@ -79,26 +79,26 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center flex-col justify-center">
-            <Link href="#" className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw]">
+            <Link href="#" className="text-[3.4vw] font-medium text-head leading-none tablet:text-[5.5vw]">
               <span data-para-anim className="">(+234) 7046336078</span>
             </Link>
             <Link href="mailto:nigeria@dmtca.com">
-              <p data-para-anim className="text-[3.4vw] text-head font-medium mobile:text-[5.5vw]">
+              <p data-para-anim className="text-[3.4vw] text-head font-medium tablet:text-[5.5vw]">
                 nigeria@dmtca.com
               </p>
             </Link>
           </div>
 
-          <div className="flex items-center justify-between mobile:flex-col mobile:gap-[7vw] fadeup pt-[7vw]">
-            <div className="w-[15%] mobile:w-[70%] order-1">
-              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] mobile:text-center">All rights reserved @2024 dmtca</p>
+          <div className="flex items-center justify-between tablet:flex-col tablet:gap-[7vw] fadeup pt-[7vw]">
+            <div className="w-[15%] tablet:w-[70%] tablet:order-1">
+              <p className="text-[1.1vw] uppercase tablet:text-[3.5vw] tablet:text-center">All rights reserved @2024 dmtca</p>
             </div>
-            <div className="w-[30%] mobile:w-[80%]">
-              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] mobile:text-center">315b Akin Ogunlewe Rd, Victoria Island, Lagos & No. 1, Adekunle Owobiyi Close, Ogba, Lagos, Nigeria</p>
+            <div className="w-[30%] tablet:w-[80%]">
+              <p className="text-[1.1vw] leading-[1.2] text-center tablet:text-[3.5vw] tablet:text-center">315b Akin Ogunlewe Rd, Victoria Island, Lagos & No. 1, Adekunle Owobiyi Close, Ogba, Lagos, Nigeria</p>
             </div>
-            <Link href={"#"} className="mobile:order-3">
+            <Link href={"#"} className="tablet:order-3">
               <div>
-                <p className="text-[1.1vw]  uppercase mobile:text-[3.2vw] mobile:text-center">PRIVACY POLICY</p>
+                <p className="text-[1.1vw]  uppercase tablet:text-[3.2vw] tablet:text-center">PRIVACY POLICY</p>
               </div>
             </Link>
           </div>

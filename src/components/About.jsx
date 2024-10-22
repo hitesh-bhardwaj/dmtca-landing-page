@@ -6,17 +6,17 @@ const About = () => {
   return (
     <>
       <section className="" id="about">
-        <div className="container-lg py-[10%] mobile:py-[20%]">
-          <div className="w-full flex justify-between  mobile:flex-col mobile:gap-[8vw]">
+        <div className="container-lg py-[10%] tablet:py-[20%]">
+          <div className="w-full flex justify-between  tablet:flex-col tablet:gap-[8vw]">
             <h2
               data-para-anim
-              className="w-[40%] text-[3.8vw] title-2 mt-[-1vw] mobile:w-[90%]"
+              className="w-[40%] text-[3.8vw] title-2 mt-[-1vw] tablet:w-[90%]"
             >
               Luxury Living Awaits You In Dubai's Elite Neighborhood
             </h2>
             <p
               data-para-anim
-              className=" w-[40%] mobile:w-full"
+              className=" w-[40%] tablet:w-full"
             >
               Welcome to 53 West 53, a masterpiece nestled in the iconic Burj
               Khalifa District, where elegance meets exclusivity. This luxurious
@@ -27,9 +27,9 @@ const About = () => {
               unparalleled sophistication.
             </p>
           </div>
-          <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup mobile:flex-col mobile:gap-[2vw]">
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[90vw] mobile:h-[90vw] mobile:px-[8vw]">
-              <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[30vw] mobile:h-[30vw] mobile:p-[4vw]">
+          <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup tablet:flex-col tablet:gap-[2vw]">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:w-[90vw] tablet:h-[90vw] tablet:px-[8vw]">
+              <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out tablet:w-[30vw] tablet:h-[30vw] tablet:p-[4vw]">
                 <Image
                   width={50}
                   height={50}
@@ -50,13 +50,13 @@ const About = () => {
                 />
               </div>
               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5vw]">
+                <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in tablet:text-[5vw]">
                   Futuristic Smart City
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[90vw] mobile:h-[90vw] mobile:px-[8vw]">
-              <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[30vw] mobile:h-[30vw] mobile:p-[4vw]">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:w-[90vw] tablet:h-[90vw] tablet:px-[8vw]">
+              <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out tablet:w-[30vw] tablet:h-[30vw] tablet:p-[4vw]">
                 <Image
                   width={50}
                   height={50}
@@ -77,12 +77,12 @@ const About = () => {
                 />
               </div>
               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5vw]">
+                <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in tablet:text-[5vw]">
                 Tax Incentives
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:hidden ">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden ">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
                  width={80}
@@ -109,7 +109,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:hidden pr-0">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden pr-0">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
                   width={80}
@@ -136,7 +136,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:hidden">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
                   width={80}
@@ -163,7 +163,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:hidden">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
                   width={80}
@@ -190,7 +190,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:hidden">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
                   width={80}
@@ -217,7 +217,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:hidden">
+            <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group tablet:hidden">
               <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out">
                 <Image
                  width={80}

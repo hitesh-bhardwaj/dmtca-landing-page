@@ -77,22 +77,22 @@ const Bringing = () => {
 
   return (
     <section id='bringing' className='overflow-hidden' ref={BringingRef}>
-      <div className='container-lg w-full h-full py-[10%] relative mobile:py-[20%]'>
+      <div className='container-lg w-full h-full py-[10%] relative tablet:py-[20%]'>
         <div className='flex flex-col items-center justify-center w-full h-full gap-[5vw]'>
           <div className='flex flex-col items-center justify-center'>
             <div className='text1'>
-              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>
+              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3]'>
                 BRINGING YOU
               </p>
             </div>
             <div className='w-full h-full flex justify-center gap-[3vw] text2'>
-              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>
+              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3]'>
                 SPACES
               </p>
               <div
-                className='h-full w-[20vw] relative rounded-[20px] mobile:absolute mobile:top-[30%] mobile:w-[90vw]'
+                className='h-full w-[20vw] relative rounded-[20px] tablet:absolute tablet:top-[30%] tablet:w-[90vw]'
               >
-                <div className="w-[20vw] h-[10vw] absolute z-[100] top-0 rounded-xl overflow-hidden video mobile:w-[90vw] mobile:h-[70vw]">
+                <div className="w-[20vw] h-[10vw] absolute z-[100] top-0 rounded-xl overflow-hidden video tablet:w-[90vw] tablet:h-[70vw]">
                   <video
                     src='/videos/bringing.mp4'
                     poster="/assets/video-poster-2.webp"
@@ -107,13 +107,13 @@ const Bringing = () => {
               </div>
             </div>
             <div className='text3 relative z-[-1]'>
-              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase mobile:leading-[1.3]'>
+              <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3]'>
                 YOU LOVE
               </p>
             </div>
           </div>
-          <div className='w-[70%] mt-[0vw] mobile:mt-[85vw] mobile:w-full'>
-            <p className='text-body text-center mobile:text-start text-4'>
+          <div className='w-[70%] mt-[0vw] tablet:mt-[85vw] tablet:w-full'>
+            <p className='text-body text-center tablet:text-start text-4'>
               At DMTCA, we artfully combine design brilliance, innovative technology, and human insight
               to deliver unparalleled real estate experiences. Our approach goes beyond conventional sales,
               turning properties into coveted lifestyle statements. We understand that discerning investors

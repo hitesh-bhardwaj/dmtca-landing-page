@@ -42,24 +42,24 @@ export default function Project() {
 
   return (
     <>
-      <section id='project' className='pt-[10%] pb-[20%] mobile:py-[20%] w-screen overflow-hidden'>
+      <section id='project' className='pt-[10%] pb-[20%] tablet:py-[20%] w-screen overflow-hidden'>
         <div className='container-lg'>
           <h2 data-para-anim className='title-2'>
             A World of Refinement
           </h2>
-          <div className='w-full h-[1px] bg-black/30 my-[4vw] lineDraw mobile:my-[8vw]'></div>
+          <div className='w-full h-[1px] bg-black/30 my-[4vw] lineDraw tablet:my-[8vw]'></div>
         <div className='w-full flex justify-end mb-[5vw]'>
-          <div className='w-[75%] flex justify-between px-[2vw] mobile:w-full mobile:flex-col mobile:gap-[7vw]'>
-            <div className='fadeup mobile:order-1'>
+          <div className='w-[75%] flex justify-between px-[2vw] tablet:w-full tablet:flex-col tablet:gap-[7vw]'>
+            <div className='fadeup tablet:order-1'>
               <BlackButton btnText={"Enquire Now"} link={"#"} />
             </div>
-            <p data-para-anim className='w-[60%] mobile:w-full'>
+            <p data-para-anim className='w-[60%] tablet:w-full'>
               Immerse yourself in the stylish allure of 53 West 53, where every corner exudes sophistication. This not just a residence, it’s a mark of distinction that embodies the luxurious lifestyle you&apos;ve always craved.
             </p>
           </div>
         </div>
         </div>
-        <div className='w-[70%] ml-auto h-full swipe fadeup mobile:w-full mobile:mt-[15vw] mobile:pl-[5%]'>
+        <div className='w-[70%] ml-auto h-full swipe fadeup tablet:w-full tablet:mt-[15vw] tablet:pl-[5%]'>
           <Swiper
             slidesPerView={1.5}
             spaceBetween={20}
@@ -69,7 +69,7 @@ export default function Project() {
             modules={[Scrollbar, FreeMode]}
             className="mySwiper w-full"
           >
-            <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative mobile:h-[70vw]'>
+            <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative tablet:h-[70vw]'>
               <Image src="/assets/interior-img-1.png" alt='interior-img-1' fill className='hover:scale-110 transition-all ease-in-out duration-500' />
             </SwiperSlide>
             <SwiperSlide className='w-[40vw] h-[30vw] rounded-[2vw] overflow-hidden relative'>
