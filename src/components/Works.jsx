@@ -77,7 +77,7 @@ if(globalThis.innerWidth>541){
           <div className="w-full h-full flex-col mt-[10vw] relative z-[2] mobile:mt-[20vw]">
             <div className="flex w-full h-full justify-between mobile:flex-col mobile:gap-[10vw]">
               <div
-                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw]" 
+                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw] fadeup" 
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"0.1"}
               >
@@ -140,7 +140,7 @@ if(globalThis.innerWidth>541){
               </div>
 
               <div
-                className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4] mobile:mt-auto mobile:mr-auto"
+                className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4] mobile:mt-auto mobile:mr-auto fadeup"
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"-0.1"}
               >
@@ -197,7 +197,7 @@ if(globalThis.innerWidth>541){
               </div>
             </div>
             <div
-              className="w-fit h-full mt-[15vw] relative mobile:mt-[90vw]"
+              className="w-fit h-full mt-[15vw] relative mobile:mt-[90vw] fadeup"
               data-scroll
               data-scroll-speed={isMobile?undefined:"-0.1"}
             >
@@ -252,7 +252,7 @@ if(globalThis.innerWidth>541){
                 </div>
               </div>
               <div className="w-[47vw] h-full flex ml-[3%] mt-[5vw] mobile:w-full mobile:ml-0">
-                <p data-para-anim className="fadeup w-[75%] text-white text-left fadeup">
+                <p data-para-anim className="w-[75%] text-white text-left mobile:w-full">
                   53 West 53 offers an extraordinary living experience, with
                   residences boasting panoramic views of the city skyline and
                   the Arabian Gulf. Each suite is designed with spacious
@@ -262,7 +262,7 @@ if(globalThis.innerWidth>541){
               </div>
             </div>
             <div
-              className="w-full h-full flex justify-between mt-[7vw] mobile:mt-auto mobile:flex-col"
+              className="w-full h-full flex justify-between mt-[7vw] mobile:mt-auto mobile:flex-col fadeup"
               data-scroll
               data-scroll-speed={isMobile?undefined:"0.1"}
             >
@@ -321,7 +321,7 @@ if(globalThis.innerWidth>541){
                 data-scroll
                 data-scroll-speed={isMobile?undefined:"-0.1"}
               >
-                <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw]">
+                <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw] fadeup">
                   <Image
                     src="/assets/work-img-3.png"
                     alt="work-img-3"

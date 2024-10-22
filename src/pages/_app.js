@@ -8,7 +8,11 @@ export default function App({ Component, pageProps }) {
     (
       async () => {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
-        const locomotiveScroll = new LocomotiveScroll();
+        const locomotiveScroll = new LocomotiveScroll({
+          lenisOptions: {
+            syncTouch: true,
+          }
+        });
       }
     )()
   }, []);
