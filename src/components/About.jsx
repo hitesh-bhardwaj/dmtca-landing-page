@@ -44,8 +44,8 @@ const About = () => {
               unparalleled sophistication.
             </p>
           </div>
-          <div className="mobile:overflow-scroll mobile:w-[100vw] mobile:ml-[-5vw]">
-            <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup mobile:flex mobile:flex-nowrap mobile:w-fit mobile:gap-[2vw] mobile:overflow-visible mobile:mb-[5vw] mobile:pl-[5vw] tablet:gap-[3vw]">
+          <div className="mobile:overflow-scroll mobile:w-[100vw] mobile:ml-[-5vw] mobile:p-[5vw]">
+            <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup mobile:flex mobile:flex-nowrap mobile:w-fit mobile:gap-[2vw] mobile:overflow-visible mobile:mb-[5vw] tablet:gap-[3vw]">
               <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
                 <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
                   <Image
@@ -56,7 +56,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className=" group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className=" group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   Futuristic Smart City
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-40 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -84,7 +84,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   Tax Incentives
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -92,7 +92,7 @@ const About = () => {
                    loading="lazy"
                     src="/assets/about/about-image-2.png"
                     alt="about-image-2"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
                     fill
                   />
                 </div>
@@ -112,7 +112,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   Easy Connectivity
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -120,7 +120,7 @@ const About = () => {
                     loading="lazy"
                     src="/assets/about/about-image-3.png"
                     alt="about-image-3"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
                     fill
                   />
                 </div>
@@ -140,7 +140,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   High-End Recreational Activities
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -148,7 +148,7 @@ const About = () => {
                     loading="lazy"
                     src="/assets/about/about-image-4.png"
                     alt="about-image-4"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
                     fill
                   />
                 </div>
@@ -168,7 +168,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   World Class Healthcare
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -176,7 +176,7 @@ const About = () => {
                     loading="lazy"
                     src="/assets/about/about-image-5.png"
                     alt="about-image-5"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
                     fill
                   />
                 </div>
@@ -196,7 +196,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   Communal Harmony
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -204,7 +204,7 @@ const About = () => {
                    loading="lazy"
                     src="/assets/about/about-image-6.png"
                     alt="about-image-6"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
                     fill
                   />
                 </div>
@@ -224,7 +224,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   International Institutions
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -232,7 +232,7 @@ const About = () => {
                     loading="lazy"
                     src="/assets/about/about-image-7.png"
                     alt="about-image-7"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
                     fill
                   />
                 </div>
@@ -252,7 +252,7 @@ const About = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%]">
+                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
                   Safety for All
                 </p>
                 <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
@@ -260,7 +260,8 @@ const About = () => {
                     loading="lazy"
                     src="/assets/about/about-image-8.png"
                     alt="about-image-8"
-                    className="object-contain"
+                    className="object-contain brightness-[70%]"
+                    
                     fill
                   />
                 </div>
@@ -271,6 +272,7 @@ const About = () => {
                 </div>
               </div>
             </div>
+            {/* <div className="scrollbar-track-visual"></div> */}
           </div>
         </div>
       </section>

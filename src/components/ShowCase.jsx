@@ -85,7 +85,7 @@ const ShowCase = () => {
   return (
     <section
       id="showcase"
-      className="py-[10%] bg-white relative z-[5] tablet:pb-[20%]"
+      className="py-[10%] bg-white relative z-[5] tablet:pb-[15%]"
       data-scroll
       data-scroll-speed={isMobile ? undefined : "-0.3"}
     >

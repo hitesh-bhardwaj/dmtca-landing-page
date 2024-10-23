@@ -45,7 +45,7 @@ export default function Project() {
 
   return (
     <>
-      <section id='project' className='pt-[10%] pb-[20%] mobile:py-[20%] tablet:py-[10%] w-screen overflow-hidden'>
+      <section id='project' className='pt-[10%] pb-[20%] mobile:pt-[20%] mobile:pb-[10%] tablet:py-[10%] w-screen overflow-hidden'>
         <div className='container-lg'>
           <h2 data-para-anim className='title-2'>
             A World of Refinement
