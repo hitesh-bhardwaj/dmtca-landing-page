@@ -17,19 +17,19 @@ const SlideShow = () => {
 
     // Function to check window size
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
+        setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
     };
-  
+
     useEffect(() => {
-      // Check screen size on mount and window resize
-      checkIsMobile();
-      window.addEventListener('resize', checkIsMobile);
-  
-      // Cleanup listener on unmount
-      return () => window.removeEventListener('resize', checkIsMobile);
+        // Check screen size on mount and window resize
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+
+        // Cleanup listener on unmount
+        return () => window.removeEventListener('resize', checkIsMobile);
     }, []);
 
- 
+
 
     const slidesTotal = 3;
 
@@ -120,7 +120,7 @@ const SlideShow = () => {
     return (
         <section className="w-screen h-screen overflow-hidden tablet:h-[80vh]" id="features-slideshow">
             <div className={`relative w-full h-full `} data-scroll
-      data-scroll-speed={!isMobile ? '-0.3' : undefined}>
+                data-scroll-speed={!isMobile ? '-0.3' : undefined}>
                 <div className="w-full h-full absolute z-10 top-0 left-0 bottom-0 right-0 grid place-items-end px-16 py-10 tablet:px-[5vw] pointer-events-none">
                     <nav className="flex gap-4 pointer-events-auto">
                         <button
@@ -274,7 +274,7 @@ const SlideShow = () => {
                                 src="/assets/slider1/img1.png"
                                 alt="Slider Image"
                                 fill
-                                quality={100}
+                                quality={90}
                                 className="object-cover w-full h-full"
                             />
                         </div>
@@ -394,7 +394,7 @@ const SlideShow = () => {
                                 src="/assets/slider1/img2.png"
                                 alt="Slider Image"
                                 fill
-                                quality={100}
+                                quality={90}
                                 className="object-cover w-full h-full"
                             />
                         </div>
@@ -464,7 +464,7 @@ const SlideShow = () => {
                                 Lumière Haven
                             </h4>
                             <div className="flex items-center gap-2 mb-2 tablet:mb-[1vw]">
-                                 <img
+                                <img
                                     src="/assets/icons/location.svg"
                                     alt="location icon"
                                     width="18"
@@ -514,7 +514,7 @@ const SlideShow = () => {
                                 src="/assets/slider1/img3.png"
                                 alt="Slider Image"
                                 fill
-                                quality={100}
+                                quality={90}
                                 className="object-cover w-full h-full"
                             />
                         </div>
