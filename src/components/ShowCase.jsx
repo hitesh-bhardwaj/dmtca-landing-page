@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ShowCase = () => {
   const [isMobile, setIsMobile] = useState(false);
- 
+
   const checkIsMobile = () => {
     setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
   };
@@ -24,37 +24,37 @@ const ShowCase = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
-      const observer = new IntersectionObserver(
-          (entries) => {
-              entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                      const video = videoRef.current;
-                      if (video && !videoLoaded) {
-                          // Set video source dynamically when it enters the viewport
-                          video.src = "/assets/dmtca-video.mp4";
-                          video.load(); // Ensure the video is loaded
-                          video.play(); // Play the video when it's visible
-                          setVideoLoaded(true); // Set video as loaded
-                      }
-                      observer.unobserve(entry.target); // Stop observing once the video has loaded
-                  }
-              });
-          },
-          { threshold: 0.5 }
-      );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const video = videoRef.current;
+            if (video && !videoLoaded) {
+              // Set video source dynamically when it enters the viewport
+              video.src = "/assets/dmtca-video.mp4";
+              video.load(); // Ensure the video is loaded
+              video.play(); // Play the video when it's visible
+              setVideoLoaded(true); // Set video as loaded
+            }
+            observer.unobserve(entry.target); // Stop observing once the video has loaded
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-      const videoElement = videoRef.current;
-      if (videoElement) {
-          observer.observe(videoElement);
-      }
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      observer.observe(videoElement);
+    }
 
-      return () => {
-          if (videoElement) observer.unobserve(videoElement);
-      };
+    return () => {
+      if (videoElement) observer.unobserve(videoElement);
+    };
   }, [videoLoaded]);
 
-  if (globalThis.innerWidth > 1024) {
-    useEffect(() => {
+  useEffect(() => {
+    if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -79,8 +79,8 @@ const ShowCase = () => {
         });
       });
       return () => ctx.revert();
-    });
-  }
+    }
+  }, []);
 
   return (
     <section

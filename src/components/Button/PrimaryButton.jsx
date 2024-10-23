@@ -2,11 +2,10 @@ import Link from "next/link";
 
 const PrimaryButton = ({link, btnText}) => {
     return(
-        <Link href={link} className="btn fadeUp">
+        <Link href={link} className="btn">
             <span data-primary className="btn-text">
                 {btnText}
             </span>
-                
             <div aria-hidden="true" className="btn-circle">
                 <div className="btn-circle-text">
                     {btnText}

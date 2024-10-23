@@ -36,6 +36,20 @@
   font-style: normal;
   font-display: swap;
 }
+/* Custom ScrollBar */
+div.custom-scroll::-webkit-scrollbar{
+  height: 1.5vw;
+  border-radius: 10px;
+}
+div.custom-scroll::-webkit-scrollbar-track{
+  background-color: #eeeeee;
+  margin: 5vw;
+  border-radius: 10px;
+}
+div.custom-scroll::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: #000;
+}
 /* Font Family End*/
 body{
   width: 100vw;
@@ -392,34 +406,6 @@ p{
   height: 100%; 
 }
 
-/* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
-::-webkit-scrollbar {
-  height: 1vw;
-  width: 0vw; /* Controls scrollbar height */
-}
-
-::-webkit-scrollbar-track {
-  background-color: #e2e2e2;
-  width: 90vw; /* Scrollbar track color */
-}
-::-webkit-scrollbar-thumb {
-  background-color: black; /* Scrollbar thumb (the draggable part) */
-  border-radius: 10px; /* Round the edges */
-}
-/* .scrollbar-track-visual {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 90vw;
-  height: 1vw;
-  background-color: #e2e2e2;
-  z-index: 0;
-} */
-/* Firefox scrollbar */
-
-
-
-
 /* ClipPath Hover Section */
 .circle-clip{
   clip-path: circle(100.0% at 0 100%);
@@ -576,16 +562,11 @@ p{
   .work-btn:hover .btn-circle{
     clip-path: inset(0 round 10vw);
   }
-  
-
   .swiper {
     width: 100vw;
     height: 80vw;
     padding-bottom: 5vw !important;
   }
-
-
-  
 }
 
 @media screen and (min-width: 541px) and (max-width: 1023px) {
@@ -600,21 +581,6 @@ p{
     font-size: 6.8vw;
     line-height: 1.2; 
   }
-  ::-webkit-scrollbar {
-    height: 0.5vw;
-    width: 0vw; /* Controls scrollbar height */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #e2e2e2;
-    width: 90vw; /* Scrollbar track color */
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: black; /* Scrollbar thumb (the draggable part) */
-    border-radius: 10px; /* Round the edges */
-  }
-
-
   .btn{
     display: inline-flex;
     align-items: center;
@@ -850,5 +816,10 @@ p{
     width: 100vw;
     height: 60vw;
     padding-bottom: 5vw !important;
+  }
+  /* Custom ScrollBar */
+  div.custom-scroll::-webkit-scrollbar{
+    height: 0.8vw;
+    border-radius: 10px;
   }
 }

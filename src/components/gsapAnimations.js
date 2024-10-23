@@ -2,36 +2,10 @@
 import gsap from 'gsap';
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { CustomEase } from 'gsap/dist/CustomEase';
-import { SplitInLine, SplitInLineWord } from './splitTextUtils';
+import { SplitInLine } from './splitTextUtils';
 
-gsap.registerPlugin(ScrollTrigger, CustomEase);
+gsap.registerPlugin(ScrollTrigger);
 
-const primaryEase = CustomEase.create("cus-1", "0.62, 0.05, 0.01, 0.99");
-
-export function titleAnim() {
-  useEffect(() => {
-    const headings = document.querySelectorAll("[data-title-anim]");
-    let ctx = gsap.context(() => {
-      headings.forEach((heading) => {
-        SplitInLineWord(heading);
-        let headingWord = heading.querySelectorAll(".word");
-        gsap.from(headingWord, {
-          scrollTrigger: {
-            trigger: heading,
-            start: "top 85%",
-          },
-          rotate: "5deg",
-          duration: 1.5,
-          yPercent: 100,
-          stagger: 0.1,
-          ease: primaryEase,
-        });
-      });
-    });
-    return () => ctx.revert();
-  });
-}
 export function paraAnim() {
   useEffect(() => {
     const paraAnimations = document.querySelectorAll("[data-para-anim]");
@@ -44,10 +18,10 @@ export function paraAnim() {
             trigger: paraAnimation,
             start: "top 90%",
           },
-          duration: 1.47,
+          duration: 1,
           yPercent: 100,
-          stagger: 0.07,
-          ease: primaryEase,
+          stagger: 0.1,
+          ease: "power4.out",
         });
       });
     });
@@ -68,10 +42,10 @@ export function lineAnim() {
             },
             scaleX: 0,
             transformOrigin: "left",
-            duration: 1.47,
+            duration: 1,
             yPercent: 100,
-            stagger: 0.07,
-            ease: primaryEase,
+            stagger: 0.1,
+            ease: "power4.out",
           });
         });
       });
@@ -90,10 +64,10 @@ export function lineAnim() {
             },
             scaleX: 0,
             transformOrigin: "left",
-            duration: 1.47,
+            duration: 1,
             yPercent: 100,
-            stagger: 0.07,
-            ease: primaryEase,
+            stagger: 0.1,
+            ease: "power4.out",
           });
         });
       });

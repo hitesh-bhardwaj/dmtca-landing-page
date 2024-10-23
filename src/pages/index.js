@@ -7,42 +7,33 @@ import Project from "@/components/Project";
 import Footer from "@/components/Footer";
 import ShowCase from "@/components/ShowCase";
 import Bringing from "@/components/Bringing";
-import { titleAnim , paraAnim , lineAnim , fadeUp} from "@/components/gsapAnimations";
+import { paraAnim, lineAnim, fadeUp } from "@/components/gsapAnimations";
 import Gallery from "@/components/Gallery";
 import ProjectHover from "@/components/ProjectHover";
-import { useEffect, useState } from "react";
-import MobileForm from "@/components/MobileForm";
+import { Suspense } from "react";
 
 export default function Home() {
   paraAnim();
   lineAnim();
-  titleAnim();
   fadeUp();
 
-  const [isMobile,setIsMobile] = useState(false);
-  useEffect(()=>{
-    if(globalThis.innerWidth<541){
-      setIsMobile(true);
-    }
-    else{
-      setIsMobile(false);
-    }
-  })
-   
   return (
     <>
       <Hero />
-      {/* {isMobile?<MobileForm/>:""} */}
       <About />
-      <SlideShow />
-      <Service />
-      <Works/>
-      <Project/>
-      <ShowCase/>
+      <Suspense fallback={<p>Loading</p>}>
+        <SlideShow />
+        <Service />
+      </Suspense>
+      <Works />
+      <Project />
+      <ShowCase />
       <Gallery />
-      <Bringing/>
-      <ProjectHover />
-      <Footer/>
+      <Suspense fallback={<p>Loading</p>}>
+        <Bringing />
+        <ProjectHover />
+      </Suspense>
+      <Footer />
     </>
   )
 }

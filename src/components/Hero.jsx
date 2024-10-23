@@ -10,17 +10,18 @@ const Hero = () => {
       <section id="hero" className="">
         <div className="w-screen h-[130vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
           <Link href={"#"} className="block fadeup">
-            <Image 
+            <Image
               quality={100}
               src="/assets/53-west-logo.svg"
               alt="logo-img"
               width={160}
-              height={160}
+              height={24}
               className="object-contain mobile:w-[30vw] tablet:w-[20vw]" />
           </Link>
 
           <Image
-            quality={100}
+            priority={true}
+            quality={90}
             data-scroll
             data-scroll-speed="-0.7"
             src="/assets/hero-image.png"
@@ -29,8 +30,7 @@ const Hero = () => {
             className="object-cover w-full h-full object-top relative z-[-1]"
           />
           <div className="w-[55%] flex flex-col gap-[6vw] mt-[15vw] mb-[8vw] tablet:w-[90%] tablet:mt-[20vh] tablet:mb-[12vw] tablet:gap-[12vw]">
-            <p data-para-anim className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]">Experience Iconic Luxury Living at Dubai’s Most Prestigious and Exclusive Address</p>
-
+            <p data-para-anim className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]">Experience Iconic Luxury Living at Dubai&apos;s Most Prestigious and Exclusive Address</p>
             <div className="w-full h-[1px] bg-white lineDraw"></div>
           </div>
           <div className="relative z-10">
@@ -54,8 +54,7 @@ const Hero = () => {
             <p data-para-anim className="text-[1.5vw] text-white opacity-90 tracking-wide w-[40%] mobile:text-[4.5vw] tablet:w-[70%] tablet:text-[3.2vw]">We Elevate Your Lifestyle With World-Class Architectural Creations</p>
           </div>
           <div className="mobile:hidden">
-
-          <EnquiryForm/>
+            <EnquiryForm/>
           </div>
         </div>
       </section>

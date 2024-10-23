@@ -78,7 +78,7 @@ export default function Service() {
                         <ServiceButton link={"#"} btnText={"Download Master Plan"} className={"mobile:hidden"} />
                         <ServiceButton link={"#"} btnText={"Download Site Plan"} className={"mobile:hidden"}  />
                     </div>
-                    <div className="w-full h-full tablet:overflow-scroll mobile:mt-[10%] tablet:w-[100vw] tablet:ml-[-5vw]">
+                    <div className="w-full h-full tablet:overflow-scroll mobile:mt-[10%] tablet:w-[100vw] tablet:ml-[-5vw] custom-scroll">
 
                     <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup tablet:flex tablet:w-[400vw] tablet:ml-[5%] tablet:aspect-auto tablet:overflow-visible tablet:mb-[5vw] tablet:gap-[3vw] mobile:gap-[1.5%]">
                         <div className="stripe group tablet:w-full tablet:h-[50vh] tablet:p-[4vw]">
