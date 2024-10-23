@@ -260,7 +260,6 @@ const About = () => {
                     src="/assets/about/about-image-8.png"
                     alt="about-image-8"
                     className="object-contain brightness-[70%]"
-                    
                     fill
                   />
                 </div>
