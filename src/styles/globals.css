@@ -1,26 +1,18 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 @import url("./slideshow.css");
-/* @import url('./servicesPannel.css'); */
 @import url('./services.css');
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 /* Only necessary with horizontal scrolling */
-html[data-scroll-orientation="horizontal"] {
+/* html[data-scroll-orientation="horizontal"] {
   body {
       width: fit-content;
   }
   [data-scroll-container] {
       display: flex;
   }
-}
+} */
 
 /* Font Family */
 @font-face {

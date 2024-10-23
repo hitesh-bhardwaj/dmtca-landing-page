@@ -14,102 +14,98 @@ const Bringing = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const video = videoRef.current;
-                    if (video && !videoLoaded) {
-                        // Set video source dynamically when it enters the viewport
-                        video.src = "/videos/bringing.mp4";
-                        video.load(); // Ensure the video is loaded
-                        video.play(); // Play the video when it's visible
-                        setVideoLoaded(true); // Set video as loaded
-                    }
-                    observer.unobserve(entry.target); // Stop observing once the video has loaded
-                }
-            });
-        },
-        { threshold: 0.5 }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const video = videoRef.current;
+            if (video && !videoLoaded) {
+              video.src = "/videos/bringing.mp4";
+              video.load();
+              video.play();
+              setVideoLoaded(true); 
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
     );
 
     const videoElement = videoRef.current;
     if (videoElement) {
-        observer.observe(videoElement);
+      observer.observe(videoElement);
     }
 
     return () => {
-        if (videoElement) observer.unobserve(videoElement);
+      if (videoElement) observer.unobserve(videoElement);
     };
-}, [videoLoaded]);
-  
+  }, [videoLoaded]);
 
- 
+  useEffect(() => {
+    if (globalThis.innerWidth > 1024) {
 
-    useEffect(() => {
-      if(globalThis.innerWidth>1024){
-
-        let ctx = gsap.context(() => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: BringingRef.current,
-              pin: true,
-              start: "top top",
-              end: "+=2000 bottom",
-              scrub: 0.5,
-            }
-          });
-          tl.to(".video", {
-            scale: 4,
-            xPercent: -105,
-            yPercent: -30,
-            delay: 0.35,
-            position: "absolute",
-            ease: "none",
-            duration: 5,
-          }).from(".text-4", {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            ease: "none",
-          })
-          gsap.from(".text1", {
-            xPercent: 120,
-            duration: 3,
-            scrollTrigger: {
-              trigger: BringingRef.current,
-              scrub: 0.5,
-              start: "top 80%",
-              end: "bottom bottom"
-            },
-            ease: "power2.inout"
-          });
-          gsap.from(".text2", {
-            xPercent: -120,
-            duration: 4,
-            scrollTrigger: {
-              trigger: BringingRef.current,
-              scrub: 0.5,
-              start: "top 80%",
-              end: "bottom bottom"
-            },
-            ease: "power2.inout"
-          });
-          gsap.from(".text3", {
-            xPercent: 120,
-            duration: 5,
-            scrollTrigger: {
-              trigger: BringingRef.current,
-              scrub: 0.5,
-              start: "top 80%",
-              end: "bottom bottom"
-            },
-            ease: "power2.inout"
-          });
+      let ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: BringingRef.current,
+            pin: true,
+            start: "top top",
+            end: "+=2000 bottom",
+            scrub: 0.5,
+          },
+          defaults: {
+            ease: "none"
+          }
         });
-        return () => ctx.revert();
-      }
-    });
-  
+        tl.to(".video", {
+          scale: 4,
+          xPercent: -105,
+          yPercent: -30,
+          delay: 0.35,
+          position: "absolute",
+          duration: 5,
+        }).from(".text-4", {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+        })
+        gsap.from(".text1", {
+          xPercent: 120,
+          duration: 3,
+          scrollTrigger: {
+            trigger: BringingRef.current,
+            scrub: 0.5,
+            start: "top 80%",
+            end: "bottom bottom"
+          },
+          ease: "power2.inout"
+        });
+        gsap.from(".text2", {
+          xPercent: -120,
+          duration: 4,
+          scrollTrigger: {
+            trigger: BringingRef.current,
+            scrub: 0.5,
+            start: "top 80%",
+            end: "bottom bottom"
+          },
+          ease: "power2.inout"
+        });
+        gsap.from(".text3", {
+          xPercent: 120,
+          duration: 5,
+          scrollTrigger: {
+            trigger: BringingRef.current,
+            scrub: 0.5,
+            start: "top 80%",
+            end: "bottom bottom"
+          },
+          ease: "power2.inout"
+        });
+      });
+      return () => ctx.revert();
+    }
+  });
 
   return (
     <section id='bringing' className='overflow-hidden' ref={BringingRef}>

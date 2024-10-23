@@ -214,7 +214,7 @@ const SlideShow = () => {
                             </div>
                         </div>
 
-                        <div className="text-white text-center absolute top-10 z-[2] w-[35%] mx-auto tablet:w-[90%]">
+                        <div className="text-white text-center left-1/2 -translate-x-1/2 absolute top-10 z-[2] w-[35%] mx-auto tablet:w-[90%]">
                             <p className="text-[1.25vw] tablet:text-[4.5vw]">Own Your Global Property!</p>
                             <span className="block h-[1px] w-full bg-gradient-to-r my-2 from-transparent from-0% via-white via-50% to-transparent to-100%" />
                             <h3 className="text-[3.3vw] font-head leading-[1.2] tablet:text-[6vw]">Live Where Prestige and Luxury Meet with DMTCA</h3>
