@@ -187,7 +187,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
                                     <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw] tablet:top-[10%] mobile:w-[30vw] mobile:top-[10%]">Minimalist Exterior Design</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] mobile:w-[60vw] tablet:w-[45vw] tablet:p-[2.5vw]">
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] mobile:w-[55vw] tablet:w-[45vw] tablet:p-[2.5vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw] tablet:leading-[1.4]">
                                             Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
                                         </p>
@@ -205,7 +205,7 @@ const SlideShow = () => {
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
                                     <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:top-[15%] mobile:top-[10%] tablet:text-[2.5vw]">Stone Facade</p>
-                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] relative tablet:p-[2.5vw]">
+                                    <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] mobile:w-[80vw] relative tablet:p-[2.5vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw] tablet:leading-[1.4]">
                                             Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
                                         </p>
