@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       <section id="hero" className="">
-        <div className="w-screen h-[130vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
+        <div className="w-screen h-[125vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
           <Link href={"#"} className="block fadeup">
             <Image
               quality={100}
@@ -21,10 +21,10 @@ const Hero = () => {
 
           <Image
             priority={true}
-            quality={90}
+            quality={100}
             data-scroll
             data-scroll-speed="-0.7"
-            src="/assets/hero-image.png"
+            src="/assets/hero.png"
             alt="Hero Image"
             fill
             className="object-cover w-full h-full object-top relative z-[-1]"
