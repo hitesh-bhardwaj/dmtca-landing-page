@@ -4,16 +4,6 @@
 @import url("./slideshow.css");
 @import url('./services.css');
 
-/* Only necessary with horizontal scrolling */
-/* html[data-scroll-orientation="horizontal"] {
-  body {
-      width: fit-content;
-  }
-  [data-scroll-container] {
-      display: flex;
-  }
-} */
-
 /* Font Family */
 @font-face {
   font-family: 'Body';

@@ -10,7 +10,6 @@ import Bringing from "@/components/Bringing";
 import { paraAnim, lineAnim, fadeUp } from "@/components/gsapAnimations";
 import Gallery from "@/components/Gallery";
 import ProjectHover from "@/components/ProjectHover";
-import { Suspense } from "react";
 
 export default function Home() {
   paraAnim();
@@ -20,19 +19,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Suspense fallback={<p>Loading</p>}>
-        <SlideShow />
-        <Service />
-      </Suspense>
+      {/* <About /> */}
+      <SlideShow />
+      <Service />
       <Works />
       <Project />
       <ShowCase />
       <Gallery />
-      <Suspense fallback={<p>Loading</p>}>
-        <Bringing />
-        <ProjectHover />
-      </Suspense>
+      <Bringing />
+      <ProjectHover />
       <Footer />
     </>
   )

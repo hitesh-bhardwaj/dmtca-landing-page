@@ -43,7 +43,7 @@ const About = () => {
               unparalleled sophistication.
             </p>
           </div>
-          <div className="mobile:overflow-scroll mobile:w-[100vw] mobile:ml-[-5vw] mobile:p-[5vw] custom-scroll">
+          <div className="mobile:overflow-x-scroll overflow-hidden mobile:w-[100vw] mobile:ml-[-5vw] mobile:p-[5vw] custom-scroll">
             <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup mobile:flex mobile:flex-nowrap mobile:w-fit mobile:gap-[2vw] mobile:overflow-visible mobile:mb-[5vw] tablet:gap-[3vw]">
               <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
                 <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
