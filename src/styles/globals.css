@@ -390,17 +390,7 @@ p{
   height: 100%;
   object-fit: cover;
 }
-.swiper-scrollbar {
-  background-color: rgba(0, 0, 0); /* Background of scrollbar */
-  height: 10px; /* Height of scrollbar */
-  border-radius: 10px;
-  overflow: hidden;
-  width: 90vw !important;
-   /* Rounded edges */
-}
-
 .swiper-scrollbar-drag {
-  
   background-color: #3d3c3c !important; 
   border-radius: 30px; 
   height: 100%; 
@@ -567,9 +557,19 @@ p{
     height: 80vw;
     padding-bottom: 5vw !important;
   }
+  .swiper-scrollbar{
+    height: 1.5vw !important;
+    width: 88% !important;
+    margin-left: -1%;
+  }
 }
 
 @media screen and (min-width: 541px) and (max-width: 1023px) {
+  .swiper-scrollbar{
+    height: 0.8vw !important;
+    width: 90% !important;
+    margin-left: -1%;
+  }
   p{
     font-size: 2.5vw;
     line-height: 1.6;

@@ -15,8 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Project() {
 
-  
-
     useEffect(() => {
       if(globalThis.innerWidth>1024){
 
