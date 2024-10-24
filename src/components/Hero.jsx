@@ -21,10 +21,10 @@ const Hero = () => {
 
           <Image
             priority={true}
-            quality={100}
+            quality={90}
             data-scroll
             data-scroll-speed="-0.7"
-            src="/assets/hero.png"
+            src="/assets/hero-1.png"
             alt="Hero Image"
             fill
             className="object-cover w-full h-full object-top relative z-[-1]"
