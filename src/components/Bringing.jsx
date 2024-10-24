@@ -144,7 +144,7 @@ const Bringing = () => {
           </div>
           <div className='w-[70%] mt-[0vw] mobile:mt-[85vw] tablet:w-full tablet:mt-[55vw]'>
             <p className='text-body text-center tablet:text-start text-4'>
-              At DMTCA, we artfully combine design brilliance, innovative technology, and human insight
+              At Hogar, we artfully combine design brilliance, innovative technology, and human insight
               to deliver unparalleled real estate experiences. Our approach goes beyond conventional sales,
               turning properties into coveted lifestyle statements. We understand that discerning investors
               seek more than just luxury; they desire a unique experience that complements their elevated lifestyle.

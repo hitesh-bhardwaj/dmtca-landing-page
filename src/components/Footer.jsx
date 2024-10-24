@@ -83,7 +83,7 @@ const Footer = () => {
             <Link href="#" className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw] tablet:text-[5vw]">
               <span data-para-anim className="">+971 800 46427</span>
             </Link>
-            <Link href="mailto:nigeria@dmtca.com">
+            <Link href="info@hogarproperties.com">
               <p data-para-anim className="text-[3.4vw] text-head font-medium mobile:text-[5.5vw] tablet:text-[5vw]">
                 info@hogarproperties.com
               </p>

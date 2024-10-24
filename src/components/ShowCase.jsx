@@ -30,13 +30,12 @@ const ShowCase = () => {
           if (entry.isIntersecting) {
             const video = videoRef.current;
             if (video && !videoLoaded) {
-              // Set video source dynamically when it enters the viewport
               video.src = "/assets/dmtca-video.mp4";
-              video.load(); // Ensure the video is loaded
-              video.play(); // Play the video when it's visible
-              setVideoLoaded(true); // Set video as loaded
+              video.load(); 
+              video.play(); 
+              setVideoLoaded(true); 
             }
-            observer.unobserve(entry.target); // Stop observing once the video has loaded
+            observer.unobserve(entry.target);
           }
         });
       },
