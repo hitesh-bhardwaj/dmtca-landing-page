@@ -57,9 +57,10 @@ const Footer = () => {
             <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup mobile:ml-0 mobile:w-[30vw] mobile:mb-[10vw] tablet:w-[20vw] tablet:ml-[-18%]">
               <Link href={"/"}>
                 <Image
+                  className="invert"
                   width={200}
                   height={50}
-                  src="/assets/emaar-logo-black.svg"
+                  src="/assets/hogar-logo.svg"
                   alt="logo-img"
                 />
               </Link>
@@ -80,21 +81,21 @@ const Footer = () => {
 
           <div className="flex items-center flex-col justify-center">
             <Link href="#" className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw] tablet:text-[5vw]">
-              <span data-para-anim className="">+971 4 366 1688</span>
+              <span data-para-anim className="">+971 800 46427</span>
             </Link>
             <Link href="mailto:nigeria@dmtca.com">
               <p data-para-anim className="text-[3.4vw] text-head font-medium mobile:text-[5.5vw] tablet:text-[5vw]">
-                info@emaar.com
+                info@hogarproperties.com
               </p>
             </Link>
           </div>
 
           <div className="flex items-center justify-between tablet:flex-col mobile:gap-[5vw] fadeup pt-[7vw] tablet:gap-[3vw]">
             <div className="w-[15%] tablet:w-[70%] tablet:order-1">
-              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">All rights reserved @2024 Emaar</p>
+              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">All rights reserved</p>
             </div>
             <div className="w-[30%] tablet:w-[80%] ml-[-5%] tablet:ml-0">
-              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">Level 7, Dubai Hills Business Park Bldg 1, Dubai Hills Estate</p>
+              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">1504, API World Tower, Trade Center, Sheikh Zayad</p>
             </div>
             <Link href={"#"} className="tablet:order-3">
               <div>

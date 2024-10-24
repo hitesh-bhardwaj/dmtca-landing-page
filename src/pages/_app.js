@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }) {
           lenisOptions: {
             duration: 1.2,
             // syncTouch: true,
-            // touchMultiplier: 2.5,
           }
         });
       }

@@ -390,10 +390,10 @@ const Works = () => {
           >
             <div className="w-[50vw] h-[50vw] relative mobile:w-[90vw] mobile:h-[90vw]">
               <Image
-                src="/assets/emaar-logo.svg"
-                alt="emaar-logo"
+                src="/assets/hogar-logo.svg"
+                alt="logo image"
                 fill
-                className="object-contain"
+                className="object-contain opacity-[0.05]"
               />
             </div>
           </div>

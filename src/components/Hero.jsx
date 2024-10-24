@@ -9,15 +9,26 @@ const Hero = () => {
     <>
       <section id="hero" className="">
         <div className="w-screen h-[125vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
-          <Link href={"#"} className="block fadeup">
-            <Image
-              quality={100}
-              src="/assets/53-west-logo.svg"
-              alt="logo-img"
-              width={160}
-              height={24}
-              className="object-contain mobile:w-[30vw] tablet:w-[20vw]" />
-          </Link>
+          <div className="flex justify-between items-center">
+            <Link href="/" className="block fadeup">
+              <Image
+                quality={100}
+                src="/assets/53-west-logo.svg"
+                alt="logo-img"
+                width={160}
+                height={24}
+                className="object-contain mobile:w-[30vw] tablet:w-[20vw]" />
+            </Link>
+            <Link href="/" className="block fadeup">
+              <Image
+                quality={100}
+                src="/assets/hogar-logo.svg"
+                alt="logo-img"
+                width={140}
+                height={48}
+                className="object-contain mobile:w-[28vw] tablet:w-[20vw]" />
+            </Link>
+          </div>
 
           <Image
             priority={true}
