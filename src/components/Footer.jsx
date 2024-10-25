@@ -55,7 +55,7 @@ const Footer = () => {
 
             {/* Second Div */}
             <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup mobile:ml-0 mobile:w-[30vw] mobile:mb-[10vw] tablet:w-[20vw] tablet:ml-[-18%]">
-              <Link href={"/"}>
+              <Link href={"/property1"}>
                 <Image
                   className="invert"
                   width={200}

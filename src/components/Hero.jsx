@@ -10,7 +10,7 @@ const Hero = () => {
       <section id="hero" className="">
         <div className="w-screen h-[125vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
           <div className="flex justify-between items-center">
-            <Link href="/" className="block fadeup">
+            <Link href="/property1" className="block fadeup">
               <Image
                 quality={100}
                 src="/assets/53-west-logo.svg"
@@ -19,7 +19,7 @@ const Hero = () => {
                 height={24}
                 className="object-contain mobile:w-[30vw] tablet:w-[20vw]" />
             </Link>
-            <Link href="/" className="block fadeup">
+            <Link href="/property1" className="block fadeup">
               <Image
                 quality={100}
                 src="/assets/hogar-logo.svg"

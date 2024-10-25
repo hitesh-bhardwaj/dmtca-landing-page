@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"pages\\\\_app.js -> locomotive-scroll":{"id":8626,"files":["static/chunks/626.c8c3edd09cc3b092.js"]},"pages\\\\property1\\\\index.js -> @/components/About":{"id":1865,"files":["static/chunks/865.4d6cd1b0714f1840.js"]}}';
