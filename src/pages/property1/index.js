@@ -10,7 +10,7 @@ import { paraAnim, lineAnim, fadeUp } from "@/components/gsapAnimations";
 import Gallery from "@/components/Gallery";
 import ProjectHover from "@/components/ProjectHover";
 import dynamic from "next/dynamic";
-// import Loader from "@/components/Loader";
+
 
 const DynamicAbout = dynamic(() => import('@/components/About'), {
   // loading: () => <p>Loading...</p>,
@@ -22,9 +22,10 @@ export default function Home() {
   lineAnim();
   fadeUp();
 
+
   return (
     <>
-    {/* <Loader/> */}
+  
     <main>
 
       <Hero />
