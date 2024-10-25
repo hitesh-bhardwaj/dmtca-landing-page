@@ -45,13 +45,13 @@ const Hero = () => {
             className="object-cover w-full h-full object-top relative z-[-1]"
           />
           <div className="w-[55%] flex flex-col gap-[6vw] mt-[15vw] mb-[8vw] tablet:w-[90%] tablet:mt-[20vh] tablet:mb-[12vw] tablet:gap-[12vw]">
-            {/* <p
+            <p
               data-para-anim
               className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]"
             >
               Experience Iconic Luxury Living at Dubai&apos;s Most Prestigious
               and Exclusive Address
-            </p> */}
+            </p>
             <div className="w-full h-[1px] bg-white lineDraw"></div>
           </div>
           <div className="relative z-10">
