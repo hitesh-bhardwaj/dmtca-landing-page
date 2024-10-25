@@ -1,27 +1,85 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import EnquiryForm from "./Enquiryform";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation } from "swiper/modules";
+// import { Navigation } from "swiper";
+// import "swiper/swiper-bundle.min.css";
+import "swiper/css/navigation";
 
 const About = () => {
-  const [isMobile,setIsMobile] = useState(false);
-  useEffect(()=>{
-    if(globalThis.innerWidth<541){
+  const slidesData = [
+    {
+      iconSrc: "/assets/about/about-icon-1.svg",
+      title: "Futuristic Smart City",
+      description: "DMTCA Properties presents a diverse array of options tailored to your discerning taste.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-2.svg",
+      title: "Tax Incentives",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-3.svg",
+      title: "Easy Connectivity",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-4.svg",
+      title: "High-End Recreational Activities",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-5.svg",
+      title: "World Class Healthcare",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-6.svg",
+      title: "Communal Harmony",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-7.svg",
+      title: "International Institutions",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    {
+      iconSrc: "/assets/about/about-icon-8.svg",
+      title: "Safety for All",
+      description: "Find exclusive living spaces designed to fit your modern lifestyle.",
+    },
+    // Add more slide data objects here...
+  ];
+  const [isMobile, setIsMobile] = useState(false);
+  const swiperRef = useRef(null);
+
+  const handleNext = () => {
+    if (swiperRef.current) swiperRef.current.slideNext();
+  };
+
+  const handlePrev = () => {
+    if (swiperRef.current) swiperRef.current.slidePrev();
+  };
+  useEffect(() => {
+    if (globalThis.innerWidth < 541) {
       setIsMobile(true);
-    }
-    else{
+    } else {
       setIsMobile(false);
     }
-  }, [])
+  }, []);
   return (
     <>
-      <section className="overflow-hidden" id="about">
-        <div className="container-lg py-[10%] mobile:py-[20%] tablet:py-[15%]">
-          {isMobile?
-          <div className="flex justify-center items-center h-full mb-[15vw]">
-            <EnquiryForm />
-          </div>:""
-          }
+      <section className="overflow-hidden bg-[#E0D4C6]" id="about">
+        <div className="container-lg py-[10%] mobile:py-[20%] mobile:pb-[40%] tablet:py-[15%]">
+          {isMobile ? (
+            <div className="flex justify-center items-center h-full mb-[15vw]">
+              <EnquiryForm />
+            </div>
+          ) : (
+            ""
+          )}
           <div className="w-full flex justify-between  tablet:flex-col tablet:gap-[8vw]">
             <h2
               data-para-anim
@@ -29,10 +87,7 @@ const About = () => {
             >
               Luxury Living Awaits You In Dubai's Elite Neighbourhood
             </h2>
-            <p
-              data-para-anim
-              className=" w-[40%] tablet:w-full"
-            >
+            <p data-para-anim className=" w-[40%] tablet:w-full">
               Welcome to 53 West 53, a masterpiece nestled in the iconic Burj
               Khalifa District, where elegance meets exclusivity. This luxurious
               haven invites you to experience a lifestyle adorned with
@@ -43,232 +98,83 @@ const About = () => {
               unparalleled sophistication.
             </p>
           </div>
-          <div className="mobile:overflow-x-scroll overflow-hidden mobile:w-[100vw] mobile:ml-[-5vw] mobile:p-[5vw] custom-scroll">
-            <div className="flex gap-[0.5vw] mt-[10vw] flex-wrap fadeup mobile:flex mobile:flex-nowrap mobile:w-fit mobile:gap-[2vw] mobile:overflow-visible mobile:mb-[5vw] tablet:gap-[3vw]">
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                   width={60}
-                   height={60}
-                   src="/assets/about/about-icon-1.svg"
-                    alt="about-icon-1"
-                    className="object-contain"
-                  />
-                </div>
-                <p className=" group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  Futuristic Smart City
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-40 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                    loading="lazy"
-                    src="/assets/about/about-image-1.png"
-                    alt="about-image-1"
-                    className="object-contain"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    Futuristic Smart City
-                  </p>
-                </div>
-              </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                    width={50}
-                    height={50}
-                    src="/assets/about/about-icon-2.svg"
-                    alt="about-icon-2"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  Tax Incentives
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                   loading="lazy"
-                    src="/assets/about/about-image-2.png"
-                    alt="about-image-2"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    Tax Incentives
-                  </p>
+          <div className="swiper-container mt-[10vw] tablet:w-[100vw] tablet:ml-[-5vw]">
+            <Swiper
+              
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              spaceBetween={100}
+              slidesPerView={5}
+              centeredSlides={true}
+              roundLengths={true}
+              loop={true}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 0,
+                },
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 0,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                1280: {
+                  slidesPerView: 5,
+                  spaceBetween: 50,
+                }}}
+             
+            >
+              {slidesData.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="w-full h-full flex flex-col justify-center items-center gap-[5vw]">
+              <div className="w-fit h-[20vw] flex justify-center items-center mobile:h-[90vw] tablet:h-[30vw]">
+                <div className="w-[11vw] h-[11vw] border border-amber-600 rounded-full p-[3vw] slider-circle bg-white mobile:w-[80vw] mobile:h-[80vw] tablet:w-[20vw] tablet:h-[20vw] tablet:p-[5vw]">
+                  <Image src={slide.iconSrc} alt="slide icon" width={50} height={50} />
                 </div>
               </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group  mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw] ">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                    width={60}
-                    height={60}
-                    src="/assets/about/about-icon-3.svg"
-                    alt="about-icon-3"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  Easy Connectivity
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                    loading="lazy"
-                    src="/assets/about/about-image-3.png"
-                    alt="about-image-3"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    Easy Connectivity
-                  </p>
-                </div>
+              <div className="slider-circle-content w-[30vw] mobile:w-[90vw] tablet:w-[50vw]">
+                <h3 className="text-[1.7vw] text-head uppercase font-medium mb-[1vw] mobile:text-[4.5vw] tablet:text-[3vw]">
+                  {slide.title}
+                </h3>
+                <p className="mobile:hidden tablet:hidden">{slide.description}</p>
               </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group  pr-0 mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                    width={60}
-                    height={60}
-                    src="/assets/about/about-icon-4.svg"
-                    alt="about-icon-4"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  High-End Recreational Activities
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                    loading="lazy"
-                    src="/assets/about/about-image-4.png"
-                    alt="about-image-4"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    High-End Recreational Activities
-                  </p>
-                </div>
-              </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                     width={60}
-                     height={60}
-                     src="/assets/about/about-icon-5.svg"
-                     alt="about-icon-5"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  World Class Healthcare
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                    loading="lazy"
-                    src="/assets/about/about-image-5.png"
-                    alt="about-image-5"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    World Class Healthcare
-                  </p>
-                </div>
-              </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                     width={60}
-                     height={60}
-                     src="/assets/about/about-icon-6.svg"
-                     alt="about-icon-6"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  Communal Harmony
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                   loading="lazy"
-                    src="/assets/about/about-image-6.png"
-                    alt="about-image-6"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    Communal Harmony
-                  </p>
-                </div>
-              </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw] ">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                     width={60}
-                     height={60}
-                     src="/assets/about/about-icon-7.svg"
-                     alt="about-icon-7"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  International Institutions
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                    loading="lazy"
-                    src="/assets/about/about-image-7.png"
-                    alt="about-image-7"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    International Institutions
-                  </p>
-                </div>
-              </div>
-              <div className="w-[22vw] h-[22vw] rounded-full border border-black flex items-center px-[1.5vw] justify-between overflow-hidden relative group mobile:w-[80vw] mobile:h-[80vw] mobile:px-[8vw] tablet:w-[43vw] tablet:h-[43vw]">
-                <div className="w-[7vw] h-[7vw] rounded-full border border-black flex justify-center items-center group-hover:opacity-0 transition-all duration-300 ease-out mobile:w-[25vw] mobile:h-[25vw] mobile:p-[4vw] tablet:w-[12vw] tablet:h-[12vw]">
-                  <Image
-                    width={60}
-                    height={60}
-                    src="/assets/about/about-icon-8.svg"
-                    alt="about-icon-8"
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[1.2vw] group-hover:opacity-0 transition-all duration-300 ease-out w-[50%] mobile:text-[5vw] tablet:text-[3vw] tablet:w-[60%] mobile:w-[50%]">
-                  Safety for All
-                </p>
-                <div className="absolute w-full h-full top-0 left-0 scale-0 group-hover:scale-[1] group-hover:opacity-100 opacity-0 origin-center rounded-full overflow-hidden transition-all duration-500 ease-out">
-                  <Image
-                    loading="lazy"
-                    src="/assets/about/about-image-8.png"
-                    alt="about-image-8"
-                    className="object-contain brightness-[70%]"
-                    fill
-                  />
-                </div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p className="text-[1.7vw] text-white leading-[1.2] text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in mobile:text-[5.5vw] tablet:text-[3.5vw]">
-                    Safety for All
-                  </p>
-                </div>
-              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+            </Swiper>
+
+            <div className="flex gap-[1.5vw] absolute top-[-10%] right-0 tablet:bottom-[-15%] tablet:top-auto tablet:left-[50%] tablet:translate-x-[-50%] tablet:right-auto mobile:gap-[5vw]">
+              <button
+                onClick={handlePrev}
+                className="w-[3vw] group border border-black rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden tablet:w-[10vw] tablet:h-[10vw] tablet:p-[2.5vw] mobile:w-[15vw] mobile:h-[15vw]"
+              >
+                <Image
+                  quality={100}
+                  alt="arrow icon"
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                  className="rotate-180 z-10 invert group-hover:invert-0 duration-300"
+                  src="/assets/icons/arrow.svg"
+                />
+                <span className="block absolute scale-0 h-full w-full bg-black group-hover:scale-100 duration-300 rounded-full" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-[3vw] border group border-black rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden tablet:w-[10vw] tablet:h-[10vw] tablet:p-[2.5vw] mobile:w-[15vw] mobile:h-[15vw]"
+              >
+                <Image
+                  alt="arrow icon"
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                  className="z-10 invert group-hover:invert-0 duration-300"
+                  src="/assets/icons/arrow.svg"
+                />
+                <span className="block absolute scale-0 h-full w-full bg-black group-hover:scale-100 duration-300 rounded-full" />
+              </button>
             </div>
           </div>
         </div>
