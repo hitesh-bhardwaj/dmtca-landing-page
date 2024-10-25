@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import PrimaryButton from "./Button/PrimaryButton";
 import Link from "next/link";
 
-const EnquiryForm = dynamic(() => import("./Enquiryform"), { ssr: false });
+const EnquiryForm = dynamic(() => import("./Enquiryform"));
 
 const Hero = () => {
   
@@ -50,6 +50,7 @@ const Hero = () => {
           <div className="w-[55%] flex flex-col gap-[6vw] mt-[15vw] mb-[8vw] tablet:w-[90%] tablet:mt-[20vh] tablet:mb-[12vw] tablet:gap-[12vw]">
             <p
               data-para-anim
+              
               className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]"
             >
               Experience Iconic Luxury Living at Dubai&apos;s Most Prestigious
