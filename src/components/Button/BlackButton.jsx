@@ -5,7 +5,7 @@ const BlackButton = ({link, btnText}) => {
         <Link href={link} className="black-btn fadeUp">
             <span data-primary className="btn-text">
                 {btnText}
-            </span>
+            </span>         
                 
             <div aria-hidden="true" className="btn-circle">
                 <div className="btn-circle-text">
