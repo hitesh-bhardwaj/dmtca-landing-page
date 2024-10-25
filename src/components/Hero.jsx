@@ -7,9 +7,12 @@ import Link from "next/link";
 const EnquiryForm = dynamic(() => import("./Enquiryform"), { ssr: false });
 
 const Hero = () => {
+  
   return (
     <>
       <section id="hero" className="">
+        <div className="w-screen h-full relative ">
+
         <div className="w-screen h-[125vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
           <div className="flex justify-between items-center">
             <Link href="/" className="block fadeup">
@@ -109,7 +112,8 @@ const Hero = () => {
               Creations
             </p>
           </div>
-          <div className="mobile:hidden">
+        </div>
+          <div className="mobile:px-[5vw] mobile:pt-[15vw] bg-[#E0D4C6]">
               <EnquiryForm />
           </div>
         </div>

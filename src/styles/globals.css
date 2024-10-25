@@ -94,6 +94,10 @@ p{
 .lineWord .line {
   overflow: hidden;
 }
+.hero-para-anim .line{
+  overflow: hidden;
+
+}
 
 /* button css */
 .btn{
@@ -297,7 +301,8 @@ p{
   height: 4.2vw;
   position: relative;
   width: fit-content;
-  min-width: 17.2vw;
+  max-width: 20vw;
+  min-width: 18vw;
   border-radius: 1000px;
   background:white;
   color: #1C1B1A;
@@ -409,7 +414,7 @@ p{
 
 .swiper-container .swiper-slide {
  /* width: 5vw; */
- width: auto;
+ width: fit-content;
  height: 100%;
   display: flex;
   background:transparent;
@@ -453,6 +458,9 @@ p{
 
 .swiper-container .swiper-slide__content {
   height: 300px;
+}
+.swiper-container .swiper-slide img{
+  object-fit: contain;
 }
 
 /* ClipPath Hover Section */
