@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React, { Suspense } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import PrimaryButton from "./Button/PrimaryButton";
 import Link from "next/link";
 
-const EnquiryForm = dynamic(() => import("./Enquiryform"), { suspense: true });
+const EnquiryForm = dynamic(() => import("./Enquiryform"), { ssr: false });
 
 const Hero = () => {
   return (
@@ -111,9 +111,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="mobile:hidden">
-            <Suspense fallback={null}>
               <EnquiryForm />
-            </Suspense>
           </div>
         </div>
       </section>
