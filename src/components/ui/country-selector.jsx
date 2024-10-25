@@ -3,6 +3,7 @@ import { COUNTRIES } from "@/lib/countries";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { SearchIcon } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function CountrySelector({
   id,
@@ -43,7 +44,9 @@ export default function CountrySelector({
           disabled={disabled}
         >
           <span className="truncate flex items-center">
-            <img
+            <Image
+            width={24}
+            height={16}
               alt={`${selectedValue.value}`}
               src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedValue.value}.svg`}
               className={"inline mr-2 relative lg:h-4 md:h-6 h-4 rounded-sm"}
