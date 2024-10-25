@@ -5,7 +5,7 @@
 @import url('./services.css');
 
 /* Font Family */
-@font-face {
+/* @font-face {
   font-family: 'Body';
   src: url('/fonts/neuemontreal.woff') format('woff');
   font-weight: 400;
@@ -25,7 +25,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
+} */
 /* Custom ScrollBar */
 div.custom-scroll::-webkit-scrollbar{
   height: 1.5vw;
@@ -45,7 +45,8 @@ body{
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
-  font-family: "Body", Arial, Helvetica, sans-serif;
+  /* font-family: "Body", Arial, Helvetica, sans-serif; */
+  font-family: var(--font-montreal);
   text-rendering: geometricPrecision;
   font-kerning: none;
   color: #1C1B1A;
@@ -57,17 +58,21 @@ body{
 }
 
 .text-body{
-  font-family: "Body";
+  /* font-family: "Body";
+   */
+   font-family: var(--font-montreal);
 }
 .text-head{
-  font-family: "Head";
+  /* font-family: "Head"; */
+  font-family: var(--font-avenir);
 }
 .container-lg{
   padding-left: 5%;
   padding-right: 5%;
 }
 .title-2{
-  font-family: "Head";
+  /* font-family: "Head"; */
+  font-family: var(--font-avenir);
   font-size: 3.8vw;
   line-height: 1.2; 
 }
@@ -463,7 +468,8 @@ p{
     letter-spacing: 0.05vw;
   }
   .title-2{
-    font-family: "Head";
+    /* font-family: "Head"; */
+    font-family: var(--font-avenir);
     font-size: 8.8vw;
     line-height: 1.2; 
   }
@@ -645,7 +651,8 @@ p{
   }
 
   .title-2{
-    font-family: "Head";
+    /* font-family: "Head"; */
+    font-family: var(--font-avenir);
     font-size: 6.8vw;
     line-height: 1.2; 
   }
