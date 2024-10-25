@@ -5,7 +5,7 @@ import { useState } from "react";
 const ServiceButton = ({ link, btnText, className }) => {
     return (
         <Link href={link} className={`service-btn fadeUp ${className}`}>
-            <span data-primary className="btn-text">
+            <span data-primary className="btn-text ">
                 {btnText}
             </span>
             <div aria-hidden="true" className="btn-circle">
@@ -72,7 +72,7 @@ export default function Service() {
                         )}
                     </div>
 
-                    <div className='flex gap-[1vw] fadeup tablet:flex-wrap tablet:hidden mobile:hidden'>
+                    <div className='flex gap-[1vw] fadeup flex-wrap tablet:hidden mobile:hidden'>
                         <ServiceButton link={"#"} btnText={"Download Brochure"} />
                         <ServiceButton link={"#"} btnText={"Download Floor Plan"} className={"mobile:hidden"} />
                         <ServiceButton link={"#"} btnText={"Download Payment Plan"} className={"mobile:hidden"} />

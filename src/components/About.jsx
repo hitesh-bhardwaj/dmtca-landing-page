@@ -1,11 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import EnquiryForm from "./Enquiryform";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation } from "swiper/modules";
-// import { Navigation } from "swiper";
-// import "swiper/swiper-bundle.min.css";
 import "swiper/css/navigation";
 
 const About = () => {
@@ -52,7 +48,7 @@ const About = () => {
     },
     // Add more slide data objects here...
   ];
-  const [isMobile, setIsMobile] = useState(false);
+
   const swiperRef = useRef(null);
 
   const handleNext = () => {
@@ -62,24 +58,12 @@ const About = () => {
   const handlePrev = () => {
     if (swiperRef.current) swiperRef.current.slidePrev();
   };
-  useEffect(() => {
-    if (globalThis.innerWidth < 541) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  }, []);
+
   return (
     <>
       <section className="overflow-hidden bg-[#E0D4C6]" id="about">
         <div className="container-lg py-[10%] mobile:py-[20%] mobile:pb-[40%] tablet:py-[15%]">
-          {isMobile ? (
-            <div className="flex justify-center items-center h-full mb-[15vw]">
-              <EnquiryForm />
-            </div>
-          ) : (
-            ""
-          )}
+          
           <div className="w-full flex justify-between  tablet:flex-col tablet:gap-[8vw]">
             <h2
               data-para-anim
@@ -131,7 +115,7 @@ const About = () => {
             <div className="w-full h-full flex flex-col justify-center items-center gap-[5vw]">
               <div className="w-fit h-[20vw] flex justify-center items-center mobile:h-[90vw] tablet:h-[30vw]">
                 <div className="w-[11vw] h-[11vw] border border-amber-600 rounded-full p-[3vw] slider-circle bg-white mobile:w-[80vw] mobile:h-[80vw] tablet:w-[20vw] tablet:h-[20vw] tablet:p-[5vw]">
-                  <Image src={slide.iconSrc} alt="slide icon" width={50} height={50} />
+                  <Image src={slide.iconSrc} alt="slide icon" width={50} height={50} className="object-contain w-full h-full" />
                 </div>
               </div>
               <div className="slider-circle-content w-[30vw] mobile:w-[90vw] tablet:w-[50vw]">
