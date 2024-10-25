@@ -46,7 +46,6 @@ const About = () => {
       title: "Safety for All",
       description: "Find exclusive living spaces designed to fit your modern lifestyle.",
     },
-    // Add more slide data objects here...
   ];
 
   const swiperRef = useRef(null);
@@ -84,7 +83,6 @@ const About = () => {
           </div>
           <div className="swiper-container mt-[10vw] tablet:w-[100vw] tablet:ml-[-5vw]">
             <Swiper
-              
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               spaceBetween={100}
               slidesPerView={5}

@@ -8,15 +8,14 @@ const ShowCase = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const checkIsMobile = () => {
-    setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
+    setIsMobile(window.innerWidth < 1024); 
   };
 
   useEffect(() => {
-    // Check screen size on mount and window resize
     checkIsMobile();
     window.addEventListener('resize', checkIsMobile);
 
-    // Cleanup listener on unmount
+   
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 

@@ -21,6 +21,14 @@ const ServiceButton = ({ link, btnText, className }) => {
     )
 }
 
+const services = [
+    { src: "/assets/service/relaxation.png", label: "Relaxation Lounge" },
+    { src: "/assets/service/pool.png", label: "65 Foot Lap Pool" },
+    { src: "/assets/service/spa.png", label: "Spa And Wellness" },
+    { src: "/assets/service/fire-pit.png", label: "Fire Pit Lounge" },
+    { src: "/assets/service/wine.png", label: "Wine" },
+  ];
+
 export default function Service() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -81,39 +89,19 @@ export default function Service() {
                     </div>
 
                     <div className="w-full h-full tablet:overflow-x-scroll overflow-hidden mobile:mt-[10%] tablet:w-[100vw] tablet:ml-[-5vw] custom-scroll">
-                        <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup tablet:flex tablet:w-[400vw] tablet:ml-[5%] tablet:aspect-auto tablet:overflow-visible tablet:mb-[5vw] tablet:gap-[3vw] mobile:gap-[1.5%]">
-                            <div className="stripe group tablet:w-full tablet:h-[50vh] tablet:p-[4vw]">
-                                <Image fill alt="Image" src="/assets/service/relaxation.png" loading="lazy" quality={90} />
-                                <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
-                                    <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] tablet:text-[3vw] ">Relaxation Lounge</p>
-                                </div>
-                            </div>
-                            <div className="stripe tablet:p-[4vw]">
-                                <Image fill alt="Image" src="/assets/service/pool.png" loading="lazy" quality={90} />
-                                <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
-                                    <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] tablet:text-[3vw] ">65 Foot Lap Pool</p>
-                                </div>
-                            </div>
-                            <div className="stripe tablet:p-[4vw]">
-                                <Image fill alt="Image" src="/assets/service/spa.png" loading="lazy" quality={90} />
-                                <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
-                                    <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] tablet:text-[3vw] ">Spa And Wellness</p>
-                                </div>
-                            </div>
-                            <div className="stripe tablet:p-[4vw]">
-                                <Image fill alt="Image" src="/assets/service/fire-pit.png" loading="lazy" quality={90} />
-                                <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
-                                    <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] tablet:text-[3vw]">Fire Pit Lounge</p>
-                                </div>
-                            </div>
-                            <div className="stripe tablet:p-[4vw]">
-                                <Image fill alt="Image" src="/assets/service/wine.png" loading="lazy" quality={90} />
-                                <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
-                                    <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] tablet:text-[3vw]">Wine</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup tablet:flex tablet:w-[400vw] tablet:ml-[5%] tablet:aspect-auto tablet:overflow-visible tablet:mb-[5vw] tablet:gap-[3vw] mobile:gap-[1.5%]">
+        {services.map((service, index) => (
+          <div key={index} className="stripe group tablet:w-full tablet:h-[50vh] tablet:p-[4vw]">
+            <Image fill alt={service.label} src={service.src} loading="lazy" quality={90} />
+            <div className="stripe-label backdrop-blur-sm px-[2vw] py-[1vw] bg-white/40 rounded-xl overflow-hidden w-fit duration-500 ease-in-out transition-all tablet:py-[2vw] tablet:px-[3vw]">
+              <p className="text-[1.25vw] font-head text-white uppercase whitespace-nowrap mobile:text-[4vw] tablet:text-[3vw]">
+                {service.label}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
                 </div>
             </section>
         </>

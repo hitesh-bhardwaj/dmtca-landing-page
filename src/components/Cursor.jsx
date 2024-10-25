@@ -1,7 +1,6 @@
 import React, {  useEffect } from 'react'
 import gsap from 'gsap'
 
-
 function Cursor() {
     useEffect(()=>{
         const cursor = document.getElementById("cursor")
