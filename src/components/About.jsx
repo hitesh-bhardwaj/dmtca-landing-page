@@ -81,7 +81,7 @@ const About = () => {
               unparalleled sophistication.
             </p>
           </div>
-          <div className="swiper-container mt-[10vw] tablet:w-[100vw] tablet:ml-[-5vw]">
+          <div className="swiper-container mt-[10vw] tablet:w-[100vw] tablet:ml-[-5vw] fadeup">
             <Swiper
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               spaceBetween={100}
