@@ -20,6 +20,7 @@ const Hero = () => {
                 quality={100}
                 src="/assets/53-west-logo.svg"
                 alt="logo-img"
+                priority={true}
                 width={160}
                 height={24}
                 className="object-contain mobile:w-[30vw] tablet:w-[20vw]"
@@ -31,6 +32,7 @@ const Hero = () => {
                 src="/assets/hogar-logo.svg"
                 alt="logo-img"
                 width={140}
+                priority={true}
                 height={48}
                 className="object-contain mobile:w-[28vw] tablet:w-[20vw]"
               />

@@ -19,28 +19,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-// import { Checkbox } from "@/components/ui/checkbox";
-// import CountrySelector from "../ui/country-selector";
 import { COUNTRIES } from "@/lib/countries";
 import CountrySelector from "./ui/country-selector";
 import BlackButton from "./Button/BlackButton";
 
-const formSchema = z.object({
-  name: z.string().min(1, { message: "Name is required." }),
-  email: z.string().min(1, { message: "Email is required." }).email({ message: "Invalid email format." }),
-  company: z.string().min(1, "Company Name is required."),
-  country: z.string().min(1, "Country is required."),
-  terms: z.boolean().refine(value => value === true, "You must agree to the terms."),
-  pageURL: z.string(),
-});
+// const formSchema = z.object({
+//   name: z.string().min(1, { message: "Name is required." }),
+//   email: z.string().min(1, { message: "Email is required." }).email({ message: "Invalid email format." }),
+//   company: z.string().min(1, "Company Name is required."),
+//   country: z.string().min(1, "Country is required."),
+//   terms: z.boolean().refine(value => value === true, "You must agree to the terms."),
+//   pageURL: z.string(),
+// });
 
 // Update the ContactForm component
 export default function EnquiryForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [country, setCountry] = useState("GB");
-  const [submitting, setSubmitting] = useState(false);
-  const [submissionError, setSubmissionError] = useState(null);
-  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+  // const [submitting, setSubmitting] = useState(false);
+  // const [submissionError, setSubmissionError] = useState(null);
+  // const [submissionSuccess, setSubmissionSuccess] = useState(false);
   const [selectedRole, setSelectedRole] = useState("");
 
   const form = useForm({
@@ -197,8 +195,8 @@ export default function EnquiryForm() {
               type="submit"
               disbaled
             />
-            {submissionError && <p className="text-red-500">{submissionError}</p>}
-            {submissionSuccess && <p className="text-green-500">Email sent successfully!</p>}
+            {/* {submissionError && <p className="text-red-500">{submissionError}</p>}
+            {submissionSuccess && <p className="text-green-500">Email sent successfully!</p>} */}
           </div>
         </form>
       </Form>
