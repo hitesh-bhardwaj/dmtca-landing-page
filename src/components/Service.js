@@ -9,8 +9,8 @@ const ServiceButton = ({ link, btnText, className }) => {
                 {btnText}
             </span>
             <div aria-hidden="true" className="btn-circle">
-                <div className="btn-circle-text ml-[-2px] mobile:ml-[2px]">
-                    {btnText}
+                <div className="btn-circle-text ml-[-0.5vw] mobile:ml-[2px]">
+                    <span>{btnText}</span>
                     <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon">
                         <path data-v-f4363f2a fillRule="evenodd" clipRule="evenodd" d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z" className="btn-path fill-current" />
                         <path data-v-f4363f2a fillRule="evenodd" clipRule="evenodd" d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z" className="btn-path fill-current" />
@@ -39,7 +39,7 @@ export default function Service() {
         <>
             <section className='w-screen mobile:py-[20%] tablet:py-[10%]' id='services'>
                 <div className='container-lg flex flex-col py-[10%] gap-[7vw] tablet:py-0 mobile:gap-[1vw]'>
-                    <div className='relative hidden mobile:block'>
+                    <div className='relative hidden mobile:block tablet:block'>
                         <button
                             onClick={toggleDropdown}
                             className='bg-secondary-color text-black border border-black rounded-full px-6 py-3 text-[2.5vw] mobile:text-[4vw] hover:bg-opacity-90 transition-colors'
@@ -80,7 +80,7 @@ export default function Service() {
                         )}
                     </div>
 
-                    <div className='flex gap-[1vw] fadeup flex-wrap tablet:hidden mobile:hidden'>
+                    <div className='flex gap-[0.5vw] fadeup flex-wrap tablet:hidden mobile:hidden'>
                         <ServiceButton link={"#"} btnText={"Download Brochure"} />
                         <ServiceButton link={"#"} btnText={"Download Floor Plan"} className={"mobile:hidden"} />
                         <ServiceButton link={"#"} btnText={"Download Payment Plan"} className={"mobile:hidden"} />
