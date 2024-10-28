@@ -14,7 +14,7 @@ import dynamic from "next/dynamic";
 
 const DynamicAbout = dynamic(() => import('@/components/About'), {
   // loading: () => <p>Loading...</p>,
-  // ssr: false,
+  ssr: false,
 })
 
 export default function Home() {
