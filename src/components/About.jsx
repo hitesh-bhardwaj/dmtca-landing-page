@@ -1,17 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-
-import { useEffect, useState } from "react";
 import dynamic from 'next/dynamic';
-const AboutSwiper = dynamic(() => import("./AboutSwiper"));
-
+const AboutSwiper = dynamic(() => import("./AboutSwiper"),{ssr:false});
 
 const About = () => {
 
-  
-  const [isSwiperLoaded, setIsSwiperLoaded] = useState(false);
-  useEffect(() => {
-    setIsSwiperLoaded(true);
-  }, []);
   return (
     <>
       <section className="overflow-hidden bg-[#E0D4C6]" id="about">
@@ -36,12 +28,10 @@ const About = () => {
             </p>
           </div>
           <div className="fadeup w-fit h-fit">
-          {
-            isSwiperLoaded&&(
+          
 
           <AboutSwiper/>
-            )
-          }
+           
             </div>
         </div>
       </section>
