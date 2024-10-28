@@ -51,9 +51,9 @@ const Hero = () => {
           />
           <div className="w-[55%] flex flex-col gap-[6vw] mt-[15vw] mb-[8vw] tablet:w-[90%] tablet:mt-[20vh] tablet:mb-[12vw] tablet:gap-[12vw]">
             <p
-              data-para-anim
               
-              className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]"
+              
+              className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw] fadeup"
             >
               Experience Iconic Luxury Living at Dubai&apos;s Most Prestigious
               and Exclusive Address
@@ -109,8 +109,8 @@ const Hero = () => {
               />
             </div>
             <p
-              data-para-anim
-              className="text-[1.5vw] text-white opacity-90 tracking-wide w-[40%] mobile:text-[4.5vw] tablet:w-[70%] tablet:text-[3.2vw]"
+              
+              className="text-[1.5vw] text-white opacity-90 tracking-wide w-[40%] mobile:text-[4.5vw] tablet:w-[70%] tablet:text-[3.2vw] fadeup"
             >
               We Elevate Your Lifestyle With World-Class Architectural
               Creations
