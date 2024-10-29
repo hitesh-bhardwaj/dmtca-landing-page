@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section id="footer" className="z-[5] footer-body bg-[#161616]">
+    <section id="footer" className="z-[5] footer-body">
       <div className="container-lg w-screen h-full rounded-t-[40px] overflow-hidden bg-[#E0D4C6] text-[#1C1B1A] mobile:py-[10%] tablet:pt-[5%]">
         <div className=" pt-[5%] pb-[2%] flex flex-col">
 

@@ -7,10 +7,14 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-	  screens: {
-		  'tablet':{'max':'1024px'},
-		  'mobile':{'max':'540px'},
-		},
+  	screens: {
+  		tablet: {
+  			max: '1024px'
+  		},
+  		mobile: {
+  			max: '540px'
+  		}
+  	},
   	extend: {
   		colors: {
   			background: 'var(--background)',
@@ -21,10 +25,32 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		fontFamily:{
-			montreal:['var(--font-montreal)'],
-			avenir:['var(--font-avenir)'],
-		}
+  		fontFamily: {
+  			montreal: ['var(--font-montreal)'],
+  			avenir: ['var(--font-avenir)']
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

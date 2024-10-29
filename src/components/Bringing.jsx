@@ -136,7 +136,7 @@ const Bringing = () => {
                 </div>
               </div>
             </div>
-            <div className='text3 relative z-[-1]'>
+            <div className='text3 relative z-[-1] tablet:z-[1]'>
               <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3] tablet:text-[9vw]'>
                 YOU LOVE
               </p>

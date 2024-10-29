@@ -77,8 +77,8 @@ const AboutSwiper = () => {
             {slidesData.map((slide, index) => (
               <SwiperSlide key={index}>
                 <div className="w-full h-full flex flex-col justify-center items-center gap-[3vw]">
-                  <div className="w-fit h-[20vw] flex justify-center items-center mobile:h-[90vw] tablet:h-[30vw] cursor-grab">
-                    <div className="w-[11vw] h-[11vw] border border-amber-600 rounded-full p-[3vw] slider-circle bg-white mobile:w-[80vw] mobile:h-[80vw] tablet:w-[20vw] tablet:h-[20vw] tablet:p-[5vw]">
+                  <div className="w-fit h-[20vw] flex justify-center items-center mobile:h-[80vw] tablet:h-[30vw] cursor-grab">
+                    <div className="w-[11vw] h-[11vw] border border-amber-600 rounded-full p-[3vw] slider-circle bg-white mobile:w-[70vw] mobile:h-[70vw] tablet:w-[20vw] tablet:h-[20vw] tablet:p-[5vw]">
                       <Image
                         src={slide.iconSrc}
                         alt="slide icon"
