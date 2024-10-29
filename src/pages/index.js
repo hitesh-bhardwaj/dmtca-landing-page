@@ -26,9 +26,8 @@ export default function Home() {
 
   return (
     <>
-    <Loader/>
-    <main>
-
+    {/* <Loader/> */}
+    <main>    
       <Hero />
       <DynamicAbout />
       <SlideShow />
