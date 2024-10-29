@@ -475,6 +475,13 @@ p{
   clip-path: circle(100.0% at 0 100%);
 }/* sample slider */
 
+/* highlights swiper */
+.highlights-swiper {
+  height: 27vw;
+  padding-bottom: 2vw !important;
+  overflow: visible !important;
+}
+
 
 @media screen and (max-width: 540px) {
   p{
@@ -641,8 +648,8 @@ p{
   /* about swiper  */
   .swiper-container .swiper-slide.swiper-slide-active .slider-circle {
     /* transform: scale(2) !important; */
-    width: 85vw;
-    height: 85vw;
+    width: 65vw;
+    height: 65vw;
     padding: 20vw;
     transition: all ease-in-out 300ms;
     /* background: #fc0; */
