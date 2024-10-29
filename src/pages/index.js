@@ -17,7 +17,8 @@ const DynamicAbout = dynamic(() => import('@/components/About'), {
   // loading: () => <p>Loading...</p>,
   
 })
-const SlideShow = dynamic(()=>import('@/components/SlideShow'))
+const SlideShow = dynamic(()=>import('@/components/SlideShow'),{ssr:false})
+const Bringing = dynamic(()=>import('@/components/Bringing'),{ssr:false})
 
 export default function Home() {
   paraAnim();
