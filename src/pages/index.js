@@ -9,11 +9,12 @@ import Gallery from "@/components/Gallery";
 import ProjectHover from "@/components/ProjectHover";
 import dynamic from "next/dynamic";
 import Roi from "@/components/Roi";
+import Bringing from "@/components/Bringing";
 
 
 const DynamicAbout = dynamic(() => import('@/components/About'))
-const SlideShow = dynamic(()=>import('@/components/SlideShow'),{ssr:false})
-const Bringing = dynamic(()=>import('@/components/Bringing'),{ssr:false})
+const SlideShow = dynamic(()=>import('@/components/SlideShow'))
+// const Bringing = dynamic(()=>import('@/components/Bringing'),{ssr:false})
 const Faq = dynamic(()=>import('@/components/Faq'))
 const Highlights = dynamic(()=>import('@/components/Highlights'))
 
@@ -35,10 +36,9 @@ export default function Home() {
       <Project />
       <ShowCase />
       <Gallery />
-      
-      <div className="h-[125vw] mobile:h-full tablet:h-full bg-white">
+     
         <Bringing />
-      </div>
+      
       
       <ProjectHover />
       <Faq/>

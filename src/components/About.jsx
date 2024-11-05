@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import dynamic from 'next/dynamic';
+import AboutSwiper from './AboutSwiper';
 // import { paraAnim } from './gsapAnimations';
-const AboutSwiper = dynamic(() => import("./AboutSwiper"));
+// const AboutSwiper = dynamic(() => import("./AboutSwiper"));
 
 const About = () => {
   
