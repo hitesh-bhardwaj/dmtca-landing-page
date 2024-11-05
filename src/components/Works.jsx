@@ -39,6 +39,7 @@ const Works = () => {
           trigger: "#works",
           start: "top 60%",
           end: "bottom 20%",
+          
           onEnter: () => changeBodyColor("#161616"),
           onLeaveBack: () => changeBodyColor("#ffffff"),
         });

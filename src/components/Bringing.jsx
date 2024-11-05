@@ -108,7 +108,7 @@ const Bringing = () => {
   });
 
   return (
-    <section id='bringing' className='overflow-hidden' ref={BringingRef}>
+    <section id='bringing' className='overflow-hidden bg-white' ref={BringingRef}>
       <div className='container-lg w-full h-full py-[10%] relative mobile:py-[20%] tablet:py-[10%]'>
         <div className='flex flex-col items-center justify-center w-full h-full gap-[5vw]'>
           <div className='flex flex-col items-center justify-center'>
