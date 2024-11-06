@@ -8,7 +8,7 @@ import Image from 'next/image';
 const NEXT = 1;
 const PREV = -1;
 
-const SlideShow = () => {
+const SlideShow = ({finalData}) => {
     const slidesRef = useRef([]);
     const slidesInnerRef = useRef([]);
     const [isMobile, setIsMobile] = useState(false);
@@ -39,8 +39,8 @@ const SlideShow = () => {
         }
 
         return () => {
-            slidesRef.current.forEach((slide) => {
-                slide.classList.remove('slide--current');
+            slidesRef?.current?.forEach((slide) => {
+                slide?.classList?.remove('slide--current');
             });
         };
     }, []);
@@ -217,7 +217,7 @@ const SlideShow = () => {
                         <div className="text-white text-center left-1/2 -translate-x-1/2 absolute top-10 z-[2] w-[35%] mx-auto tablet:w-[90%]">
                             <p className="text-[1.25vw] tablet:text-[4.5vw]">Own Your Global Property!</p>
                             <span className="block h-[1px] w-full bg-gradient-to-r my-2 from-transparent from-0% via-white via-50% to-transparent to-100%" />
-                            <h3 className="text-[3.3vw] font-head leading-[1.2] tablet:text-[6vw]">Live Where Prestige and Luxury Meet with HOGAR</h3>
+                            <h3 className="text-[3.3vw] font-head leading-[1.2] tablet:text-[6vw]">Live Where Prestige and Luxury Meet with {finalData?.title}</h3>
                         </div>
                         <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[5%] tablet:bottom-[5%] mobile:p-[4vw] tablet:p-[2.2vw]">
                             <h4 className="text-xl font-head mb-[3vw] tablet:mb-[1vw]">

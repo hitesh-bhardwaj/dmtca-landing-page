@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = ({ finalData }) => {
   return (
     <section id="footer" className="z-[5] footer-body">
       <div className="container-lg w-screen h-full rounded-t-[40px] overflow-hidden bg-[#E0D4C6] text-[#1C1B1A] mobile:py-[10%] tablet:pt-[5%]">
         <div className=" pt-[5%] pb-[2%] flex flex-col">
-
           <div className="w-full relative flex items-center justify-between mobile:flex-col-reverse mb-[7vw] mobile:gap-0">
-            
             {/* First Div */}
             <div className="flex items-center justify-center gap-[1vw] mobile:gap-[3vw] mobile:mb-[5vw]">
               <Link href={"#"}>
@@ -55,19 +53,25 @@ const Footer = () => {
 
             {/* Second Div */}
             <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup mobile:ml-0 mobile:w-[30vw] mobile:mb-[10vw] tablet:w-[20vw] tablet:ml-[-18%]">
-              <Link href={"/property1"}>
+              <Link href={"/"}>
                 <Image
                   className="invert"
                   width={200}
                   height={50}
-                  src="/assets/hogar-logo.svg"
+                  src={finalData?.logo}
                   alt="logo-img"
                 />
               </Link>
             </div>
 
             {/* Third Div */}
-            <a aria-label="Scroll Top" data-scroll data-scroll-to data-scroll-to-duration="3s" href="#hero">
+            <a
+              aria-label="Scroll Top"
+              data-scroll
+              data-scroll-to
+              data-scroll-to-duration="3s"
+              href="#hero"
+            >
               <div className="relative h-[3vw] w-[3vw] p-[0.5vw] flex items-center justify-center bg-[#1C1B1A] rounded-full overflow-hidden fadeup mobile:absolute mobile:top-[5%] mobile:right-[5%] mobile:w-[9vw] mobile:h-[9.2vw] tablet:w-[5vw] tablet:h-[5vw]">
                 <Image
                   width={24}
@@ -80,30 +84,43 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center flex-col justify-center">
-            <Link href="#" className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw] tablet:text-[5vw]">
-              <span data-para-anim className="">+971 800 46427</span>
+            <Link
+              href={`tel: ${finalData?.phone}`}
+              className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw] tablet:text-[5vw]"
+            >
+              <span data-para-anim className="">
+                {finalData?.phone}
+              </span>
             </Link>
-            <Link href="info@hogarproperties.com">
-              <p data-para-anim className="text-[3.4vw] text-head font-medium mobile:text-[5.5vw] tablet:text-[5vw]">
-                info@hogarproperties.com
+            <Link href={`mailto: ${finalData?.email}`}>
+              <p
+                data-para-anim
+                className="text-[3.4vw] text-head font-medium mobile:text-[5.5vw] tablet:text-[5vw]"
+              >
+                {finalData?.email}
               </p>
             </Link>
           </div>
 
           <div className="flex items-center justify-between tablet:flex-col mobile:gap-[5vw] fadeup pt-[7vw] tablet:gap-[3vw]">
             <div className="w-[15%] tablet:w-[70%] tablet:order-1">
-              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">All rights reserved</p>
+              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">
+                All rights reserved
+              </p>
             </div>
             <div className="w-[30%] tablet:w-[80%] ml-[-5%] tablet:ml-0">
-              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">1504, API World Tower, Trade Center, Sheikh Zayad</p>
+              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">
+                {finalData?.address}
+              </p>
             </div>
             <Link href={"#"} className="tablet:order-3">
               <div>
-                <p className="text-[1.1vw]  uppercase mobile:text-[3.2vw] mobile:text-center tablet:text-[2.5vw]">PRIVACY POLICY</p>
+                <p className="text-[1.1vw]  uppercase mobile:text-[3.2vw] mobile:text-center tablet:text-[2.5vw]">
+                  PRIVACY POLICY
+                </p>
               </div>
             </Link>
           </div>
-
         </div>
       </div>
     </section>

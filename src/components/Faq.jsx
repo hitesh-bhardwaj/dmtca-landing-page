@@ -34,7 +34,26 @@ const SingleAccordion = ({ id, title, content1, content2 }) => {
     );
   };
 const Faq = () => {
+    useGSAP(() => {
+        const body = document.body;
     
+        const changeBodyColor = (color) => {
+          gsap.to(body, {
+            backgroundColor: color,
+            duration: 0.03, // Duration for smooth transition
+            ease: "power2.out",
+          });
+        };
+    
+        // ScrollTrigger for changing body background color
+        ScrollTrigger.create({
+          trigger: "#faq",
+          start: "top bottom", // When the section enters the viewport
+          end: "bottom 80%", // When the section is about to leave
+          onEnter: () => changeBodyColor("#f9f9f9"), // Replace with your actual secondary color
+          onLeaveBack: () => changeBodyColor("#1d1d1d"), // Revert when scrolling back up
+        });
+      });
   return (
     <>
     <section className='py-[7%] mobile:pt-[20%]' id='faq'>

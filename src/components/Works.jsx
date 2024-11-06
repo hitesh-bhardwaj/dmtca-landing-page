@@ -6,7 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Works = () => {
+const Works = ({finalData}) => {
   const [isMobile, setIsMobile] = useState(false);
   const checkIsMobile = () => {
     setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
@@ -39,7 +39,6 @@ const Works = () => {
           trigger: "#works",
           start: "top 60%",
           end: "bottom 20%",
-          
           onEnter: () => changeBodyColor("#161616"),
           onLeaveBack: () => changeBodyColor("#ffffff"),
         });
@@ -391,7 +390,7 @@ const Works = () => {
           >
             <div className="w-[50vw] h-[50vw] relative mobile:w-[90vw] mobile:h-[90vw]">
               <Image
-                src="/assets/hogar-logo.svg"
+                src={finalData?.logo}
                 alt="logo image"
                 fill
                 className="object-contain opacity-[0.05]"
