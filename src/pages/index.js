@@ -1,22 +1,24 @@
-import Hero from "@/components/Hero";
-import Works from "@/components/Works";
-import Service from "@/components/Service";
-import Project from "@/components/Project";
+
 import Footer from "@/components/Footer";
-import ShowCase from "@/components/ShowCase";
 import { paraAnim, lineAnim, fadeUp } from "@/components/gsapAnimations";
-import Gallery from "@/components/Gallery";
-import ProjectHover from "@/components/ProjectHover";
+import Bringing from "@/components/indexContent/Bringing";
+import Gallery from "@/components/indexContent/Gallery";
+import Hero from "@/components/indexContent/Hero";
+import Project from "@/components/indexContent/Project";
+import ProjectHoverAnimation from "@/components/indexContent/ProjectHover";
+import Roi from "@/components/indexContent/Roi";
+import Service from "@/components/indexContent/Service";
+import ShowCase from "@/components/indexContent/ShowCase";
+import Works from "@/components/indexContent/Works";
 import dynamic from "next/dynamic";
-import Roi from "@/components/Roi";
-import Bringing from "@/components/Bringing";
 
 
-const DynamicAbout = dynamic(() => import('@/components/About'))
-const SlideShow = dynamic(()=>import('@/components/SlideShow'))
+
+const DynamicAbout = dynamic(() => import('@/components/indexContent/About'))
+const SlideShow = dynamic(()=>import('@/components/indexContent/SlideShow'))
 // const Bringing = dynamic(()=>import('@/components/Bringing'),{ssr:false})
-const Faq = dynamic(()=>import('@/components/Faq'))
-const Highlights = dynamic(()=>import('@/components/Highlights'))
+const Faq = dynamic(()=>import('@/components/indexContent/Faq'))
+const Highlights = dynamic(()=>import('@/components/indexContent/Highlights'))
 
 export default function Home() {
   paraAnim();
@@ -40,7 +42,7 @@ export default function Home() {
         <Bringing />
       
       
-      <ProjectHover />
+      <ProjectHoverAnimation/>
       <Faq/>
       <Highlights/>
       <Roi/>

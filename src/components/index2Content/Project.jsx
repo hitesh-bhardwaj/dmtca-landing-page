@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import BlackButton from './Button/BlackButton';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -10,6 +9,7 @@ import { Scrollbar, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/scrollbar';
+import BlackButton from '../Button/BlackButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +55,10 @@ export default function Project() {
               <BlackButton btnText={"Enquire Now"} link={"#"} />
             </div>
             <p data-para-anim className='w-[60%] tablet:w-full'>
-              Immerse yourself in the stylish allure of 53 West 53, where every corner exudes sophistication. This not just a residence, it’s a mark of distinction that embodies the luxurious lifestyle you&apos;ve always craved.
+            53 West 53 embodies the pinnacle of modern sophistication. This distinguished masterpiece stands as one 
+of the finest properties in the world, offering an unparalleled benefits and promising enduring value for 
+generations to come.
+
             </p>
           </div>
         </div>

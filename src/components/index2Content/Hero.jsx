@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
-import PrimaryButton from "./Button/PrimaryButton";
 import Link from "next/link";
+import PrimaryButton from "../Button/PrimaryButton";
 
-const EnquiryForm = dynamic(() => import("./Enquiryform"));
+const EnquiryForm = dynamic(() => import("../Enquiryform"));
 
 const Hero = () => {
   
@@ -55,16 +55,17 @@ const Hero = () => {
               
               className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]"
             >
-              Experience Iconic Luxury Living at Dubai&apos;s Most Prestigious
-              and Exclusive Address
+              Claim Exquisite Returns in a Luxurious Setting Crafted for Elite Visionaries
+
             </p>
             <div className="w-full h-[1px] bg-white lineDraw"></div>
           </div>
           <div className="relative z-10">
             <h1 className="text-white text-[10vw] leading-[1] text-head font-light uppercase flex flex-col gap-[1vw] opacity-90 tablet:text-[14vw] tablet:gap-[4vw]">
-              <span data-para-anim>Live In</span>
+              <span data-para-anim>Expand 
+              </span>
               <div className="flex items-start gap-[1.5vw] tablet:flex-col tablet:items-start tablet:gap-[4vw]">
-                <span data-para-anim>Grandeur</span>
+                <span data-para-anim>Your Empire</span>
                 <a
                   aria-label="Select Title"
                   data-scroll
@@ -113,8 +114,7 @@ const Hero = () => {
               
               className="text-[1.5vw] text-white opacity-90 tracking-wide w-[40%] mobile:text-[4.5vw] tablet:w-[70%] tablet:text-[3.2vw]"
             >
-              We Elevate Your Lifestyle With World-Class Architectural
-              Creations
+              From Concept to Completion, We Create High-Value Masterpieces
             </p>
           </div>
         </div>
