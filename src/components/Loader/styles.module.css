@@ -101,3 +101,21 @@
   .aplNum.aplNum3 {
     margin-left: -15px;
   }
+
+  @media screen and (max-width: 1024px) {
+    .aplCount {
+      font-size: 20vw;
+      color: #d2d2d2;
+    }
+    
+    .aplCount .aplNum {
+      display: block;
+      overflow: hidden;
+      float: left;
+      height: 20vw;
+      line-height: 1.2;
+    }
+    .aplNum.aplNum3 {
+      margin-left: -10px;
+    }
+  }
