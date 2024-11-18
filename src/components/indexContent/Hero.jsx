@@ -1,13 +1,40 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
-
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import PrimaryButton from "../Button/PrimaryButton";
-
+gsap.registerPlugin(ScrollTrigger)
 const EnquiryForm = dynamic(() => import("../Enquiryform"));
 
 const Hero = () => {
+  
+  useEffect(()=>{
+   const ctx = gsap.context(()=>{
+    gsap.from(".hero-fadeup", {
+      yPercent:50,
+      opacity:0,
+      duration:1,
+      delay:6.4
+    })
+    gsap.from(".linedraw", {
+      scrollTrigger: {
+        trigger: ".linedraw",
+        start: "top 95%",
+      },
+      scaleX: 0,
+      transformOrigin: "left",
+      duration: 1,
+      delay:6.4,
+      yPercent: 100,
+      ease: "power4.out",
+    });
+   })
+   return ()=>ctx.revert();
+  },[])
+
+
   
   return (
     <>
@@ -16,7 +43,7 @@ const Hero = () => {
 
         <div className="w-screen h-[125vw] relative overflow-hidden container-lg pt-[3%] tablet:h-[240vw] tablet:pt-[7%]">
           <div className="flex justify-between items-center">
-            <Link href="/" className="block fadeup">
+            <Link href="/" className="block hero-fadeup">
               <Image
                 quality={100}
                 src="/assets/53-west-logo.svg"
@@ -27,7 +54,7 @@ const Hero = () => {
                 className="object-contain mobile:w-[30vw] tablet:w-[20vw]"
               />
             </Link>
-            <Link href="/" className="block fadeup">
+            <Link href="/" className="block hero-fadeup">
               <Image
                 quality={100}
                 src="/assets/hogar-logo.svg"
@@ -52,14 +79,14 @@ const Hero = () => {
           />
           <div className="w-[55%] flex flex-col gap-[6vw] mt-[15vw] mb-[8vw] tablet:w-[90%] tablet:mt-[20vh] tablet:mb-[12vw] tablet:gap-[12vw]">
             <p
-              data-para-anim
               
-              className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw]"
+              
+              className="text-[1.5vw] text-white tracking-wide opacity-90 w-[80%] mobile:text-[4.5vw] tablet:text-[3.2vw] hero-fadeup"
             >
               Experience Iconic Luxury Living at Dubai&apos;s Most Prestigious
               and Exclusive Address
             </p>
-            <div className="w-full h-[1px] bg-white lineDraw"></div>
+            <div className="w-full h-[1px] bg-white linedraw"></div>
           </div>
           <div className="relative z-10">
             <h1 className="text-white text-[10vw] leading-[1] text-head font-light uppercase flex flex-col gap-[1vw] opacity-90 tablet:text-[14vw] tablet:gap-[4vw]">

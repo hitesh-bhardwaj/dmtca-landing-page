@@ -932,3 +932,10 @@ p{
     opacity: 100%;
   }
 }
+
+/* loader animation */
+body.loading{
+  pointer-events: none;
+  height: 100vh;
+  overflow: hidden;
+}

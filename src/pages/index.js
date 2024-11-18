@@ -10,7 +10,9 @@ import Roi from "@/components/indexContent/Roi";
 import Service from "@/components/indexContent/Service";
 import ShowCase from "@/components/indexContent/ShowCase";
 import Works from "@/components/indexContent/Works";
+// import Loader from "@/components/Loader";
 import dynamic from "next/dynamic";
+import Loader from "../components/Loader";
 
 
 
@@ -29,6 +31,7 @@ export default function Home() {
   return (
     <>
     {/* <Loader/> */}
+    <Loader/>
     <main>    
       <Hero />
       <DynamicAbout />
