@@ -1,15 +1,9 @@
-import React from 'react'
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion";
-  import ScrollTrigger from "gsap/dist/ScrollTrigger";
-  import { gsap } from "gsap";
-  import { useGSAP } from "@gsap/react";
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
-
 
 const SingleAccordion = ({ id, title, content1, content2 }) => {
     return (
@@ -72,7 +66,6 @@ const Faq = () => {
            
           </Accordion>
           <div className="w-full bg-black lineDraw h-[1px] mobile:block tablet:block"></div>
-          {/* <AccordionLine/> */}
         </div>
         
 
