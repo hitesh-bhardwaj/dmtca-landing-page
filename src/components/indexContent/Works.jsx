@@ -4,9 +4,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useTranslation } from "next-i18next";
 gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
+  const { t } = useTranslation('work');
   const [isMobile, setIsMobile] = useState(false);
   const checkIsMobile = () => {
     setIsMobile(window.innerWidth < 1024); // You can adjust the threshold if needed
@@ -23,7 +25,7 @@ const Works = () => {
 
 
   useEffect(() => {
-    if(globalThis.innerWidth>1024){
+    if (globalThis.innerWidth > 1024) {
 
       let ctx = gsap.context(() => {
         const body = document.body;
@@ -39,7 +41,7 @@ const Works = () => {
           trigger: "#works",
           start: "top 60%",
           end: "bottom 20%",
-          
+
           onEnter: () => changeBodyColor("#161616"),
           onLeaveBack: () => changeBodyColor("#ffffff"),
         });
@@ -75,15 +77,15 @@ const Works = () => {
               data-para-anim
               className="title-2 text-white w-[60%] text-center mobile:w-full tablet:w-[80%]"
             >
-              Indulge in Unmatched Elegance in Dubai’s Skyline
+              {t('workHead')}
             </h2>
           </div>
           <div className="w-full h-full flex-col mt-[10vw] relative z-[2] mobile:mt-[20vw]">
             <div className="flex w-full h-full justify-between mobile:flex-col mobile:gap-[10vw]">
               <div
-                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw] tablet:w-[70vw]" 
+                className="w-[37vw] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[7vw] tablet:w-[70vw]"
                 data-scroll
-                data-scroll-speed={isMobile?undefined:"0.1"}
+                data-scroll-speed={isMobile ? undefined : "0.1"}
               >
                 <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw] fadeup tablet:w-[65vw] tablet:h-[40vw]">
                   <Image
@@ -93,7 +95,7 @@ const Works = () => {
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
                   <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw] tablet:text-[2.5vw] tablet:h-[7vw] tablet:px-[2vw] tablet:py-[2vw] tablet:group-hover:h-[20vw]">
-                    Living room
+                    {t('workCard')}
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
                         <p className="tracking-tight">300 x 400</p>
@@ -101,11 +103,11 @@ const Works = () => {
                       <div className="work-btn">
                         <Link href={"#"} className="  btn fadeUp">
                           <span data-primary className="btn-text normal-case ">
-                            Learn more
+                            {t('workCardBtn')}
                           </span>
                           <div aria-hidden="true" className="btn-circle">
                             <div className="btn-circle-text normal-case">
-                              Learn more
+                              {t('workCardBtn')}
                               <svg
                                 viewBox="0 0 10 10"
                                 fill="none"
@@ -135,18 +137,14 @@ const Works = () => {
                   </div>
                 </div>
                 <p data-para-anim className=" text-white">
-                  Embrace a lifestyle enriched by high-end recreational
-                  activities, from exclusive rooftop lounges to private fitness
-                  centers. Whether you seek relaxation or vibrant social
-                  engagement, 53 West 53 provides a curated experience that
-                  caters to your every desire in an elite environment.
+                  {t('workCard1')}
                 </p>
               </div>
 
               <div
                 className="w-[25vw] h-fit relative mr-[8%] mt-[30%] z-[4] mobile:mt-auto mobile:mr-auto tablet:mt-[80%] tablet:w-[35vw] "
                 data-scroll
-                data-scroll-speed={isMobile?undefined:"-0.1"}
+                data-scroll-speed={isMobile ? undefined : "-0.1"}
               >
                 <div className="w-[27vw] h-[35vw] rounded-[1.5vw] overflow-hidden absolute p-[1.5vw] top-0 left-0 group mobile:w-[90vw] mobile:h-[80vw] mobile:p-[4vw] fadeup tablet:w-[40vw] tablet:h-[50vw] tablet:ml-[-140%] mobile:ml-0">
                   <Image
@@ -156,7 +154,7 @@ const Works = () => {
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
                   <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-300 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw] tablet:text-[2.5vw] tablet:h-[7vw] tablet:px-[2vw] tablet:py-[2vw] tablet:group-hover:h-[20vw]">
-                    Living room
+                    {t('workCard')}
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
                         <p className="tracking-tight">300 x 400</p>
@@ -164,12 +162,12 @@ const Works = () => {
                       <div className="work-btn">
                         <Link href={"#"} className="  btn fadeUp">
                           <span data-primary className="btn-text normal-case ">
-                            Learn more
+                            {t('workCardBtn')}
                           </span>
 
                           <div aria-hidden="true" className="btn-circle">
                             <div className="btn-circle-text normal-case">
-                              Learn more
+                              {t('workCardBtn')}
                               <svg
                                 viewBox="0 0 10 10"
                                 fill="none"
@@ -203,7 +201,7 @@ const Works = () => {
             <div
               className="w-fit h-full mt-[15vw] relative mobile:mt-[90vw] tablet:mt-[70%]"
               data-scroll
-              data-scroll-speed={isMobile?undefined:"-0.1"}
+              data-scroll-speed={isMobile ? undefined : "-0.1"}
             >
               <div className="w-[47vw] h-[35vw] relative rounded-[2vw] overflow-hidden ml-[3%] p-[2vw] group mobile:w-[90vw] mobile:h-[80vw] mobile:ml-0 mobile:p-[4vw] fadeup tablet:w-[65vw] tablet:h-[45vw]">
                 <Image
@@ -213,7 +211,7 @@ const Works = () => {
                   fill
                 />
                 <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw] tablet:text-[2.5vw] tablet:h-[7vw] tablet:px-[2vw] tablet:py-[2vw] tablet:group-hover:h-[20vw]">
-                  Living room
+                  {t('workCard')}
                   <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                     <div>
                       <p className="tracking-tight">300 x 400</p>
@@ -221,12 +219,12 @@ const Works = () => {
                     <div className="work-btn">
                       <Link href={"#"} className="  btn fadeUp">
                         <span data-primary className="btn-text normal-case ">
-                          Learn more
+                          {t('workCardBtn')}
                         </span>
 
                         <div aria-hidden="true" className="btn-circle">
                           <div className="btn-circle-text normal-case">
-                            Learn more
+                            {t('workCardBtn')}
                             <svg
                               viewBox="0 0 10 10"
                               fill="none"
@@ -257,18 +255,14 @@ const Works = () => {
               </div>
               <div className="w-[47vw] h-full flex ml-[3%] mt-[5vw] tablet:w-[80vw] mobile:w-full mobile:ml-0">
                 <p data-para-anim className="w-[75%] text-white text-left mobile:w-full">
-                  53 West 53 offers an extraordinary living experience, with
-                  residences boasting panoramic views of the city skyline and
-                  the Arabian Gulf. Each suite is designed with spacious
-                  interiors, ultra-luxury amenities, and modern craftsmanship
-                  that reflects your elite status.
+                  {t('workCard2')}
                 </p>
               </div>
             </div>
             <div
               className="w-full h-full flex justify-between mt-[7vw] mobile:mt-auto mobile:flex-col tablet:mt-[10vw]"
               data-scroll
-              data-scroll-speed={isMobile?undefined:"0.1"}
+              data-scroll-speed={isMobile ? undefined : "0.1"}
             >
               <div className="w-[40vw] h-[27vw] relative rounded-[2vw] overflow-hidden mt-[10vw] p-[2vw] group tablet:w-[47vw] tablet:h-[35vw] tablet:mt-[25vw] mobile:w-[90vw] mobile:h-[70vw] mobile:mt-[10vw] mobile:p-[4vw] fadeup ">
                 <Image
@@ -278,7 +272,7 @@ const Works = () => {
                   fill
                 />
                 <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[10vw] mobile:px-[3vw] mobile:py-[3vw] mobile:group-hover:h-[30vw] tablet:text-[2.5vw] tablet:h-[7vw] tablet:px-[2vw] tablet:py-[2vw] tablet:group-hover:h-[20vw]">
-                  Living room
+                  {t('workCard')}
                   <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                     <div>
                       <p className="tracking-tight">300 x 400</p>
@@ -286,12 +280,12 @@ const Works = () => {
                     <div className="work-btn">
                       <Link href={"#"} className="  btn fadeUp">
                         <span data-primary className="btn-text normal-case ">
-                          Learn more
+                          {t('workCardBtn')}
                         </span>
 
                         <div aria-hidden="true" className="btn-circle">
                           <div className="btn-circle-text normal-case">
-                            Learn more
+                            {t('workCardBtn')}
                             <svg
                               viewBox="0 0 10 10"
                               fill="none"
@@ -323,7 +317,7 @@ const Works = () => {
               <div
                 className="w-[35vw] h-full flex flex-col gap-[5vw] mobile:mt-[10vw] mobile:w-full tablet:w-[40vw]"
                 data-scroll
-                data-scroll-speed={isMobile?undefined:"-0.1"}
+                data-scroll-speed={isMobile ? undefined : "-0.1"}
               >
                 <div className="w-[25vw] h-[35vw] overflow-hidden rounded-[2vw] relative p-[2vw] group mobile:w-[90vw] mobile:h-[70vw] mobile:p-[4vw] fadeup tablet:w-[40vw] tablet:h-[45vw]">
                   <Image
@@ -333,7 +327,7 @@ const Works = () => {
                     className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
                   />
                   <div className="w-fit h-[3.5vw] p-[1vw] px-[1vw] rounded-[0.8vw] bg-white/40 relative z-[3] text-[1.2vw] uppercase glassmorphism overflow-hidden group-hover:h-[12vw] transition-all ease-in-out duration-500 mobile:text-[3.5vw] mobile:h-[7vw] mobile:px-[3vw] mobile:group-hover:h-[30vw] tablet:text-[2.5vw] tablet:h-[7vw] tablet:px-[2vw] tablet:py-[2vw] tablet:group-hover:h-[20vw]">
-                    Living room
+                    {t('workCard')}
                     <div className="w-full h-full flex flex-col gap-[1vw] mt-[1.5vw]">
                       <div>
                         <p className="tracking-tight">300 x 400</p>
@@ -341,12 +335,12 @@ const Works = () => {
                       <div className="work-btn">
                         <Link href={"#"} className="  btn fadeUp">
                           <span data-primary className="btn-text normal-case ">
-                            Learn more
+                            {t('workCardBtn')}
                           </span>
 
                           <div aria-hidden="true" className="btn-circle">
                             <div className="btn-circle-text normal-case">
-                              Learn more
+                              {t('workCardBtn')}
                               <svg
                                 viewBox="0 0 10 10"
                                 fill="none"
@@ -376,11 +370,7 @@ const Works = () => {
                   </div>
                 </div>
                 <p data-para-anim className="text-white">
-                  Designed for those who appreciate exclusivity, 53 West 53
-                  offers access to private dining rooms, suites and elegant
-                  event spaces, perfect for hosting sophisticated gatherings.
-                  This luxurious property embodies the pinnacle of refined
-                  living.
+                  {t('workCard3')}
                 </p>
               </div>
             </div>

@@ -1,7 +1,10 @@
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const { t } = useTranslation('faq');
+  
   return (
     <section id="footer" className="z-[5] footer-body">
       <div className="container-lg w-screen h-full rounded-t-[40px] overflow-hidden bg-[#E0D4C6] text-[#1C1B1A] mobile:py-[10%] tablet:pt-[5%]">
@@ -54,7 +57,7 @@ const Footer = () => {
             </div>
 
             {/* Second Div */}
-            <div className="flex items-center ml-[-12%] justify-center w-[10vw] h-auto fadeup mobile:ml-0 mobile:w-[30vw] mobile:mb-[10vw] tablet:w-[20vw] tablet:ml-[-18%]">
+            <div className="flex items-center ml-[-12%] rtl:mr-[-12%] rtl:ml-0 justify-center w-[10vw] h-auto fadeup mobile:ml-0 mobile:w-[30vw] mobile:mb-[10vw] tablet:w-[20vw] tablet:ml-[-18%]">
               <Link href={"/"}>
                 <Image
                   className="invert"
@@ -80,10 +83,10 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center flex-col justify-center">
-            <Link href="#" className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw] tablet:text-[5vw]">
+            <Link href="tel:+97180046427" className="text-[3.4vw] font-medium text-head leading-none mobile:text-[5.5vw] tablet:text-[5vw]">
               <span data-para-anim className="">+971 800 46427</span>
             </Link>
-            <Link href="info@hogarproperties.com">
+            <Link href="mailto:info@hogarproperties.com">
               <p data-para-anim className="text-[3.4vw] text-head font-medium mobile:text-[5.5vw] tablet:text-[5vw]">
                 info@hogarproperties.com
               </p>
@@ -92,14 +95,14 @@ const Footer = () => {
 
           <div className="flex items-center justify-between tablet:flex-col mobile:gap-[5vw] fadeup pt-[7vw] tablet:gap-[3vw]">
             <div className="w-[15%] tablet:w-[70%] tablet:order-1">
-              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">All rights reserved</p>
+              <p className="text-[1.1vw] uppercase mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">{t('footer1')}</p>
             </div>
             <div className="w-[30%] tablet:w-[80%] ml-[-5%] tablet:ml-0">
-              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">1504, API World Tower, Trade Center, Sheikh Zayad</p>
+              <p className="text-[1.1vw] leading-[1.2] text-center mobile:text-[3.5vw] tablet:text-center tablet:text-[2.5vw]">{t('footer2')}</p>
             </div>
             <Link href={"#"} className="tablet:order-3">
               <div>
-                <p className="text-[1.1vw]  uppercase mobile:text-[3.2vw] mobile:text-center tablet:text-[2.5vw]">PRIVACY POLICY</p>
+                <p className="text-[1.1vw]  uppercase mobile:text-[3.2vw] mobile:text-center tablet:text-[2.5vw]">{t('footer3')}</p>
               </div>
             </Link>
           </div>

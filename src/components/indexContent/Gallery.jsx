@@ -2,70 +2,12 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 const Gallery = () => {
-  const features = [
-    {
-      name: 'ENTRANCE LOBBY',
-      image: '/assets/features/1.png',
-      icon: '/assets/features/icons/1.svg',
-      color: '#E0D4C6',
-    },
-    {
-      name: 'FEATURE STAIRCASE',
-      image: '/assets/features/2.png',
-      icon: '/assets/features/icons/2.svg',
-      color: '#6D7783',
-    },
-    {
-      name: 'PRIVATE MASTER LIVING ROOM',
-      image: '/assets/features/3.png',
-      icon: '/assets/features/icons/3.svg',
-      color: '#B9A288',
-    },
-    {
-      name: 'PRIVATE STUDY / CIGAR BAR',
-      image: '/assets/features/4.png',
-      icon: '/assets/features/icons/4.svg',
-      color: '#B5B8AC',
-    },
-    {
-      name: 'WATER PAVILION',
-      image: '/assets/features/5.png',
-      icon: '/assets/features/icons/5.svg',
-      color: '#A2B0B1',
-    },
-    {
-      name: 'SPA',
-      image: '/assets/features/6.png',
-      icon: '/assets/features/icons/6.svg',
-      color: '#5F5F5F',
-    },
-    {
-      name: 'SUNKEN SUN BED DECK',
-      image: '/assets/features/7.png',
-      icon: '/assets/features/icons/7.svg',
-      color: '#7E98B1',
-    },
-    {
-      name: 'BEACH LOUNGE & FIREPLACE',
-      image: '/assets/features/8.png',
-      icon: '/assets/features/icons/8.svg',
-      color: '#E0D4C6',
-    },
-    {
-      name: 'POOL & BEACH SHOWER',
-      image: '/assets/features/9.png',
-      icon: '/assets/features/icons/9.svg',
-      color: '#A6A6A6',
-    },
-    {
-      name: 'PRIVATE BEACH',
-      image: '/assets/features/10.png',
-      icon: '/assets/features/icons/10.svg',
-      color: '#B5B4AB',
-    },
-  ];
+
+  const { t } = useTranslation('work');
+  const features = t('galleryData', { returnObjects: true });
 
   const previewContainerRef = useRef(null);
   const bodyRef = useRef(null);
@@ -141,10 +83,9 @@ const Gallery = () => {
   return (
     <section className="py-[8%] bg-[#E0D4C6] relative z-10 mobile:py-[20%] tablet:py-[10%]" ref={bodyRef} >
       <div className="container-lg">
-        <h2 data-title-anim className="title-2 mb-[2vw]">Core Features
+        <h2 data-title-anim className="title-2 mb-[2vw]">{t('galleryHead')}
         </h2>
-        <p data-para-anim className="w-[40%] tablet:w-full">Experience the essence of luxury at 53 West 53, where Exceptional offerings cater to your 
-        sophisticated preferences.</p>
+        <p data-para-anim className="w-[40%] tablet:w-full">{t('gallerySub')}</p>
         <div className="w-full mt-[12vw] mb-[8vw] relative tablet:flex mobile:flex-col tablet:gap-[4vw]">
           {renderHeadings()}
           <div className="w-[35%] h-[45vw] z-10 overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 fadeup tablet:static tablet:translate-x-0 tablet:translate-y-0 mobile:w-[90vw] mobile:h-[120vw] tablet:w-[90vw] tablet:h-[70vw]">

@@ -1,0 +1,101 @@
+{
+  "title1": "Live In",
+  "title2": "Grandeur",
+  "description": "Experience Iconic Luxury Living at Dubai's Most Prestigious Address.",
+  "cta": "Enquire Today",
+  "des2": "We Elevate Your Lifestyle With World-Class Architectural Creations",
+  "secTitle": "Luxury Living Awaits You In Dubai's Elite Neighbourhood",
+  "secSub": "Welcome to 53 West 53, a masterpiece nestled in the iconic Burj Khalifa District, where elegance meets exclusivity. This luxurious haven invites you to experience a lifestyle adorned with world-class amenities and curated spaces. Indulge in breathtaking skyline views, sophisticated recreational activities and private access to cultural landmarks. Here, every moment becomes a statement of your taste, setting the stage for a life of unparalleled sophistication.",
+  "secSwiper": [
+    {
+      "iconSrc": "/assets/about/about-icon-1.svg",
+      "title": "Futuristic Smart City",
+      "description": "DMTCA Properties presents a diverse array of options tailored to your discerning taste."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-2.svg",
+      "title": "Tax Incentives",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-3.svg",
+      "title": "Easy Connectivity",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-4.svg",
+      "title": "High-End Recreational Activities",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-5.svg",
+      "title": "World Class Healthcare",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-6.svg",
+      "title": "Communal Harmony",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-7.svg",
+      "title": "International Institutions",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    },
+    {
+      "iconSrc": "/assets/about/about-icon-8.svg",
+      "title": "Safety for All",
+      "description": "Find exclusive living spaces designed to fit your modern lifestyle."
+    }
+  ],
+  "thirdTitle": "Live Where Prestige and Luxury Meet with HOGAR",
+  "thirdSub": "Own Your Global Property!",
+  "thirdAddTitle": "Lumière Haven",
+  "thirdAdd": "0 Pahlawan St., City B",
+  "thirdName1": "Flat Roof Terraces",
+  "thirdContent1": "Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.",
+  "thirdName2": "Minimalist Exterior Design",
+  "thirdContent2": "Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.",
+  "thirdName3": "Stone Facade",
+  "thirdContent3": "Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.",
+  "buttonOption": "Download Options",
+  "forthButtons": [
+    {
+      "text": "Download Brochure"
+    },
+    {
+      "text": "Download Floor Plan"
+    },
+    {
+      "text": "Download Payment Plan"
+    },
+    {
+      "text": "Download Master Plan"
+    },
+    {
+      "text": "Download Site Plan"
+    }
+  ],
+  "forthContent": [
+    {
+      "title": "Relaxation Lounge",
+      "img": "/assets/service/relaxation.png"
+    },
+    {
+      "title": "65 Foot Lap Pool",
+      "img": "/assets/service/pool.png"
+    },
+    {
+      "title": "Spa And Wellness",
+      "img": "/assets/service/spa.png"
+    },
+    {
+      "title": "Fire Pit Lounge",
+      "img": "/assets/service/fire-pit.png"
+    },
+    {
+      "title": "Wine",
+      "img": "/assets/service/wine.png"
+    }
+  ]
+}

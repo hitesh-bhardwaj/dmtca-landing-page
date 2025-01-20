@@ -10,47 +10,51 @@ import Roi from "@/components/indexContent/Roi";
 import Service from "@/components/indexContent/Service";
 import ShowCase from "@/components/indexContent/ShowCase";
 import Works from "@/components/indexContent/Works";
-// import Loader from "@/components/Loader";
 import dynamic from "next/dynamic";
-import Loader from "../components/Loader";
 
-
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const DynamicAbout = dynamic(() => import('@/components/indexContent/About'))
-const SlideShow = dynamic(()=>import('@/components/indexContent/SlideShow'))
-// const Bringing = dynamic(()=>import('@/components/Bringing'),{ssr:false})
-const Faq = dynamic(()=>import('@/components/indexContent/Faq'))
-const Highlights = dynamic(()=>import('@/components/indexContent/Highlights'))
+const SlideShow = dynamic(() => import('@/components/indexContent/SlideShow'))
+const Faq = dynamic(() => import('@/components/indexContent/Faq'))
+const Highlights = dynamic(() => import('@/components/indexContent/Highlights'))
 
 export default function Home() {
   paraAnim();
   lineAnim();
   fadeUp();
 
-
   return (
     <>
-    {/* <Loader/> */}
-    <Loader/>
-    <main>    
-      <Hero />
-      <DynamicAbout />
-      <SlideShow />
-      <Service />
-      <Works />
-      <Project />
-      <ShowCase />
-      <Gallery />
-     
+      <main>
+        <Hero />
+        <DynamicAbout />
+        <SlideShow />
+        <Service />
+        <Works />
+        <Project />
+        <ShowCase />
+        <Gallery />
         <Bringing />
-      
-      
-      <ProjectHoverAnimation/>
-      <Faq/>
-      <Highlights/>
-      <Roi/>
-      <Footer />
-    </main> 
+        <ProjectHoverAnimation />
+        <Faq />
+        <Highlights />
+        <Roi />
+        <Footer />
+      </main>
     </>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'form',
+        'faq',
+        'work'
+      ])),
+    },
+  }
 }

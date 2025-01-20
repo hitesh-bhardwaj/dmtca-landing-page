@@ -2,29 +2,45 @@ import { useEffect } from 'react';
 import "@/styles/globals.css";
 import Head from 'next/head';
 import localFont from 'next/font/local';
+import { useRouter } from "next/router";
+import { appWithTranslation } from 'next-i18next'
 
 const montreal = localFont({
   src: [{ path: './fonts/neuemontreal.woff', weight: '400' }],
-  style:'normal',
-  display:'swap',
+  style: 'normal',
+  display: 'swap',
   variable: '--font-montreal'
 });
 
 const avenir = localFont({
-  src: [{ path: './fonts/avenir.woff',
-   weight: '400' }],
-   style:'normal',
-   display:'swap',
+  src: [{
+    path: './fonts/avenir.woff',
+    weight: '400'
+  }],
+  style: 'normal',
+  display: 'swap',
   variable: '--font-avenir'
 });
 const avenirMedium = localFont({
   src: [{ path: './fonts/avenir-medium.woff', weight: '500' }],
-  style:'normal',
-  display:'swap',
+  style: 'normal',
+  display: 'swap',
   variable: '--font-avenir'
 });
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
+
+  const { locale } = useRouter();
+
+  useEffect(() => {
+    const dir = locale === "ar" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", dir);
+    document.documentElement.setAttribute("lang", locale);
+    document.querySelectorAll('Swiper').forEach(swiper => {
+      swiper.setAttribute("dir", dir);
+    });
+  }, [locale]);
+
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
@@ -51,3 +67,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default appWithTranslation(App);

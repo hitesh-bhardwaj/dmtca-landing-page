@@ -4,6 +4,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 const NEXT = 1;
 const PREV = -1;
@@ -14,6 +15,8 @@ const SlideShow = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [current, setCurrent] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+
+    const { t } = useTranslation('common');
 
     // Function to check window size
     const checkIsMobile = () => {
@@ -28,8 +31,6 @@ const SlideShow = () => {
         // Cleanup listener on unmount
         return () => window.removeEventListener('resize', checkIsMobile);
     }, []);
-
-
 
     const slidesTotal = 3;
 
@@ -121,7 +122,8 @@ const SlideShow = () => {
         <section className="w-screen h-screen overflow-hidden tablet:h-[80vh]" id="features-slideshow">
             <div className={`relative w-full h-full `} data-scroll
                 data-scroll-speed={!isMobile ? '-0.3' : undefined}>
-                <div className="w-full h-full absolute z-10 top-0 left-0 bottom-0 right-0 grid place-items-end px-16 py-10 tablet:px-[5vw] pointer-events-none">
+
+                <div dir='ltr' className="w-full h-full absolute z-10 top-0 left-0 bottom-0 right-0 grid place-items-end px-16 py-10 tablet:px-[5vw] pointer-events-none">
                     <nav className="flex gap-4 pointer-events-auto">
                         <button
                             className="w-[3vw] group border border-white rounded-full h-[3vw] flex items-center relative justify-center p-[1vw] overflow-hidden tablet:w-[10vw] tablet:h-[10vw] tablet:p-[2.5vw]"
@@ -154,6 +156,7 @@ const SlideShow = () => {
                         </button>
                     </nav>
                 </div>
+
                 <div className="slides w-screen h-screen absolute overflow-hidden place-items-center tablet:h-[80vh]">
                     <div
                         className="slide"
@@ -168,10 +171,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[2.5vw] mobile:text-[3.2vw] tablet:top-[10%] mobile:top-0">Flat Roof Terraces</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] tablet:text-[2.5vw] mobile:text-[3.2vw] tablet:top-[10%] mobile:top-0 rtl:left-0">{t('thirdName1')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] mobile:w-[60vw] tablet:w-[65vw] tablet:p-[2.5vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] tablet:text-[2.5vw] mobile:text-[3.5vw] tablet:leading-[1.4]">
-                                            Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
+                                            {t('thirdContent1')}
                                         </p>
                                     </div>
                                 </div>
@@ -186,10 +189,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw] tablet:top-[10%] mobile:w-[30vw] mobile:top-[10%]">Minimalist Exterior Design</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw] tablet:top-[10%] mobile:w-[30vw] mobile:top-[10%] rtl:left-0">{t('thirdName2')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] mobile:w-[55vw] tablet:w-[45vw] tablet:p-[2.5vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw] tablet:leading-[1.4]">
-                                            Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
+                                            {t('thirdContent2')}
                                         </p>
                                     </div>
                                 </div>
@@ -204,24 +207,27 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:top-[15%] mobile:top-[10%] tablet:text-[2.5vw]">Stone Facade</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:top-[15%] mobile:top-[10%] tablet:text-[2.5vw] rtl:left-0">{t('thirdName3')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] mobile:w-[80vw] relative tablet:p-[2.5vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw] tablet:leading-[1.4]">
-                                            Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
+                                            {t('thirdContent3')}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        {/* Section Title Slide 1 */}
                         <div className="text-white text-center left-1/2 -translate-x-1/2 absolute top-10 z-[2] w-[35%] mx-auto tablet:w-[90%]">
-                            <p className="text-[1.25vw] tablet:text-[4.5vw]">Own Your Global Property!</p>
+                            <p className="text-[1.25vw] tablet:text-[4.5vw]">{t('thirdSub')}</p>
                             <span className="block h-[1px] w-full bg-gradient-to-r my-2 from-transparent from-0% via-white via-50% to-transparent to-100%" />
-                            <h3 className="text-[3.3vw] font-head leading-[1.2] tablet:text-[6vw]">Live Where Prestige and Luxury Meet with HOGAR</h3>
+                            <h3 className="text-[3.3vw] font-head leading-[1.2] tablet:text-[6vw]">{t('thirdTitle')}</h3>
                         </div>
+
+                        {/* Slide 1 Address */}
                         <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[5%] tablet:bottom-[5%] mobile:p-[4vw] tablet:p-[2.2vw]">
                             <h4 className="text-xl font-head mb-[3vw] tablet:mb-[1vw]">
-                                Lumière Haven
+                                {t('thirdAddTitle')}
                             </h4>
                             <div className="flex items-center gap-2 mb-2 tablet:mb-[1vw]">
                                 <img
@@ -230,7 +236,7 @@ const SlideShow = () => {
                                     width="18"
                                     height="18"
                                 />
-                                <p className="text-md">10 Pahlawan St., City B</p>
+                                <p className="text-md">{t('thirdAdd')}</p>
                             </div>
                             <div className="flex gap-[2vw]">
                                 <div className="flex items-center gap-2">
@@ -262,6 +268,7 @@ const SlideShow = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div
                             className="slide__img pointer-events-none relative w-full h-full"
                             ref={(el) => (slidesInnerRef.current[0] = el)}
@@ -293,10 +300,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:w-[20vw] tablet:text-[2.5vw] tablet:top-[15%]">Flat Roof Terraces</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:w-[20vw] tablet:text-[2.5vw] tablet:top-[15%] rtl:left-0">{t('thirdName1')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:w-[60vw] tablet:p-[3vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw]">
-                                            Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
+                                            {t('thirdContent1')}
                                         </p>
                                     </div>
                                 </div>
@@ -311,10 +318,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw]">Minimalist Exterior Design</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw] rtl:left-0">{t('thirdName2')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] tablet:w-[45vw] mobile:w-[60vw] tablet:p-[3vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw]">
-                                            Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
+                                            {t('thirdContent2')}
                                         </p>
                                     </div>
                                 </div>
@@ -329,10 +336,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:top-[8%] tablet:text-[2.5vw] tablet:top-[20%] ">Stone Facade</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] mobile:top-[8%] tablet:text-[2.5vw] tablet:top-[20%] rtl:left-0">{t('thirdName3')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:p-[2vw] tablet:w-[60vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw]">
-                                            Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
+                                            {t('thirdContent3')}
                                         </p>
                                     </div>
                                 </div>
@@ -341,7 +348,7 @@ const SlideShow = () => {
 
                         <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[4%] tablet:bottom-[4%] mobile:p-[3vw] tablet:p-[2.2vw]">
                             <h4 className="text-xl font-head mb-[3vw] tablet:mb-[1vw]">
-                                Lumière Haven
+                                {t('thirdAddTitle')}
                             </h4>
                             <div className="flex items-center gap-2 mb-2 tablet:mb-[1vw]">
                                 <img
@@ -350,7 +357,7 @@ const SlideShow = () => {
                                     width="18"
                                     height="18"
                                 />
-                                <p className="text-md">10 Pahlawan St., City B</p>
+                                <p className="text-md">{t('thirdAdd')}</p>
                             </div>
                             <div className="flex gap-[2vw]">
                                 <div className="flex items-center gap-2">
@@ -413,10 +420,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:top-[5%] tablet:text-[2.5vw]">Flat Roof Terraces</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:top-[5%] tablet:text-[2.5vw] rtl:left-0">{t('thirdName1')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] tablet:p-[3vw] tablet:w-[60vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw]">
-                                            Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
+                                            {t('thirdContent1')}
                                         </p>
                                     </div>
                                 </div>
@@ -431,10 +438,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw]">Minimalist Exterior Design</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] mobile:text-[3.2vw] tablet:text-[2.5vw] rtl:left-0">{t('thirdName2')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[20vw] p-[1vw] tablet:p-[3vw] tablet:w-[60vw]">
                                         <p className="text-white text-[1.25vw] leading-[1.2] mobile:text-[3.5vw] tablet:text-[2.5vw]">
-                                            Lumière Haven's volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster, masonry and ceramics.
+                                            {t('thirdContent2')}
                                         </p>
                                     </div>
                                 </div>
@@ -449,10 +456,10 @@ const SlideShow = () => {
                                     </span>
                                 </div>
                                 <div className="absolute left-[110%] top-[-50%] pointer-events-none">
-                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2]">Stone Facade</p>
+                                    <p className="text-[1.25vw] absolute group-hover:translate-y-[5vw] top-[10%] group-hover:opacity-0 duration-300 text-white w-[5vw] leading-[1.2] rtl:left-0">{t('thirdName3')}</p>
                                     <div className="bg-white/20 group-hover:translate-y-[-5vw] group-hover:opacity-100 opacity-0 duration-300 backdrop-blur-sm rounded-xl w-[18vw] p-[1vw] ">
                                         <p className="text-white text-[1.25vw] leading-[1.2]">
-                                            Lumière Havens volumes are united by a minimalist exterior design, while the interiors are very rich in texture. The palette of materials includes pale plaster.
+                                            {t('thirdContent3')}
                                         </p>
                                     </div>
                                 </div>
@@ -461,7 +468,7 @@ const SlideShow = () => {
 
                         <div className="bg-white/20 backdrop-blur-sm absolute w-fit rounded-xl text-white p-[1.5vw] z-[2] bottom-10 left-16 tablet:left-[4%] tablet:bottom-[4%] mobile:p-[3vw] tablet:p-[2.2vw]">
                             <h4 className="text-xl font-head mb-[3vw] tablet:mb-[1vw]">
-                                Lumière Haven
+                                {t('thirdAddTitle')}
                             </h4>
                             <div className="flex items-center gap-2 mb-2 tablet:mb-[1vw]">
                                 <img
@@ -470,7 +477,7 @@ const SlideShow = () => {
                                     width="18"
                                     height="18"
                                 />
-                                <p className="text-md">10 Pahlawan St., City B</p>
+                                <p className="text-md">{t('thirdAdd')}</p>
                             </div>
                             <div className="flex gap-[2vw]">
                                 <div className="flex items-center gap-2">

@@ -1,0 +1,31 @@
+{
+  "hover1": "Years in Business",
+  "hover2": "Housing",
+  "hover2_2": "Projects",
+  "hover3": "Luxury Projects",
+  "faqTitle": "FAQs",
+  "faqs": [
+    {
+      "title": "What is the minimum down payment required?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et mauris dictum, pretium magna sit amet, condimentum sem. Curabitur rutrum tincidunt elit, id fermentum massa. Morbi ut iaculis tortor. Donec dapibus felis at libero tempor, eget rutrum odio pellentesque. Aliquam purus neque, feugiat in quam vel, pulvinar ornare eros. Aenean faucibus eleifend augue."
+    },
+    {
+      "title": "What perks will i get if I  invest in Dubai?",
+      "content": "We bring simplicity to complexity - distilling goals and values into brands that are relevant and inspiring, for customers and staff."
+    },
+    {
+      "title": "What documents do I need to invest in Dubai?",
+      "content": "We bring simplicity to complexity - distilling goals and values into brands that are relevant and inspiring, for customers and staff."
+    },
+    {
+      "title": "Will i get good resale value on purchased properties?",
+      "content": "We bring simplicity to complexity - distilling goals and values into brands that are relevant and inspiring, for customers and staff."
+    }
+  ],
+  "highLights": "Nearby Highlights",
+  "roiTitle": "Return On Investment (ROI)",
+  "roiContent": "Investing in real estate is one of the most reliable ways to build long-term wealth. With property values appreciating over time and the potential for rental income, your investment can generate significant returns.",
+  "footer1": "ALL RIGHTS RESERVED",
+  "footer2": "1504, API World Tower, Trade Center, Sheikh Zayad",
+  "footer3": "PRIVACY POLICY"
+}

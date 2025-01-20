@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useTranslation } from "next-i18next";
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowCase = () => {
@@ -80,6 +81,8 @@ const ShowCase = () => {
     }
   }, []);
 
+  const { t } = useTranslation('work');
+
   return (
     <section
       id="showcase"
@@ -90,9 +93,9 @@ const ShowCase = () => {
       <div className="container-lg h-full relative">
         <div className="flex w-full gap-[10vw] tablet:flex-col">
           <h2 data-para-anim className="w-[50%] title-2 tablet:w-full">
-            Find Opulence in Dubai’s Finest Location
-          </h2>
-          <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] tablet:w-[90vw] tablet:h-[50vw] tablet:static tablet:rounded-[4vw]">
+            {t('showcaseHead')}
+          </h2> 
+          <div className="w-[25vw] h-[25vw] overflow-hidden rounded-[1000px] video-block absolute right-[10%] rtl:left-[10%] rtl:right-auto tablet:w-[90vw] tablet:h-[50vw] tablet:static tablet:rounded-[4vw]">
             <video
               ref={videoRef}
               poster="/assets/video-poster.webp"
@@ -102,21 +105,16 @@ const ShowCase = () => {
               className="w-full h-full aspect-video object-cover"
             ></video>
             <div className="w-[50vw] bg-white/50 glassmorphism flex justify-around rounded-full py-[2vw] absolute bottom-[7%] left-[50%] translate-x-[-50%] opacity-0 inner-detail z-[6]">
-              <p data-para-anim>Off-Plan in Dubai Marina</p>
-              <p data-para-anim>61,250 sq.ft of Amenities</p>
-              <p data-para-anim>5 Bedroom</p>
+              <p data-para-anim>{t('showcaseInfo1')}</p>
+              <p data-para-anim>{t('showcaseInfo2')}</p>
+              <p data-para-anim>{t('showcaseInfo3')}</p>
             </div>
           </div>
         </div>
 
         <div className="w-full h-full mt-[48vw] flex justify-end tablet:mt-[7vw]">
           <p data-para-anim className="w-[50%] tablet:w-full ">
-            At 53 West 53, immerse yourself in a lifestyle defined by
-            sophistication and exclusivity. Indulge in breathtaking views,
-            unparalleled amenities, and a vibrant community that embodies
-            prestige. This is where your legacy thrives, combining luxurious
-            living with unparalleled opportunities and cultural richness,
-            creating an exceptional global paradise.
+            {t('showcaseSub')}
           </p>
         </div>
       </div>

@@ -19,12 +19,12 @@ const SelectTrigger = React.forwardRef(({ className, children,placeholderIcon, .
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-[3.2vw] rounded-full bg-white w-[5vw] mobile:h-[10vw] mobile:text-[4vw] tablet:h-[5vw] tablet:text-[2vw] items-center justify-between focus:outline-none whitespace-nowrap px-4 py-2 text-[1.2vw] shadow-sm ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:ring-0 autofill:ring-0",
+      "flex rtl:flex-row-reverse h-[3.2vw] rounded-full bg-white w-[5vw] mobile:h-[10vw] mobile:text-[4vw] tablet:h-[5vw] tablet:text-[2vw] items-center justify-between focus:outline-none whitespace-nowrap px-4 py-2 text-[1.2vw] shadow-sm ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:ring-0 autofill:ring-0",
       className
     )}
     {...props}>
       {placeholderIcon&&(
-        <span className="absolute left-[2.5vw] mobile:left-[7.5vw] tablet:left-[3.5vw]">
+        <span className="absolute left-[2.5vw] mobile:left-[7.5vw] tablet:left-[3.5vw] rtl:right-[2.5vw] rtl:left-auto">
           <Image src={placeholderIcon} alt="form-icons" width={25} height={25}/>
         </span>
       )}
@@ -93,7 +93,7 @@ const SelectItem = React.forwardRef(({ className, children, ...props }, ref) => 
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center py-1.5 px-[0.5vw] text-[1.2vw] mobile:text-[3.5vw] mobile:px-[3vw] tablet:text-[2vw] tablet:px-[1vw] outline-none focus:bg-neutral-100 focus:text-neutral-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-neutral-800 dark:focus:text-neutral-50",
+      "relative flex w-full cursor-default select-none items-center py-1.5 px-[0.5vw] text-[1.2vw] mobile:text-[3.5vw] rtl:text-right mobile:px-[3vw] tablet:text-[2vw] tablet:px-[1vw] outline-none focus:bg-neutral-100 focus:text-neutral-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-neutral-800 dark:focus:text-neutral-50",
       className
     )}
     {...props}>

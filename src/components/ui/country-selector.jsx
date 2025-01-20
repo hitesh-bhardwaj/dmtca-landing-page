@@ -53,7 +53,7 @@ export default function CountrySelector({
             /> 
           </span>
           <span
-            className={`absolute inset-y-0 right-0 flex items-center pr-[1vw] pointer-events-none mobile:pr-[4vw] tablet:pr-[2vw] ${
+            className={`absolute inset-y-0 ltr:right-0 flex items-center ltr:pr-[1vw] pointer-events-none mobile:pr-[4vw] tablet:pr-[2vw] rtl:left-0 rtl:pl-[1vw] ${
               disabled ? "hidden" : ""
             }`}
           >

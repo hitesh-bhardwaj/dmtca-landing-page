@@ -3,10 +3,14 @@
 import { useEffect, useState, useRef } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
-gsap.registerPlugin(ScrollTrigger); 
+gsap.registerPlugin(ScrollTrigger);
 
 const Bringing = () => {
+  const { t } = useTranslation('work');
+  const { locale } = useRouter();
   const BringingRef = useRef(null);
 
   const videoRef = useRef(null);
@@ -22,7 +26,7 @@ const Bringing = () => {
               video.src = "/videos/bringing.mp4";
               video.load();
               video.play();
-              setVideoLoaded(true); 
+              setVideoLoaded(true);
             }
             observer.unobserve(entry.target);
           }
@@ -59,7 +63,8 @@ const Bringing = () => {
         });
         tl.to(".video", {
           scale: 4,
-          xPercent: -105,
+          xPercent:locale === "ar" ? 90 : -105,
+          // xPercent: -105,
           yPercent: -30,
           delay: 0.35,
           position: "absolute",
@@ -114,12 +119,12 @@ const Bringing = () => {
           <div className='flex flex-col items-center justify-center'>
             <div className='text1'>
               <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3] tablet:text-[9vw]'>
-                BRINGING YOU
+                {t('bringing1')}
               </p>
             </div>
             <div className='w-full h-full flex justify-center gap-[3vw] text2'>
               <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3] tablet:text-[9vw]'>
-                SPACES
+                {t('bringing2')}
               </p>
               <div
                 className='h-full w-[20vw] relative rounded-[20px] tablet:absolute mobile:top-[27%] tablet:w-[90vw] tablet:top-[35%]'
@@ -138,18 +143,13 @@ const Bringing = () => {
             </div>
             <div className='text3 relative z-[-1] tablet:z-[1]'>
               <p className='text-[10.5vw] text-[#353430] leading-[1.1] text-head uppercase tablet:leading-[1.3] tablet:text-[9vw]'>
-                YOU LOVE
+                {t('bringing3')}
               </p>
             </div>
           </div>
           <div className='w-[70%] mt-[0vw] mobile:mt-[85vw] tablet:w-full tablet:mt-[55vw]'>
             <p className='text-body text-center tablet:text-start text-4'>
-              At Hogar, we artfully combine design brilliance, innovative technology, and human insight
-              to deliver unparalleled real estate experiences. Our approach goes beyond conventional sales,
-              turning properties into coveted lifestyle statements. We understand that discerning investors
-              seek more than just luxury; they desire a unique experience that complements their elevated lifestyle.
-              Through our expertise, we connect clients with extraordinary properties that reflect their sophisticated
-              tastes and desires.
+              {t('bringingSub')}
             </p>
           </div>
         </div>
