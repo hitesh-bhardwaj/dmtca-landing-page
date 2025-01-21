@@ -16,7 +16,7 @@ const Hero = () => {
         yPercent: 50,
         opacity: 0,
         duration: 1,
-        delay: 7
+        delay: 2.5
       })
       gsap.from(".linedraw", {
         scrollTrigger: {
@@ -26,7 +26,7 @@ const Hero = () => {
         scaleX: 0,
         transformOrigin: "left",
         duration: 1,
-        delay: 6.4,
+        delay: 2.5,
         yPercent: 100,
         ease: "power4.out",
       });

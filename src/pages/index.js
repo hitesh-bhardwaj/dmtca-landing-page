@@ -13,6 +13,7 @@ import Works from "@/components/indexContent/Works";
 import dynamic from "next/dynamic";
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Loader2 from "@/components/Loader2";
 
 const DynamicAbout = dynamic(() => import('@/components/indexContent/About'))
 const SlideShow = dynamic(() => import('@/components/indexContent/SlideShow'))
@@ -25,7 +26,8 @@ export default function Home() {
   fadeUp();
 
   return (
-    <>
+    <>  
+      <Loader2 />
       <main>
         <Hero />
         <DynamicAbout />

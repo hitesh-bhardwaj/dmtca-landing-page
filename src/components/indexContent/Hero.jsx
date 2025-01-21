@@ -23,6 +23,7 @@ const Hero = () => {
         opacity: 0,
         duration: 1,
         stagger: 0.01,
+        delay: 2.5,
       })
       gsap.from(".linedraw", {
         scrollTrigger: {
@@ -34,6 +35,7 @@ const Hero = () => {
         duration: 1,
         yPercent: 100,
         ease: "power4.out",
+        delay: 2.5,
       });
     })
     return () => ctx.revert();
@@ -48,7 +50,7 @@ const Hero = () => {
             <div className="flex justify-between items-center">
               <Link href="/" className="block hero-fadeup">
                 <svg width="167" height="25" className="mobile:w-[25vw] tablet:w-[20vw]" viewBox="0 0 167 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_707_5514)">
+                  <g clipPath="url(#clip0_707_5514)">
                     <mask id="mask0_707_5514" style={{maskType:'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="167" height="25">
                       <path d="M167 0H0V24.4875H167V0Z" fill="white" />
                     </mask>
@@ -73,7 +75,7 @@ const Hero = () => {
               <div className="flex items-end gap-6 mobile:items-center">
                 <Link href="/" className="block hero-fadeup">
                   <svg className="mobile:w-[20vw] tablet:w-[20vw]" width="145" height="49" viewBox="0 0 145 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_4446_850)">
+                    <g clipPath="url(#clip0_4446_850)">
                       <mask id="mask0_4446_850" style={{maskType:'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="145" height="49">
                         <path d="M144.928 0.655273H0.649414V48.6324H144.928V0.655273Z" fill="white" />
                       </mask>

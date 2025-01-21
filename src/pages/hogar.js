@@ -8,7 +8,7 @@ import Roi from "@/components/index2Content/Roi";
 import Service from "@/components/index2Content/Service";
 import ShowCase from "@/components/index2Content/ShowCase";
 import Works from "@/components/index2Content/Works";
-import Loader from "@/components/Loader";
+import Loader2 from "@/components/Loader2";
 import dynamic from "next/dynamic";
 
 const DynamicAbout = dynamic(() => import('@/components/index2Content/About'));
@@ -25,7 +25,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* <Loader /> */}
+      <Loader2 />
       <Hero />
       <DynamicAbout />
       <SlideShow />
