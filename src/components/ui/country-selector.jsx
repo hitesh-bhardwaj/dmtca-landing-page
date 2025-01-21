@@ -114,6 +114,7 @@ export default function CountrySelector({
                       >
                         <img
                           alt={`${value.value}`}
+                          loading="lazy"
                           src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${value.value}.svg`}
                           className={"inline mr-2 h-4 rounded-sm"}
                         />

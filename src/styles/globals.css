@@ -9,29 +9,6 @@
   --font-montreal: "Body", Arial, Helvetica, sans-serif;
   --font-avenir: "Head", Arial, Helvetica, sans-serif;
 }
-
-/* Font Family */
-@font-face {
-  font-family: "Body";
-  src: url("/fonts/neuemontreal.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Head";
-  src: url("/fonts/avenir.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Head";
-  src: url("/fonts/avenir-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
 /* Custom ScrollBar */
 div.custom-scroll::-webkit-scrollbar {
   height: 1.5vw;
